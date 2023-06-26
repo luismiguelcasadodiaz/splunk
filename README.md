@@ -19,7 +19,11 @@ Splunk lessons
 # <a name="visualizations">1. Visualizations</a>
 ## Video one : Using Formatting Commands
 We use Splunk Search Processing Language (SSPL) and Splunk Web InterfaceSWI
- - `fields`
+ - `fields` incluye o excluye campos en las búsquedas. POr defecto incluye el campo mencionado. Los cmapor internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. si no los deseamos hya eu indicarlo explicitamente con el operador minus.
+   > `fields procut_name price' **agrega** dos campos
+   > 'fields -product_name price' **excluye** product_name y **agrega** price
+   > `fields - product_name price` **excluye** product name y price
+   La inclusion sucede antes que la exclusion. La eficiencia en la búsqueda se logra limitando la extracción de campos.
  - `table`
  - `dedup`
  - `addtotals`
