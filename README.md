@@ -49,7 +49,11 @@ Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando
 ## Video 02: Visualizating data (11:25).
 ## Video 03: Generating maps (04:50).
 ## Video 04: Single value visualizations (02:39).
-Disponemos de dos formatos para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos 
+Disponemos de dos formatos para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
+- ![Marcas en escalas](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/30eb2ff4-072f-4e71-a299-103744217e77)
+- ![Indicador de llenado](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8926539c-30ed-464f-80b6-90973c12e762)
+- ![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)
+
 ## Video 05: Formatting Visualizatins (02:23).
 
 # <a name= "working-with-time">2. Working with time</a>
@@ -69,7 +73,9 @@ Disponemos de dos formatos para visualizar valores únicos: El valor numérico e
 
 
 ![Visualizations available](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/26bad114-0f68-46fc-aabb-8e0c9c595a48)
-![Escalimetro](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6e5d847f-f169-4b20-97aa-94c7dfc3c499)
+
+![Marcas en escalas](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/30eb2ff4-072f-4e71-a299-103744217e77)
+![Indicador de llenado](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8926539c-30ed-464f-80b6-90973c12e762)
 ![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)
 
 
