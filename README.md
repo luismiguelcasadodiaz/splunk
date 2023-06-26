@@ -19,11 +19,11 @@ Splunk lessons
 # <a name="visualizations">1. Visualizations</a>
 ## Video one : Using Formatting Commands
 We use Splunk Search Processing Language (SSPL) and Splunk Web InterfaceSWI
- - fields
- - table
- - dedup
- - addtotals
- - fieldformat
+ - `fields`
+ - `table`
+ - `dedup`
+ - `addtotals`
+ - `fieldformat`
 
 # <a name= "working-with-time">2. Working with time</a>
 
