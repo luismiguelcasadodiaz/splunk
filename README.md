@@ -17,7 +17,7 @@ Splunk lessons
 ---
 
 # <a name="visualizations">1. Visualizations</a>
-## Video one : Using Formatting Commands
+## Video one: Using Formatting Commands (6:41).
 We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
 
 Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando analizamos archivos de log?¿Registros si analizamos tablas de datos?
@@ -42,10 +42,15 @@ Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando
    
  - `addtotals`, suma por defecto todos los campos numéricos de un mismo registro de datos y crea una columna total. El flag `col=true` crea un total de columnas. El flag `row=false` elimina el comportamiento por defecto que genera un total de fila. El flag `label="Total ventas"`nos permite poner una etiqueta a la fila nueva fila que ha creado el flag `col=true`, esta etiqueta la ponemos debajo de la column indicada con `labelfield="product_name"`. el flag `fieldname="total por fila"` personaliza la etiqueta de total de la dila que este comando crea por defecto.
 
- - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0588b4c2-eee2-4025-83fd-f3c69952c470)
+ > ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0588b4c2-eee2-4025-83fd-f3c69952c470)
 
    
  - `fieldformat`, cambia la representación en la presentación de los datos pero no en el origen. `fieldformat Total = "$" + tostring(Totalt, "comas")`
+## Video 02: Visualizating data (11:25).
+## Video 03: Generating maps (04:50).
+## Video 04: Single value visualizations (02:39).
+Disponemos de dos formatos para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos 
+## Video 05: Formatting Visualizatins (02:23).
 
 # <a name= "working-with-time">2. Working with time</a>
 
@@ -61,6 +66,11 @@ Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando
 # <a name= "data-models">9. Data Models</a>
 # <a name= "using-choropleth">10. Using Choropleth</a>
 
+
+
+![Visualizations available](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/26bad114-0f68-46fc-aabb-8e0c9c595a48)
+![Escalimetro](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6e5d847f-f169-4b20-97aa-94c7dfc3c499)
+![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)
 
 
 
