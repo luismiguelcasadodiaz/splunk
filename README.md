@@ -51,8 +51,9 @@ Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando
 ## Video 04: Single value visualizations (02:39).
 Disponemos de dos formatos para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
 
-|Marcas en escala| indicador de llenado  |  calibres radiales |
-|-------------------------------|---------------------------------|----------------------------|
+| el valor numerico en si|Marcas en escala| indicador de llenado  |  calibres radiales |
+|----------------|-------------------------------|---------------------------------|----------------------------|
+|![Valor](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/76788796-c182-4151-a40f-14fc9f277091)
 |![Marcas en escalas](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/30eb2ff4-072f-4e71-a299-103744217e77)|![Indicador de llenado](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8926539c-30ed-464f-80b6-90973c12e762)|![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)|
 
 ## Video 05: Formatting Visualizatins (02:23).
