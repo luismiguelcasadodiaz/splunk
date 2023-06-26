@@ -19,17 +19,21 @@ Splunk lessons
 # <a name="visualizations">1. Visualizations</a>
 ## Video one : Using Formatting Commands
 We use Splunk Search Processing Language (SSPL) and Splunk Web InterfaceSWI
- - `fields` incluye o excluye campos en las búsquedas. POr defecto incluye el campo mencionado. Los cmapor internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. si no los deseamos hya eu indicarlo explicitamente con el operador minus.
-   > `fields procut_name price' **agrega** dos campos
+ - `fields` incluye o excluye campos en las búsquedas. POr defecto incluye el campo mencionado. Los cmapor internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. Si no los deseamos hay que indicarlo explicitamente con el operador minus `-`.
+ - 
+   > `fields product_name price` **agrega** dos campos
    > 
-   > 'fields -product_name price' **excluye** product_name y **agrega** price
+   > `fields -product_name price` **excluye** product_name y **agrega** price
    > 
    > `fields - product_name price` **excluye** product name y price
    
    La inclusion sucede antes que la exclusion. La eficiencia en la búsqueda se logra limitando la extracción de campos.
    
- - `table`
- - `dedup`
+ - `table` aunque se parece a `fields` por incluir campos en la búsqueda, es un comando de transformación que retiene los datos en forma tabular. Los campos aparecen en la tabla en el mismo orden en que se mencionan en la instruccion table. Usando conjuntamente la instruccion fields y table la búsqueda es más eficiente, primero `fields` y luego `table`.
+ - 
+ - `dedup` Elimina registors de los resultados de búsqueda. puede aplicarse a uno o más campos
+   > 'dedup product_name price`elimina todas las lineas en las que se repita el nombre de un producto que tenga el mismo precio.
+   
  - `addtotals`
  - `fieldformat`
 
