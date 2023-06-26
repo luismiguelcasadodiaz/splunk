@@ -18,24 +18,34 @@ Splunk lessons
 
 # <a name="visualizations">1. Visualizations</a>
 ## Video one : Using Formatting Commands
-We use Splunk Search Processing Language (SSPL) and Splunk Web InterfaceSWI
- - `fields` incluye o excluye campos en las búsquedas. POr defecto incluye el campo mencionado. Los cmapor internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. Si no los deseamos hay que indicarlo explicitamente con el operador minus `-`.
+We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
+
+Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando analizamos archivos de log?¿Registros si analizamos tablas de datos?
+
+ - `fields` limita (incluye o excluye) campos en las búsquedas. Por defecto incluye el campo mencionado. Los campos internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. Si no los deseamos hay que indicarlo explicitamente con el operador minus `-`.
  - 
    > `fields product_name price` **agrega** dos campos
    > 
    > `fields -product_name price` **excluye** product_name y **agrega** price
    > 
-   > `fields - product_name price` **excluye** product name y price
+   > `fields - product_name price` **excluye** product name y price. Atneción al ESPACIO EN BLANCO TRAS EL OPERADOR MINUS.
    
-   La inclusion sucede antes que la exclusion. La eficiencia en la búsqueda se logra limitando la extracción de campos.
+   La inclusion sucede antes que la exclusion. La eficiencia en la búsqueda se logra limitando/reducciendo el número de campos a extraer.
    
  - `table` aunque se parece a `fields` por incluir campos en la búsqueda, es un comando de transformación que retiene los datos en forma tabular. Los campos aparecen en la tabla en el mismo orden en que se mencionan en la instruccion table. Usando conjuntamente la instruccion fields y table la búsqueda es más eficiente, primero `fields` y luego `table`.
- - 
- - `dedup` Elimina registors de los resultados de búsqueda. puede aplicarse a uno o más campos
-   > 'dedup product_name price`elimina todas las lineas en las que se repita el nombre de un producto que tenga el mismo precio.
    
- - `addtotals`
- - `fieldformat`
+   > fields JSESSIONSID Price Product_name
+   > table JSESSIONSID Price Product_name
+   
+ - `dedup` Elimina registors de los resultados de búsqueda. puede aplicarse a uno o más campos
+   > `dedup product_name price` elimina todas las líneas en las que se repita el nombre de un producto que tenga el mismo precio.
+   
+ - `addtotals`, suma por defecto todos los campos numéricos de un mismo registro de datos y crea una columna total. El flag `col=true` crea un total de columnas. El flag `row=false` elimina el comportamiento por defecto que genera un total de fila. El flag `label="Total ventas"`nos permite poner una etiqueta a la fila nueva fila que ha creado el flag `col=true`, esta etiqueta la ponemos debajo de la column indicada con `labelfield="product_name"`. el flag `fieldname="total por fila"` personaliza la etiqueta de total de la dila que este comando crea por defecto.
+
+ - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0588b4c2-eee2-4025-83fd-f3c69952c470)
+
+   
+ - `fieldformat`, cambia la representación en la presentación de los datos pero no en el origen. `fieldformat Total = "$" + tostring(Totalt, "comas")`
 
 # <a name= "working-with-time">2. Working with time</a>
 
