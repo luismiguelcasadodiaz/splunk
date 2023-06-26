@@ -49,11 +49,22 @@ Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando
 ## Video 02: Visualizating data (11:25).
 ## Video 03: Generating maps (04:50).
 ## Video 04: Single value visualizations (02:39).
-Disponemos de dos formatos para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
+Disponemos de dos modalidades para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
 
 | el valor numerico en si|Marcas en escala| indicador de llenado  |  calibres radiales |
 |----------------|-------------------------------|---------------------------------|----------------------------|
 |![Valor](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/76788796-c182-4151-a40f-14fc9f277091)|![Marcas en escalas](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/30eb2ff4-072f-4e71-a299-103744217e77)|![Indicador de llenado](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8926539c-30ed-464f-80b6-90973c12e762)|![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)|
+
+En cualquiera de las modalidades podemos definir segmentos de rangos con diferenes colores.
+![Personalización de rangos y colores](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/82a4da04-e269-4bbe-9d40-72e53ab4752c)
+
+Es posible dividir un valor por los elementos de otro campo y mostrar un gráfico tipo trellis.
+
+![formato Trellis](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2f985a80-f4ec-4535-a2f9-8f270f48b9e0)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ccae6d80-9ffa-4243-8031-99c21a0349cd)
+![trellis 3](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6fb8bc66-13f0-46a8-96c7-1fc785f6cabc)
+
+
 
 ## Video 05: Formatting Visualizatins (02:23).
 
