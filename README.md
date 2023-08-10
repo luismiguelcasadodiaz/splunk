@@ -1,16 +1,16 @@
-# intro to Splunk
+# Intro to Splunk
 ## main functions:
-1. index data. It is the heart (collects data from any source)
-2. Search & investigate
-3. Add Knowledge
-4. Monitor & alert
-5. Report & analyses
+1. Index data. It is the heart (collects data from any source)
+2. Search & investigate.
+3. Add Knowledge.
+4. Monitor & Alert.
+5. Report & analyses.
 
 El indexador analiza el flujo entrante. Cuando encuentra un match con un modelo de datos de una fuente lo etiqueta con el sourcetype.
 Conocido el sourcetype, descompone el flujo de datos en evento únicos al que se les pones un timestampo normalizado según la zona horaria del ususrio de la cuenta.
 
 Los evento se guardan en el index donde pueden ser investigados con el **Splunk Search Language**. Haremos queries.
-A los evento se les peude añadir etiquetas y aportarles conocimiento del dominio de negocio.
+A los evento se les peude añadir etiquetas y aportarles conocimiento del dominio de negocio para ayudar a interpretarlos.
 
 Se puedn poner alertas de monitoreso que disparen acciones.
 
@@ -18,20 +18,48 @@ Se puedn poner alertas de monitoreso que disparen acciones.
 ### admin
  - Install apps.
  - Ingest data.
- - Create Knowledge objects.
+ - Create Knowledge objects for all users
+ - Defines apps other users can see
 ### Power
- - Create Knowledge objects.
+ - Create Knowledge objects for users of an app.
  - Do real-time searches.
 ### User
  - See only knowledge objects shared with him.
 
 
-## Apps
- - Home: sets a default dashboard
- - Search and reporting
+## Apps (pre-configured environments that extend pre-built knowledge and capabilities)
+ - two default apps: ``Home app``: (sets a custom dashboard as a default dashboard) and ``Search and reporting app``
  - SplunkBases has hundreds of them
- - We can ceate our own apps.
-   
+ - We can create our own apps.
+
+### Search and reporting app (has 8 components)
+#### 1. Splunk Bar
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b78ab40d-bd01-4044-808a-1e7b96ce6eb5)
+
+menus to navigate
+#### 2. Search Bar
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a34378af-264d-49f5-afd6-bb45c8619348)
+
+Keyword plus time filter
+There is a ``save as`` menu to save the search as a knowledge object.
+#### 3. Search button
+#### 4. Time range picker
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/706673ae-fa4b-4f7a-9995-17494444eeb1)
+
+#### 5. How to search Pannel
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ad6e5cf9-1e2b-4c3e-9e79-d3cb34f20769)
+
+#### 6. Data summary button
+Breaks down data  by Host (IP, FQDN, or Hostname), Source or Source type. The source is the data's file or directory path 
+#### 7. Table views
+Allows data study without Splunk Search Processing language.
+#### 8. Search History
+#### 9. Search result tabs
+- Events.
+- Patterns
+- Statistics
+- visualizations
+
 # Splunk Core Certified Power User
 Splunk lessons
 
