@@ -95,13 +95,16 @@ If the job is not accessed in the specified time period the job is removed.
 
 ##### Search mode selector
 - Fast: Field discovery **off**.  Only return information on default fields and fields required to fulfill the search.
-- Verbose: Field discovery **on**. Returns as much field and even data as possible,
+  
+- Verbose: Field discovery **on**. Returns as many fields and even data as possible.
+  
 - Smart: toggle mode depending search type we are running.
+  
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/861a1bc6-0bc5-4913-9d94-c5c6d12fe548)
 
 ##### Search Timeline
 
-Where it is possible to drill into time axis
+Where it is possible to drill into the time axis. clicking and dragging filter results.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/80995d7b-a28a-4f1a-bc7a-a817f2b6ce8c)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/64a0a10a-03f5-4818-8a9e-65686130e54f)
@@ -109,13 +112,24 @@ Where it is possible to drill into time axis
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d2b70e6c-8a85-4507-9ca3-20a14df72920)
 
 ##### Event list
+
+In reverse chronological order.
+Time is normalized in the index to a consistent format based on the time zone settled in the user account.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9392633b-a693-4f6b-8d49-f687b5485ec3)
+
+For each event, we visualize the default fields (host, source & source type)
+
+Easily we can add more fields to search and launch a new search
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/66bdfaf8-2b87-413d-bfd4-497b16dd3e98)
+
 
 ##### Fields sidebar
 Shows all fields extracted
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b2db4c0e-9528-4677-a6b2-d26518c335bc)
 
 
+## Search processing language
 
 
 
