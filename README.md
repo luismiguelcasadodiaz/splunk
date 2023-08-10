@@ -1,3 +1,37 @@
+# intro to Splunk
+## main functions:
+1. index data. It is the heart (collects data from any source)
+2. Search & investigate
+3. Add Knowledge
+4. Monitor & alert
+5. Report & analyses
+
+El indexador analiza el flujo entrante. Cuando encuentra un match con un modelo de datos de una fuente lo etiqueta con el sourcetype.
+Conocido el sourcetype, descompone el flujo de datos en evento únicos al que se les pones un timestampo normalizado según la zona horaria del ususrio de la cuenta.
+
+Los evento se guardan en el index donde pueden ser investigados con el **Splunk Search Language**. Haremos queries.
+A los evento se les peude añadir etiquetas y aportarles conocimiento del dominio de negocio.
+
+Se puedn poner alertas de monitoreso que disparen acciones.
+
+## roles:
+### admin
+ - Install apps.
+ - Ingest data.
+ - Create Knowledge objects.
+### Power
+ - Create Knowledge objects.
+ - Do real-time searches.
+### User
+ - See only knowledge objects shared with him.
+
+
+## Apps
+ - Home: sets a default dashboard
+ - Search and reporting
+ - SplunkBases has hundreds of them
+ - We can ceate our own apps.
+   
 # Splunk Core Certified Power User
 Splunk lessons
 
