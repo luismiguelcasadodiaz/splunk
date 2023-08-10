@@ -54,11 +54,73 @@ Breaks down data  by Host (IP, FQDN, or Hostname), Source or Source type. The so
 #### 7. Table views
 Allows data study without Splunk Search Processing language.
 #### 8. Search History
+To view and rerun past searches
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0993ca01-9687-4592-85f9-82dc31ecae47)
+
 #### 9. Search result tabs
-- Events.
-- Patterns
-- Statistics
-- visualizations
+limiting a search by time is key to faster results and it is a good practice.
+
+When the search is sent to Splunk, becomes a ``search job``
+wiht te result we got a 
+
+##### Save as menu
+Allows us to save the search as a knowledge object
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/299221b3-5bb2-4503-ac65-b612967ff0dd)
+
+##### Search result tabs
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/32c9b448-ea30-4ed2-9ad5-cd3831bfd1b4)
+
+###### - Events.
+###### - Patterns. Allows to see patterns in the data
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ac30bdf1-efc5-4723-bd64-dc89b60d68de)
+
+###### - Statistics & visualizations
+If the search command does not generate statistics or visualizations nothing shows here aside from the 3 default links.
+Commands that generate statistics or visualizations are called **transforming commands**. Transfomr event data into data tables
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/915fb700-9690-4e93-a273-cdba960c15f5)
+
+
+
+##### Search Action Buttons
+Edit job, send it to the background, inspect, delete, Pause, stop, share, print, export (Raw, CSV, XML, JSON) 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6f4ee29a-a102-4d51-9a29-cb315e4f48f0)
+
+When sharing a search we get a link.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/72bea11d-ab1a-4395-ae3a-ffbf8988615b)
+
+By default, a search job will remain active for 10 minutes. After 10 minutes Splunk needs to run it again to return results.
+A shared search remains active for seven days. Anyone I shared the job with will see the same result I saw the first time I ran it.
+If the job is not accessed in the specified time period the job is removed.
+
+##### Search mode selector
+- Fast: Field discovery **off**.  Only return information on default fields and fields required to fulfill the search.
+- Verbose: Field discovery **on**. Returns as much field and even data as possible,
+- Smart: toggle mode depending search type we are running.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/861a1bc6-0bc5-4913-9d94-c5c6d12fe548)
+
+##### Search Timeline
+
+Where it is possible to drill into time axis
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/80995d7b-a28a-4f1a-bc7a-a817f2b6ce8c)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/64a0a10a-03f5-4818-8a9e-65686130e54f)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/20b22100-6e74-4ca2-9b1f-5c4b92f04a80)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d2b70e6c-8a85-4507-9ca3-20a14df72920)
+
+##### Event list
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9392633b-a693-4f6b-8d49-f687b5485ec3)
+
+##### Fields sidebar
+Shows all fields extracted
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b2db4c0e-9528-4677-a6b2-d26518c335bc)
+
+
+
+
+
+
+ 
 
 # Splunk Core Certified Power User
 Splunk lessons
