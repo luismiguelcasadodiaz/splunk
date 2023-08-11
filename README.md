@@ -130,9 +130,43 @@ Shows all fields extracted
 
 
 ## Search processing language
+Wildcards accepted.
+search terms **are not** case sensitive. (FAILED, failed, FaiLeD give same results)
+3 uppercased boolean operators with this precedence order 1.-NOT 2.-OR & 3.-AND. Parenthesis can change such precedence order.
+When the boolean operator is not explicit AND is implicit.
+Use quotes for exact search. Escape a quote with a backslash if it is part of an exact search.
+### commands have 5 components
+ - Search terms ==> query events
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4927c716-3700-4bf6-af25-ab523a3671a7)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/555e5740-6c6e-4ece-8c97-d731c0b76648)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3f7acc1f-7f57-45d4-a20a-d8a806a65445)
 
 
+ - Commands ==> What to do with the results: Charts, computing statistics & formatting
+ - Functions ==> how we want to chart, evaluate or compute the results
+ - Arguments ==>Variables to apply in functions
+ - Clauses ==> Group results
 
+Commands, functions, and clauses **are not** case sensitive.
+If a command references a specific value, such value will be case-sensitive.
+
+### best practices
+Filtering fields before the first pipe produces better results
+Using time is the most efficient way of filtering
+The fewer data to search the faster
+Default fields extracted at indexing time that do not need to be extracted at search time:
+- time
+- index
+- host
+- source
+- source type
+
+The more you tell the search engine, the more likely it is that you get good results.
+Is better to search ``failed password`` than ``password``.
+Inclusion is better than exclusion.
+Searching for ``"access denied"`` is better than searching for ``NOT "access granted"``.
+When possible use the OR or IN operator instead of wildcards.
+Apply filtering commands as early as possible in your search limits the number of events, making futurs data manipulation faster.
 
  
 
