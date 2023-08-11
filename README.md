@@ -189,8 +189,36 @@ It is convenient that all Splunk users are aware of the  5 categories.
 - Data Models (Search-time mapping of Knowledge): are hierarchically structured datasets (events, search or transactions)
 
 ## Reports and Dashboards.
-
+Before start saving reports define a naming convention.
+Saving and sharing searches is easy with reports. We can do it in the ``save as`` menu.
  
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4006f464-4010-426c-b08d-7aca0fc4f97f)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/702a8445-0809-47af-8bbc-59bb28b225ba)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7c3bf4c7-6be6-4800-b979-48c2247424cb)
+
+The option to display a report in all apps is available only to admin role users.
+
+By default, the report will be available only to the owner who created it. 
+
+Power users are granted read & write permission on the report.
+
+Changing the setting to App, a report can be shared with all users of the app **in which the report was created**.
+
+The ``run as`` dialog has to be treated carefully in case the report shows sensitive data. 
+If not all users can see it, is better to execute the repost as a user. in this way, only the data right for the level of authorization of the user will be shown
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fff538c9-8fee-4d90-a309-f1a112363e88)
+
+A report can be scheduled to be executed at regular time triggering different events. 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/49695eca-705b-4de1-bc9c-908c41687aa9)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f7269e83-6e55-49c2-b444-14d02547c649)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9423fffd-e349-4345-8c0f-a339bcf483b4)
+
+
+
+All reports are available from de reports tab in the application menu.
+Any search that returns statistical values can be seen as a chart.
+
+
 
 # Splunk Core Certified Power User
 Splunk lessons
