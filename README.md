@@ -168,6 +168,28 @@ Searching for ``"access denied"`` is better than searching for ``NOT "access gra
 When possible use the OR or IN operator instead of wildcards.
 Apply filtering commands as early as possible in your search limits the number of events, making future data manipulation faster.
 
+## Knowledge objects (Discover and analyze data):
+Created by one user and shared with other users.
+Saved and reused by multiple people or in multiple apps.
+Can be used in a search.
+Became powerful tools for Splunk deployment.
+
+A **knowledge manager** has to take care of general policies that rule the creation of knowledge objects. the aim of such rules is to create a clean and efficient toolbox.
+1. Oversee Knowledge object creation and usage.
+2. implement a naming convention.
+3. Normalize event data.
+4. Create data models for Pivot users.
+
+It is convenient that all Splunk users are aware of the  5 categories.
+- Data Interpretation: Depending on source type,  some fields are **automatically** extracted from data, but we can extract more **manually**. it is possible to set **calculated field** on previous ones.
+  
+- Data Classification: **Event types** allow to categorize events. A **transaction** is any group of conceptually-related events that spans time, such as a series of events related to the online reservation of a hotel room by a single customer.
+- Data Enrichment: **Lookups** add other fields and data to the event not included in the indexed data. **Workflow actions** are links within events that interact with external resources (Use the field values in an HTTP error event to create a new entry in an external issue management system) or narrow or search.
+- Data Normalization: **Tags** or descriptive names for key-value pairs. We can search on tags. you could have an IP address related to your main office with the value 192.168.1.2. Tag that IPaddress value as "mainoffice". **Field aliases** normalize data over multiple sources. One data model might have a field called ``http_referrer``. This field might be misspelled in your source data as ``http_referer``. Use field aliases to capture the misspelled field in your original source data and map it to the expected field name.
+- Data Models (Search-time mapping of Knowledge): are hierarchically structured datasets (events, search or transactions)
+
+## Reports and Dashboards.
+
  
 
 # Splunk Core Certified Power User
