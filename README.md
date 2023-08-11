@@ -7,19 +7,19 @@
 5. Report & analyses.
 
 El indexador analiza el flujo entrante. Cuando encuentra un match con un modelo de datos de una fuente lo etiqueta con el sourcetype.
-Conocido el sourcetype, descompone el flujo de datos en evento únicos al que se les pones un timestampo normalizado según la zona horaria del ususrio de la cuenta.
+Conocido el sourcetype, descompone el flujo de datos en evento únicos al que se les pone un timestampo normalizado según la zona horaria del usuario de la cuenta.
 
 Los evento se guardan en el index donde pueden ser investigados con el **Splunk Search Language**. Haremos queries.
-A los evento se les peude añadir etiquetas y aportarles conocimiento del dominio de negocio para ayudar a interpretarlos.
+A los eventos se les puede añadir etiquetas y aportarles conocimiento del dominio de negocio para ayudar a interpretarlos.
 
-Se puedn poner alertas de monitoreso que disparen acciones.
+Se pueden poner alertas de monitoreso que disparen acciones.
 
 ## roles:
 ### admin
  - Install apps.
  - Ingest data.
- - Create Knowledge objects for all users
- - Defines apps other users can see
+ - Create Knowledge objects for all users.
+ - Defines apps other users can see.
 ### Power
  - Create Knowledge objects for users of an app.
  - Do real-time searches.
@@ -29,39 +29,41 @@ Se puedn poner alertas de monitoreso que disparen acciones.
 
 ## Apps (pre-configured environments that extend pre-built knowledge and capabilities)
  - two default apps: ``Home app``: (sets a custom dashboard as a default dashboard) and ``Search and reporting app``
- - SplunkBases has hundreds of them
+ - **SplunkBase** has hundreds of them
  - We can create our own apps.
 
-### Search and reporting app (has 8 components)
-#### 1. Splunk Bar
+### Search and reporting app (has 8 components).
+#### 1. Splunk Bar.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b78ab40d-bd01-4044-808a-1e7b96ce6eb5)
 
 menus to navigate
-#### 2. Search Bar
+#### 2. Search Bar.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a34378af-264d-49f5-afd6-bb45c8619348)
 
-Keyword plus time filter
+Keyword plus time filter.
 There is a ``save as`` menu to save the search as a knowledge object.
-#### 3. Search button
-#### 4. Time range picker
+#### 3. Search button.
+#### 4. Time range picker.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/706673ae-fa4b-4f7a-9995-17494444eeb1)
 
-#### 5. How to search Pannel
+#### 5. How to search Pannel.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ad6e5cf9-1e2b-4c3e-9e79-d3cb34f20769)
 
-#### 6. Data summary button
+#### 6. Data summary button.
 Breaks down data  by Host (IP, FQDN, or Hostname), Source or Source type. The source is the data's file or directory path 
-#### 7. Table views
+#### 7. Table views.
 Allows data study without Splunk Search Processing language.
-#### 8. Search History
+#### 8. Search History.
 To view and rerun past searches
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0993ca01-9687-4592-85f9-82dc31ecae47)
 
-#### 9. Search result tabs
-limiting a search by time is key to faster results and it is a good practice.
+#### 9. Search result tabs.
+Limiting a search by time is key to faster results and it is a good practice.
 
-When the search is sent to Splunk, becomes a ``search job``
-wiht te result we got a 
+When the search is sent to Splunk, becomes a ``search job``.
+
+whit the result we got:
+
 
 ##### Save as menu
 Allows us to save the search as a knowledge object
@@ -76,11 +78,9 @@ Allows us to save the search as a knowledge object
 
 ###### - Statistics & visualizations
 If the search command does not generate statistics or visualizations nothing shows here aside from the 3 default links.
-Commands that generate statistics or visualizations are called **transforming commands**. Transfomr event data into data tables
+Commands that generate statistics or visualizations are called **transforming commands**. Transform event data into data tables
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/915fb700-9690-4e93-a273-cdba960c15f5)
-
-
 
 ##### Search Action Buttons
 Edit job, send it to the background, inspect, delete, Pause, stop, share, print, export (Raw, CSV, XML, JSON) 
@@ -166,7 +166,7 @@ Is better to search ``failed password`` than ``password``.
 Inclusion is better than exclusion.
 Searching for ``"access denied"`` is better than searching for ``NOT "access granted"``.
 When possible use the OR or IN operator instead of wildcards.
-Apply filtering commands as early as possible in your search limits the number of events, making futurs data manipulation faster.
+Apply filtering commands as early as possible in your search limits the number of events, making future data manipulation faster.
 
  
 
