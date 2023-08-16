@@ -380,30 +380,35 @@ Interactive Marker maps plot geographic coordinates on a world map.
 Choropleth maps use shading to show relative metrics for **predefined** geographic regions.
 
 ### iplocation 
-Look up and add location information from a third-party database to an event. City, country, region, Latitude, and longitude can be added to events that include external IP addresses. Some location information may not be available for particular ip addressess. this is the nature of geolcation and has to be taken into consideration whne searching data. in this case not additional location information will be added to the event.
+Look up and add location information from a third-party database to an event. City, country, region, Latitude, and longitude can be added to events that include external IP addresses. Some location information may not be available for particular IP addresses. this is the nature of geolocation and has to be taken into consideration when searching data. in this case, no additional location information will be added to the event.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7376c278-fbb7-49ce-972d-ec3eec791b7d)
-Comparing these tow images we can see how location fields show up inside the field sidebar
+Comparing these two images we can see how location fields show up inside the field sidebar
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/dd63e1b8-af83-4483-b240-d1f211d7dcce)
 
 
 
 ### geostats
-Uses same functions as stat command but only accepts **one** `by`argument. column count can be controlled wiht  `globallimit`
+Uses the same functions as the `stats` command but only accepts **one** `by` argument. Column count can be controlled with  `globallimit`
 Gestats needs a `latfield` and a `longfield`.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7920df2c-bab5-4d39-b705-224f5763ea6e)
 
 ### When geostats uses the enriched fields from iplocation (lat & lon)
-The default names from iplocation for `latitude` is `lat` and for `longitude` is `lon`. Feeding this fields into geostats gives a quick geolocation of the accesses to our servers.
+The default names from `iplocation` for `latitude` is `lat` and for `longitude` is `lon`. Feeding these fields into geostats gives a quick geolocation of the accesses to our servers.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/40a552fb-0742-41f7-a95d-b8e379f24bb2)
 
 ## choropleth Maps
 Choropleth maps use shading to show relative metrics for **predefined** geographic regions.
-we need compressed keyhole Markup Language files (KMZ) defining region boundaries.
-Splunnk ships wiht two KMZ:
-geo_us_states.kmz
-geo_countries.kmz
+we need compressed Keyhole Markup Language files (KMZ) defining region boundaries.
+Splunk ships with two KMZ:
 
-![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/40a552fb-0742-41f7-a95d-b8e379f24bb2)
-geom add to our events fields that includes geographical data structures that match polygons in our map
+- geo_us_states.kmz
+- geo_countries.kmz
+
+
+`geom` add to our events fields that include geographical data structures that match polygons in our map. `geom` requires a KMZ file (also known as a **featureCollection**) where to lookup in his country name a `featureIdField` from my search results.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e90d8d29-4f18-4f58-983c-954ed46a9deb)
+
 
 ## Video 04: Single value visualizations (02:39).
 Disponemos de dos modalidades para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
