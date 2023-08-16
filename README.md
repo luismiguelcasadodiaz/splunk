@@ -417,10 +417,10 @@ Disponemos de dos modalidades para visualizar valores únicos: El valor numéric
 |----------------|-------------------------------|---------------------------------|----------------------------|
 |![Valor](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/76788796-c182-4151-a40f-14fc9f277091)|![Marcas en escalas](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/30eb2ff4-072f-4e71-a299-103744217e77)|![Indicador de llenado](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8926539c-30ed-464f-80b6-90973c12e762)|![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)|
 
-En cualquiera de las modalidades podemos definir segmentos de rangos con diferenes colores.
+En cualquiera de las modalidades podemos definir segmentos de rangos con diferenes colores. Once the color range format is set, it stays persistent over the radial, filler or marker gauges.
 ![Personalización de rangos y colores](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/82a4da04-e269-4bbe-9d40-72e53ab4752c)
 
-Es posible dividir un valor por los elementos de otro campo y mostrar un gráfico tipo trellis.
+Es posible dividir un valor por los elementos de otro campo y mostrar un gráfico tipo trellis. Cuando hay varias visualizaciones mostradas la búsqueda de los datos se ha ejecutado una sola vez para todos
 
 ![formato Trellis](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2f985a80-f4ec-4535-a2f9-8f270f48b9e0)
 
@@ -433,6 +433,9 @@ Hay varias posibilidades y es cuastión de presentar la más adecuada para el qu
 
 
 ## Video 05: Formatting Visualizatins (02:23).
+In the statistics tab, the format that applies to the table. we can overlay a heatmap over the values or a max min shadow.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ad89fbe3-9978-4737-8e11-5bbad0933bc7)
+
 
 # <a name= "working-with-time">2. Working with time</a>
 
