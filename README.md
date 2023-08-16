@@ -296,10 +296,14 @@ Any search that returns statistical values can be viewed as a chart.
 You can roll over the chart to see the values of each chart element.
 You can drill down to events represented by a chart element.
 Most visualizations require results structured as tables with at least two columns. In the statistic tab, you can see how many columns or **single series** are available. The first single series provide de x-axis values and the second single series provides de y-axis values.
+You can hover the legend to select on single series
 
 ### Transforming commands to order search results into a data table.
 #### top finds the most common values of given fields
-By default shows the top ten. `limit` flag modifies it. 
+By default shows the top ten. 
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c0c6855f-55c1-46da-89b4-af87cb2299a9)
+
 
 |clauses| action|
 |:-------|------------:|
@@ -313,8 +317,36 @@ By default shows the top ten. `limit` flag modifies it.
 
 
 #### rare
+igual que top pero con los valores menos frecuentes.
 #### stats
+Produces statistics from our search results
+[There are about 35 different functions inside this command. its study is out of the scope of this module.]  (https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/CommonStatsFunctions)
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2574950-1365-43c1-b0a9-795ae4b202ec)
+
+
+
 #### chart
+Can take two clause statements. the `over` clause tells which field you want to be on the x-axis. `by` clause allows you to split data by an additional field. Only one field can be specified after the `by` clause when using the `over` clause. 
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0a7753f0-8616-4968-95e1-b649b75b3143)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8ae82d4c-0a4f-4714-8810-4d39c4ce2f92)
+
+if we use two fields after a `by` clause without the over clause, the first field will be used as the `over` clause.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e7bd8ed9-566f-4e93-abdf-3e6636d37a8a)
+
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/42c666b7-3ccd-4498-aa08-ec2fa3a83008)
+Los eventos sin contenido en el campo de la claúsula 'by' se agrupan bajo la etieta NULL. POdemos eliminarlos con el argumento `usenull=f`
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab986c2a-2d21-4b83-9591-94bcef1c04ef)
+
+`chart`por defecto está limitado a 10 single series. Las otras las agrupa en la serie `OTHER` que podemos quitar con el comando`useother=f`
+
+Tanto 'usenull` como  `useother` defautl to True, por lo que si no se especifica nada NULL y OTHER aparecerá en el Chart.
+La claúsula `limit` ajusta el número de single series a mostrar en el chart. `limit=0`los mustra todos.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/65d4b5c9-93d4-41c0-82c2-f7d58ef84a17)
+
+
 #### timechart
 #### trendline
 
