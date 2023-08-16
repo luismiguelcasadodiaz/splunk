@@ -425,7 +425,7 @@ Es posible dividir un valor por los elementos de otro campo y mostrar un gráfic
 ![formato Trellis](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2f985a80-f4ec-4535-a2f9-8f270f48b9e0)
 
 En este caso cambiamos la asignación de color al fondo del valor
-![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ccae6d80-9ffa-4243-8031-99c21a0349cd
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ccae6d80-9ffa-4243-8031-99c21a0349cd)
 
 Hay varias posibilidades y es cuastión de presentar la más adecuada para el que tiene que presentar los datos.
 ![trellis 3](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6fb8bc66-13f0-46a8-96c7-1fc785f6cabc)
