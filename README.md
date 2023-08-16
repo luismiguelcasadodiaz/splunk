@@ -360,9 +360,51 @@ Performs stats aggregations against time. Time is always the X-axis. By default,
 `usenull` y `useother` también están disponibles en `timechart`
 
 #### trendline
+Computes the moving average of field values over a period of time giving a clear understanding of how data is trending
 
+|Trendtype|Function|Behavior|
+|:--------|:----:|-------------------|
+|Simple moving average| SMAtp| Sums data points over a period of time. |
+|exponential moving average| EMAtp| Sums data points over a period of time. Assign a heavier weight to more current data points.|
+|weighted moving average| WMAtp| Sums data points over a period of time. Assign a heavier weight to more current data points.|
+
+The `time period ` has to be between two and ten thousand (2 .. 10 000)
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a7b1584f-780e-487c-92d1-9401a0368207)
+ In this chart whose time range is 7 days the trend line shows that `WMA2` for 2 days
 
 ## Video 03: Generating maps (04:50).
+Maps represent data including geographic information.
+There are some commands that let pull geographic data from the machine data
+Interactive Marker maps plot geographic coordinates on a world map.
+Choropleth maps use shading to show relative metrics for **predefined** geographic regions.
+
+### iplocation 
+Look up and add location information from a third-party database to an event. City, country, region, Latitude, and longitude can be added to events that include external IP addresses. Some location information may not be available for particular ip addressess. this is the nature of geolcation and has to be taken into consideration whne searching data. in this case not additional location information will be added to the event.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7376c278-fbb7-49ce-972d-ec3eec791b7d)
+Comparing these tow images we can see how location fields show up inside the field sidebar
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/dd63e1b8-af83-4483-b240-d1f211d7dcce)
+
+
+
+### geostats
+Uses same functions as stat command but only accepts **one** `by`argument. column count can be controlled wiht  `globallimit`
+Gestats needs a `latfield` and a `longfield`.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7920df2c-bab5-4d39-b705-224f5763ea6e)
+
+### When geostats uses the enriched fields from iplocation (lat & lon)
+The default names from iplocation for `latitude` is `lat` and for `longitude` is `lon`. Feeding this fields into geostats gives a quick geolocation of the accesses to our servers.
+
+## choropleth Maps
+Choropleth maps use shading to show relative metrics for **predefined** geographic regions.
+we need compressed keyhole Markup Language files (KMZ) defining region boundaries.
+Splunnk ships wiht two KMZ:
+geo_us_states.kmz
+geo_countries.kmz
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/40a552fb-0742-41f7-a95d-b8e379f24bb2)
+geom add to our events fields that includes geographical data structures that match polygons in our map
+
 ## Video 04: Single value visualizations (02:39).
 Disponemos de dos modalidades para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
 
