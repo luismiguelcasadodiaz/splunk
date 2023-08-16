@@ -1,6 +1,6 @@
 # Splunk Core Certified Power User
 Splunk lessons
-#### [0. Intro to Splunk](#visualizations)
+#### [0. Intro to Splunk](#intro-to-splunk)
 #### [1. Visualizations](#visualizations)
 #### [2. Working with time](#working-with-time)
 #### [3. Statistical Processing](#statistical-processing)
@@ -14,7 +14,7 @@ Splunk lessons
 #### [11. Using Fields](#using-fields)
 
 
-# Intro to Splunk
+# [Intro to Splunk]
 ## main functions:
 1. Index data. It is the heart (collects data from any source)
 2. Search & investigate.
