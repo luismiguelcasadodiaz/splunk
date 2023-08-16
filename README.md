@@ -332,22 +332,33 @@ Can take two clause statements. the `over` clause tells which field you want to 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0a7753f0-8616-4968-95e1-b649b75b3143)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8ae82d4c-0a4f-4714-8810-4d39c4ce2f92)
 
-if we use two fields after a `by` clause without the over clause, the first field will be used as the `over` clause.
+If we use two fields after a `by` clause without the over clause, the first field will be used as the `over` clause.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e7bd8ed9-566f-4e93-abdf-3e6636d37a8a)
 
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/42c666b7-3ccd-4498-aa08-ec2fa3a83008)
-Los eventos sin contenido en el campo de la claúsula 'by' se agrupan bajo la etieta NULL. POdemos eliminarlos con el argumento `usenull=f`
+
+Los eventos sin contenido en el campo de la claúsula 'by' se agrupan bajo la etieta NULL. POdemos eliminarlos con el argumento `usenull=f`.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab986c2a-2d21-4b83-9591-94bcef1c04ef)
 
-`chart`por defecto está limitado a 10 single series. Las otras las agrupa en la serie `OTHER` que podemos quitar con el comando`useother=f`
+`chart`por defecto está limitado a 10 single series. Las otras las agrupa en la serie `OTHER` que podemos quitar con el comando`useother=f`.
 
-Tanto 'usenull` como  `useother` defautl to True, por lo que si no se especifica nada NULL y OTHER aparecerá en el Chart.
-La claúsula `limit` ajusta el número de single series a mostrar en el chart. `limit=0`los mustra todos.
+
+Tanto `usenull` como  `useother` default to True, por lo que si no se especifica nada NULL y OTHER aparecerá en el Chart.
+La claúsula `limit` ajusta el número de **single series** a mostrar en el chart. `limit=0`los muestra todos.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/65d4b5c9-93d4-41c0-82c2-f7d58ef84a17)
 
 
 #### timechart
+Performs stats aggregations against time. Time is always the X-axis. By default, clusters data in time intervals dependent on the time range selected. That behavior can be changed with `span` command
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/356d48ce-0ae8-4203-9551-86dd19ac40e1)
+
+
+`usenull` y `useother` también están disponibles en `timechart`
+
 #### trendline
 
 
