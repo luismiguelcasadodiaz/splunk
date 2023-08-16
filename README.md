@@ -1,3 +1,19 @@
+# Splunk Core Certified Power User
+Splunk lessons
+#### [0. Intro to Splunk](#visualizations)
+#### [1. Visualizations](#visualizations)
+#### [2. Working with time](#working-with-time)
+#### [3. Statistical Processing](#statistical-processing)
+#### [4. Comparing Values](#comparing-values)
+#### [5. Result Modification](#result-modification)
+#### [6. Correlation Analysis](#correlation-analysis)
+#### [7.Creating Knowledge Objects](#creating-knowledge-objects)
+#### [8. Creating Field Extractions](#creating-field-extractions)
+#### [9. Data Models](#data-models)
+#### [10. Using Choropleth](#using-choropleth)
+#### [11. Using Fields](#using-fields)
+
+
 # Intro to Splunk
 ## main functions:
 1. Index data. It is the heart (collects data from any source)
@@ -225,19 +241,7 @@ Any chart can be saved as a dashboard.
 A dashboard is a collection of reports
 
 
-# Splunk Core Certified Power User
-Splunk lessons
 
-#### [1. Visualizations](#visualizations)
-#### [2. Working with time](#working-with-time)
-#### [3. Statistical Processing](#statistical-processing)
-#### [4. Comparing Values](#comparing-values)
-#### [5. Result Modification](#result-modification)
-#### [6. Correlation Analysis](#correlation-analysis)
-#### [7.Creating Knowledge Objects](#creating-knowledge-objects)
-#### [8. Creating Field Extractions](#creating-field-extractions)
-#### [9. Data Models](#data-models)
-#### [10. Using Choropleth](#using-choropleth)
 
 
 
