@@ -1,6 +1,6 @@
 # Splunk Core Certified Power User
 Splunk lessons
-#### [0. Intro to Splunk](#intro-to-splunk)
+[0. Intro to Splunk](#intro-to-splunk)
 #### [1. Visualizations](#visualizations)
 #### [2. Working with time](#working-with-time)
 #### [3. Statistical Processing](#statistical-processing)
