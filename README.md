@@ -1,5 +1,6 @@
 # Splunk Core Certified Power User
 Splunk lessons
+
 [0. Intro to Splunk](#intro-to-splunk)
 #### [1. Visualizations](#visualizations)
 #### [2. Working with time](#working-with-time)
@@ -247,7 +248,7 @@ A dashboard is a collection of reports
 
 ---
 
-# <a name="visualizations">1. Visualizations</a>
+# 1. Visualizations
 I will learn how to visualize and format data into tables and charts using Splunk Search Processing Language (SPL) and Splunk Web Interface (SWI).
 ## Video one: Using Formatting Commands (6:41).
 We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
