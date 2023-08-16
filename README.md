@@ -1,7 +1,7 @@
 # Splunk Core Certified Power User
 Splunk lessons
 
-[0. Intro to Splunk](#intro-to-splunk)
+#### [0. Intro to Splunk](#intro-to-splunk)
 #### [1. Visualizations](#visualizations)
 #### [2. Working with time](#working-with-time)
 #### [3. Statistical Processing](#statistical-processing)
@@ -15,7 +15,7 @@ Splunk lessons
 #### [11. Using Fields](#using-fields)
 
 
-# [Intro to Splunk]
+# Intro to Splunk
 ## main functions:
 1. Index data. It is the heart (collects data from any source)
 2. Search & investigate.
@@ -248,7 +248,7 @@ A dashboard is a collection of reports
 
 ---
 
-# 1. Visualizations
+# Visualizations
 I will learn how to visualize and format data into tables and charts using Splunk Search Processing Language (SPL) and Splunk Web Interface (SWI).
 ## Video one: Using Formatting Commands (6:41).
 We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
