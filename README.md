@@ -216,8 +216,13 @@ A report can be scheduled to be executed at regular time triggering different ev
 
 
 All reports are available from de reports tab in the application menu.
-Any search that returns statistical values can be seen as a chart.
+Any search that returns statistical values can be seen as a chart. Charta can be based on numbers, time, and location.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/01d88528-1516-4c06-aece-8283b3f257cf)
 
+Charts are interactive allowing one to hover over the details or drill down to the events behind.
+Any chart can be saved as a dashboard.
+
+A dashboard is a collection of reports
 
 
 # Splunk Core Certified Power User
@@ -239,36 +244,81 @@ Splunk lessons
 ---
 
 # <a name="visualizations">1. Visualizations</a>
+I will learn how to visualize and format data into tables and charts using Splunk Search Processing Language (SPL) and Splunk Web Interface (SWI).
 ## Video one: Using Formatting Commands (6:41).
 We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
 
 Estoy algo confuso con la nomemclatura. ¿Eventos o registros?. ¿Eventos cuando analizamos archivos de log?¿Registros si analizamos tablas de datos?
 
- - `fields` limita (incluye o excluye) campos en las búsquedas. Por defecto incluye el campo mencionado. Los campos internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. Si no los deseamos hay que indicarlo explicitamente con el operador minus `-`.
- - 
+ - `fields` limita (incluye o excluye) campos en los resultados de las búsquedas. La restricción de campo hace las búsquedas más rápidas.
+
+    Por defecto incluye el campo mencionado. Los campos internos `_raw` y `_time` se incluyen por defecto en cada búsqueda. Si no los deseamos hay que indicarlo explicitamente con el operador minus `-`.
+
+ - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0c34fd13-bae9-4f7f-8b72-ddbbb4faa560)
+
    > `fields product_name price` **agrega** dos campos
    > 
    > `fields -product_name price` **excluye** product_name y **agrega** price
-   > 
-   > `fields - product_name price` **excluye** product name y price. Atneción al ESPACIO EN BLANCO TRAS EL OPERADOR MINUS.
+   >
+   > ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a03daeff-d6b4-4559-a1c0-3f13bc69459c)
+
+   > `fields - product_name price` **excluye** product name y price. Atneción al ESPACIO EN BLANCO TRAS EL OPERADOR MINUS. EL espacio en blanco hace que el menos afecte a todos los campos enumerados en la lista.
    
-   La inclusion sucede antes que la exclusion. La eficiencia en la búsqueda se logra limitando/reducciendo el número de campos a extraer.
+   La extracción de los datos referidos por los campos es una de las partes más costosas de la búsqueda. La `inclusión` de los campos se ejecuta antes la
+    `Extracción`. La eficiencia en la búsqueda se logra limitando/reducciendo el número de campos a extraer.
    
- - `table` aunque se parece a `fields` por incluir campos en la búsqueda, es un comando de transformación que retiene los datos en forma tabular. Los campos aparecen en la tabla en el mismo orden en que se mencionan en la instruccion table. Usando conjuntamente la instruccion fields y table la búsqueda es más eficiente, primero `fields` y luego `table`.
+ - `table` aunque se parece a `fields` por incluir campos en la búsqueda, es un comando de transformación que retiene los datos en forma tabular. Los campos aparecen en la tabla en el mismo orden en que se mencionan en la instruccion table. Usando conjuntamente la instruccion fields y table la búsqueda es más eficiente, primero `fields` y luego `table`. cada fila de la tabla representa un evento.
    
-   > fields JSESSIONSID Price Product_name
-   > table JSESSIONSID Price Product_name
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/cb19b77e-ffa9-40d1-9520-9bcfd2efc284)
+
    
- - `dedup` Elimina registors de los resultados de búsqueda. puede aplicarse a uno o más campos
+ - `dedup` Elimina registros con valores repetidos de los resultados de búsqueda. Puede aplicarse a uno o más campos
+ - 
+ ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab941cf1-73c7-4a29-978a-b646d70ced0b)
+
    > `dedup product_name price` elimina todas las líneas en las que se repita el nombre de un producto que tenga el mismo precio.
    
- - `addtotals`, suma por defecto todos los campos numéricos de un mismo registro de datos y crea una columna total. El flag `col=true` crea un total de columnas. El flag `row=false` elimina el comportamiento por defecto que genera un total de fila. El flag `label="Total ventas"`nos permite poner una etiqueta a la fila nueva fila que ha creado el flag `col=true`, esta etiqueta la ponemos debajo de la column indicada con `labelfield="product_name"`. el flag `fieldname="total por fila"` personaliza la etiqueta de total de la dila que este comando crea por defecto.
+ - `addtotals`, suma por defecto todos **los campos numéricos de un mismo registro/evento de datos** y crea una columna total.
+ 
+ ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/251acb06-54d7-4271-af98-232773878232)
 
- > ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0588b4c2-eee2-4025-83fd-f3c69952c470)
-
+El flag `col=true` crea un total de columnas. El flag `row=false` elimina el comportamiento por defecto que genera un total de fila. El flag `label="Total ventas"`nos permite poner una etiqueta en la fila nueva fila que ha creado el flag `col=true`, esta etiqueta la ponemos debajo de la column indicada con `labelfield="product_name"`. el flag `fieldname="total por fila"` personaliza la etiqueta de total de la dila que este comando crea por defecto.
    
  - `fieldformat`, cambia la representación en la presentación de los datos pero no en el origen. `fieldformat Total = "$" + tostring(Totalt, "comas")`
-## Video 02: Visualizating data (11:25).
+ - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/aa480df8-6809-44ef-9ac9-15d865e14b8e)
+
+   
+## Video 02: Visualizing data (11:25).
+Any search that returns statistical values can be viewed as a chart.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5c536650-c195-4f9a-9e37-76a4e86e13de)
+
+You can roll over the chart to see the values of each chart element.
+You can drill down to events represented by a chart element.
+Most visualizations require results structured as tables with at least two columns. In the statistic tab, you can see how many columns or **single series** are available. The first single series provide de x-axis values and the second single series provides de y-axis values.
+
+### Transforming commands to order search results into a data table.
+#### top finds the most common values of given fields
+By default shows the top ten. `limit` flag modifies it. 
+
+|clauses| action|
+|:-------|------------:|
+| limit = int |`limit=20` show the top twenty. `limit=0`shows all|
+| countfield = string| Changes the title of the column `count`|
+| percentfield = string| Changes the title of the column `percentage`|
+| showcount = True/False|Shows/hides the column `count`|
+| showperc = True/False | Shows/hides the column `percentage`|
+| showother = True/False| Shows/hides the column `others` with the count numbers for results not within the limit|
+| otherstr = string|Changes the title of the column `others`|
+
+
+#### rare
+#### stats
+#### chart
+#### timechart
+#### trendline
+
+
 ## Video 03: Generating maps (04:50).
 ## Video 04: Single value visualizations (02:39).
 Disponemos de dos modalidades para visualizar valores únicos: El valor numérico en si y un indicador gráfico de los que tenemos:
