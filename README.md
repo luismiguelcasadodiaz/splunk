@@ -568,10 +568,11 @@ The commands `rex` and `rex` can also be used to extract **temporal** fields at 
 `erex` new_field_name `fromfield` (is the field in our data to match on) `examples` (a list of sample data)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a78f83f6-59aa-46ca-a10e-b3da44cc7057)
 
-![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d500f31-acca-4b77-bb68-8d1d0081c467)
+
 
 When the search is run, Splunk builds a regular expression based on the sample data, checks it against _raw event data  field, and ad matched values to the `character` field.
 `Erex'  only knows what to look for based on the sample i gave it.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e09cdf82-6828-4055-acf7-84d8d6d5285e)
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e6ad3ad7-8612-4b84-bd98-97431ae710e6)
