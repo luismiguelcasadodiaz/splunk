@@ -1,18 +1,18 @@
 # Splunk Core Certified Power User
 Splunk lessons
 
-#### [Intro to Splunk](#intro-to-splunk) OK
-#### [Visualizations](#1-visualizations)
-#### [Working with time](#2-working-with-time)
-#### [Statistical Processing](#3-statistical-processing)
-#### [Comparing Values](#4-comparing-values)
-#### [Result Modification](#5-result-modification) KO
-#### [Correlation Analysis](#6-correlation-analysis) KO
-#### [Creating Knowledge Objects](#7-creating-knowledge-objects) KO
-#### [Creating Field Extractions](#8-creating-field-extractions) KO
-#### [Data Models](#9-data-models) KO
-#### [Using Choropleth](#10-using-choropleth) KO
-#### [Using Fields](#11-using-fields) OK
+#### [00.- Intro to Splunk](#intro-to-splunk) 
+#### [01.-Visualizations](#1-visualizations)
+#### [02.-Working with time](#2-working-with-time) KO
+#### [03.-Statistical Processing](#3-statistical-processing) KO
+#### [04.-Comparing Values](#4-comparing-values)  KO
+#### [05.-Result Modification](#5-result-modification) KO
+#### [06.-Correlation Analysis](#6-correlation-analysis) KO
+#### [07.-Creating Knowledge Objects](#7-creating-knowledge-objects) KO
+#### [08.-Creating Field Extractions](#8-creating-field-extractions) KO
+#### [09.-Data Models](#9-data-models) KO
+#### [10.-Using Choropleth](#10-using-choropleth) KO
+#### [11.-Using Fields](#11-using-fields) KO
 
 [Back to index](#splunk-core-certified-power-user)
 # Intro to Splunk
