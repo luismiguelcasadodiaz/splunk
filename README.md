@@ -465,7 +465,7 @@ In the statistics tab, the format that applies to the table. we can overlay a he
 ![Calibres radiales](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c325ea3e-2cf1-4ad4-b9ab-ff8d32dc5310)
 
 
-
+[Back to index](#Splunk-Core-Certified-Power-User)
 
 # [Using Fields]
 ## Introduction (0:44)
