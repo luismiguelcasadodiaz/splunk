@@ -2,7 +2,7 @@
 Splunk lessons
 
 #### [0. Intro to Splunk](#intro-to-splunk)
-# [Visualizations](#visualizations)
+#### [Visualizations](#visualizations)
 #### [2. Working with time](#working-with-time)
 #### [3. Statistical Processing](#statistical-processing)
 #### [4. Comparing Values](#comparing-values)
@@ -12,7 +12,7 @@ Splunk lessons
 #### [8. Creating Field Extractions](#creating-field-extractions)
 #### [9. Data Models](#data-models)
 #### [10. Using Choropleth](#using-choropleth)
-#### [11. Using Fields](#using-fields)
+#### [Using Fields](#using-fields)
 
 
 # Intro to Splunk
@@ -467,7 +467,12 @@ In the statistics tab, the format that applies to the table. we can overlay a he
 
 
 
-
+# [Using Fields]
+## Introduction (0:44)
+## Using the fields Sidebar (01:42)
+## Using Fields in Search (04:02)
+## Fields in Search Results (7:05)
+## Enriching Data (03:02)
 
 
 
