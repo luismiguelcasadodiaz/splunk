@@ -605,9 +605,52 @@ We continue the expression to return a Characte field. Behind our capture group,
 |Help|| can use Erex-generated Regular expression as a starting point|
 |Advice|| When possible use rex|
 
-## Enriching Data wiht Knowledge objects (03:02)
+My own try
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d557ffb4-da13-4549-8a09-e4626604d99a)
 
 
+## Enriching Data with Knowledge objects (03:02)
+### calculated fields
+With the eval command, we created a temporary field to convert bytes into megabytes. As it is not a persistent solution we need to write such a conversion every time we want to make it. 
+The calculated field is a better option for that:
+
+From `settings` menu
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/426318d3-00fc-42cb-a9bb-d4581ea17958)
+in the  `fields` option
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b059ec9f-3471-4ae2-9b47-ad943d1495bc)
+we find the `calculated fields` dialog
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/60c9646c-74e5-4f88-b1e8-589fa841652b)
+
+that if filled properly
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6a2f0990-f717-4669-a0a1-c83a7ac904e3)
+will allow Splunk to create the field at search time  every time the search contains the bytes field in the run.
+
+Calculated fields can only reference fields that are already present in the event returned by a search. So for calculated fields to perform correctly make sure they are configured to reference a field that has already been extracted.
+### field aliases
+Allow to assign alternate names to fields in the data. If you have fields from multiple sourcetypes that all contain similar values
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/76029f9a-1b8b-4c70-a9ed-bc438e503d77)
+the field alias group together similar values. This allows us to search for all values at once in the shared field alias. field aliases do not replace or remove the original field name so you can search data usin the original name or its alias.
+
+### Lookups
+Adds to the events other fields and values that are not part of the indexed data
+From `settings` menu
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/426318d3-00fc-42cb-a9bb-d4581ea17958)
+in the  `lookups` option
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fb8a7cf9-50b0-4cb4-805d-7c260ab858d8)
+
+the value pairs can be configured to automatically append to events in the search at search time allowing to add related information
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/08185364-16c8-4d39-9232-e92e4514feda)
+
+## Search time operations order
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ac5363fa-0bd6-4eb9-b34c-4d867edc3650)
+
+`Field extractions` are evaluated first in the pipeline. That means that `Calculated fields` can add additional context to ´extracted fields`, but a `field alias` cannot reference a value from a `lookup`
 
 
 
