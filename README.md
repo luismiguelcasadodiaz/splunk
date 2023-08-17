@@ -2,7 +2,7 @@
 Splunk lessons
 
 #### [0. Intro to Splunk](#intro-to-splunk)
-#### [Visualizations](#visualizations)
+#### [Visualizations](#3-visualizations)
 #### [2. Working with time](#working-with-time)
 #### [3. Statistical Processing](#statistical-processing)
 #### [4. Comparing Values](#comparing-values)
@@ -12,7 +12,7 @@ Splunk lessons
 #### [8. Creating Field Extractions](#creating-field-extractions)
 #### [9. Data Models](#data-models)
 #### [10. Using Choropleth](#using-choropleth)
-#### [Using Fields](#using-fields)
+#### [Using Fields](#11-using-fields)
 
 
 # Intro to Splunk
@@ -248,7 +248,7 @@ A dashboard is a collection of reports
 
 ---
 
-# Visualizations
+# 3 Visualizations
 I will learn how to visualize and format data into tables and charts using Splunk Search Processing Language (SPL) and Splunk Web Interface (SWI).
 ## Video one: Using Formatting Commands (6:41).
 We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
@@ -467,7 +467,7 @@ In the statistics tab, the format that applies to the table. we can overlay a he
 
 [Back to index](#splunk-core-certified-power-user)
 
-# [Using Fields]
+# [11 Using Fields]
 ## Introduction (0:44)
 ## Using the fields Sidebar (01:42)
 ## Using Fields in Search (04:02)
