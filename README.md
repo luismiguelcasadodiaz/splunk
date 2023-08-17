@@ -473,7 +473,41 @@ In the statistics tab, the format that applies to the table. we can overlay a he
 
 # [11 Using Fields]
 ## Introduction (0:44)
+- Use fields in Splunks' Search processing language to filter data to return needed results.
+- Select which fields are extracted from the index versus search time.
+- Learn the difference between persistent and temporary fields.
+- Do more whit data through the use of knowledge objects.
+  
 ## Using the fields Sidebar (01:42)
+Shows all the fields extracted at search time split into two categories
+- **Selected** fields. Show at the events' bottom together with the default fields (host, source, and sourcetype)
+- **interesting** fields. are fields that have values in at least 20% of the events.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ee650aad-37ec-42e9-ae1b-a6cde0354c0d)
+
+  `a` in front of the field name denotes a string field.  `#` in front of the field name denotes a numeral field.
+Clicking on a field show values for the field, a count of the values, and a percentage of the events the value shows up in. 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e8584629-ea05-455e-81e6-0a4ae5dc6574)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5f80d4bc-c6ca-4d05-9f81-b7666b50c5c6)
+You can add a field value pair `Country=Germany` to the search by clicking on it.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c15d28b4-efeb-4e4b-bb5e-54fbfb04d725)
+You can launch quick reports based on the field (top/Rare Values or top values by time as shown below)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9a6a5b08-8b9f-481f-9d65-84c026da6e6c)
+
+When you add a field to the selected fields list
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e0ae6519-3083-4f6e-a4b7-3708f25b7dae)
+
+aside from showing up at the event, it will persist for subsequent searches
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7e727bee-8a99-44ef-9899-fb24955eff89)
+
+From the fields sidebar, either with the `all-fields` button
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/930e2e66-ddcc-4b9b-a329-977c422f24ab)
+or the `more fileds` link
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a5334317-d610-412b-9d58-62fccfb8f7f1)
+
+we can see all fields for the search, filter them, see the number of distinct values in the field, the **coverage** or percentage of the events that have a value in the field, and add a field to the selected fields.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5bf12d92-e0b0-434b-bc4e-2940457bd78d)
+
 ## Using Fields in Search (04:02)
 ## Fields in Search Results (7:05)
 ## Enriching Data (03:02)
