@@ -1,18 +1,18 @@
 # Splunk Core Certified Power User
 Splunk lessons
 
-#### [Intro to Splunk](#intro-to-splunk)
+#### [Intro to Splunk](#intro-to-splunk) OK
 #### [Visualizations](#1-visualizations)
 #### [Working with time](#2-working-with-time)
 #### [Statistical Processing](#3-statistical-processing)
 #### [Comparing Values](#4-comparing-values)
-#### [Result Modification](#5-result-modification)
-#### [Correlation Analysis](#6-correlation-analysis)
-#### [Creating Knowledge Objects](#7-creating-knowledge-objects)
-#### [Creating Field Extractions](#8-creating-field-extractions)
-#### [Data Models](#9-data-models)
-#### [Using Choropleth](#10-using-choropleth)
-#### [Using Fields](#11-using-fields)
+#### [Result Modification](#5-result-modification) KO
+#### [Correlation Analysis](#6-correlation-analysis) KO
+#### [Creating Knowledge Objects](#7-creating-knowledge-objects) KO
+#### [Creating Field Extractions](#8-creating-field-extractions) KO
+#### [Data Models](#9-data-models) KO
+#### [Using Choropleth](#10-using-choropleth) KO
+#### [Using Fields](#11-using-fields) OK
 
 [Back to index](#splunk-core-certified-power-user)
 # Intro to Splunk
