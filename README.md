@@ -2,19 +2,19 @@
 Splunk lessons
 
 #### [0. Intro to Splunk](#intro-to-splunk)
-#### [Visualizations](#3-visualizations)
-#### [2. Working with time](#working-with-time)
-#### [3. Statistical Processing](#statistical-processing)
-#### [4. Comparing Values](#comparing-values)
-#### [5. Result Modification](#result-modification)
-#### [6. Correlation Analysis](#correlation-analysis)
-#### [7.Creating Knowledge Objects](#creating-knowledge-objects)
-#### [8. Creating Field Extractions](#creating-field-extractions)
-#### [9. Data Models](#data-models)
-#### [10. Using Choropleth](#using-choropleth)
+#### [Visualizations](#1-visualizations)
+#### [2. Working with time](#2-working-with-time)
+#### [3. Statistical Processing](#3-statistical-processing)
+#### [4. Comparing Values](#4-comparing-values)
+#### [5. Result Modification](#5-result-modification)
+#### [6. Correlation Analysis](#6-correlation-analysis)
+#### [7.Creating Knowledge Objects](#7-creating-knowledge-objects)
+#### [8. Creating Field Extractions](#8-creating-field-extractions)
+#### [9. Data Models](#9-data-models)
+#### [10. Using Choropleth](#10-using-choropleth)
 #### [Using Fields](#11-using-fields)
 
-
+[Back to index](#splunk-core-certified-power-user)
 # Intro to Splunk
 ## main functions:
 1. Index data. It is the heart (collects data from any source)
@@ -247,7 +247,7 @@ A dashboard is a collection of reports
 
 
 ---
-
+[Back to index](#splunk-core-certified-power-user)
 # 3 Visualizations
 I will learn how to visualize and format data into tables and charts using Splunk Search Processing Language (SPL) and Splunk Web Interface (SWI).
 ## Video one: Using Formatting Commands (6:41).
@@ -441,20 +441,24 @@ Hay varias posibilidades y es cuastión de presentar la más adecuada para el qu
 In the statistics tab, the format that applies to the table. we can overlay a heatmap over the values or a max min shadow.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ad89fbe3-9978-4737-8e11-5bbad0933bc7)
 
-
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "working-with-time">2. Working with time</a>
-
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "statistical-processing">3. Statistical Processing</a>
-
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "comparing-values">4. Comparing Values</a>
-
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "result-modification">5. Result Modification</a>
-
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "correlation-analysis">6. Correlation Analysis</a>
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "creating-knowledge-objects">7.Creating Knowledge Objects</a>
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "creating-field-extractions">8. Creating Field Extractions</a>
+[Back to index](#splunk-core-certified-power-user)
 # <a name= "data-models">9. Data Models</a>
-# <a name= "using-choropleth">10. Using Choropleth</a>
+[Back to index](#splunk-core-certified-power-user)
+# <a name= "using-choropleth">10. Using Choropleth
 
 
 
