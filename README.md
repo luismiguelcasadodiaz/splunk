@@ -550,6 +550,29 @@ Can be used to rename fields in the search to give them mote meaningful or user-
 
 
 ## Fields in Search Results (7:05)
+Splunk returns 
+### Indexing versus search time field extraction
+Some fields are extracted at index time while others are extracted at search time.
+At data ingestion, a selected number of fields are automatically extracted (metadata: host, source, sourcetype, _time ( Event's timestamp), and _raw (original raw data of an event)
+At search time, field discovery extracts additional fields from the raw event data based on its assigned sourcetype, and key-value pairs found in the data. These fields are persistent and will be extracted every time a search is run containing the same search terms unless no inclusion is specified.
+### temporary fields
+Are created on an ad-hoc basis with the command `eval`, which is used to calculate and manipulate field values.
+Results of eval can be written at search time  to a new temporary field or to replace an existing field value.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/bc3bf8e1-7d67-4b1b-8e3b-df6475f1b789)
+Since we used a non-existing field name for the results, a new temporary field  `bandwidth` is created.
+
+### Field Extraction
+The utility `field extractor` can be used to extract new,  **persistent across searches**,   data fields that were not automatically extracted from the data accordingly with the assigned sourcetype.
+The commands `rex` and `rex` can also be used to extract **temporal** fields at search time.
+
+### Erex versus rex
+|                  |Erex|Rex|
+|------------------|--------|-------|
+|Usage|easier| sofisticated|
+|Requires Regular expresion knowledge|no|yes|
+|Requirese sample data|yes|no|
+|generates Regular Expresion|yes|no|
+
 ## Enriching Data (03:02)
 
 
