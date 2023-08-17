@@ -488,9 +488,13 @@ Shows all the fields extracted at search time split into two categories
 Clicking on a field show values for the field, a count of the values, and a percentage of the events the value shows up in. 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e8584629-ea05-455e-81e6-0a4ae5dc6574)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5f80d4bc-c6ca-4d05-9f81-b7666b50c5c6)
+
 You can add a field value pair `Country=Germany` to the search by clicking on it.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c15d28b4-efeb-4e4b-bb5e-54fbfb04d725)
+
 You can launch quick reports based on the field (top/Rare Values or top values by time as shown below)
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9a6a5b08-8b9f-481f-9d65-84c026da6e6c)
 
 When you add a field to the selected fields list
@@ -509,6 +513,42 @@ we can see all fields for the search, filter them, see the number of distinct va
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5bf12d92-e0b0-434b-bc4e-2940457bd78d)
 
 ## Using Fields in Search (04:02)
+You can  refine and run more efficient searches using fields.
+Field names are case-sensitive while values are not
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4cbbefbe-29ef-4967-81cb-8839d2ca3a79)
+
+|Operator| Field Operator Usage|
+|:------:|---------------------|
+|=,  != | with Numerical or string values|
+|>, >0, <, <=|wiht numerical values|
+
+Wild cards and booleans are allowed ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5738154f-8e2a-4acf-8dad-578ec1a28bc1)
+For fields containing an IP address, wildcards are subnet and CIDR aware ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0677509b-be89-4f19-97fe-50388bfa61bc)
+
+### `!=` is not equal field operator versus `NOT`boolean
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/178665d0-ca74-4705-8066-8da98cc7e577)
+
+
+They do not always return the same results or the same number of events. The tops search only returns events where the status field is not 200 while the bottom search returns all events that do not have a field where status equals 200. Meaning that if an event does not have a status field at all, it will be included in the results.
+Me parece que esto es debido a que implicitamente el operador AND anda por ahí.
+
+### `IN` operator can be used as an alternative to chaining several operators
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8c8ae06c-f461-462e-a790-6aa8b03283ee)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/923cefe6-040e-458a-8520-eaa63a4cf763)
+
+### `fields` command
+Can be used to include (`+` plus operator) or exclude (`-` minus operator) fields from the search.
+We can make our search more efficient by adding a field command to include only the needed fields.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f663a3f1-8fd2-4ac8-8ca6-bf630a038d3a)
+
+Filtering as early as possible in a search is a best practice.
+Fields default to inclusion, so if not operator is specified the supplied fields will be included in the search
+
+### `rename`command.
+Can be used to rename fields in the search to give them mote meaningful or user-friendly names.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d641a352-cc70-4255-b046-19d240b19132)
+
+
 ## Fields in Search Results (7:05)
 ## Enriching Data (03:02)
 
