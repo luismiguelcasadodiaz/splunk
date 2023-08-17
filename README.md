@@ -566,12 +566,14 @@ The utility `field extractor` can be used to extract new,  **persistent across s
 The commands `rex` and `rex` can also be used to extract **temporal** fields at search time.
 
 ### Erex versus rex
-|                  |Erex|Rex|
+|                  |erex|rex|
 |------------------|--------|-------|
 |Usage|easier| sofisticated|
-|Requires Regular expresion knowledge|no|yes|
-|Requirese sample data|yes|no|
-|generates Regular Expresion|yes|no|
+|Requires Regular expression knowledge|no|yes|
+|Requires sample data|yes|no|
+|Generates Regular Expresion|yes|no|
+|Help|| can use Erex-generated Regular expression as a starting point|
+|advice|| When possible use rex|
 
 ## Enriching Data (03:02)
 
