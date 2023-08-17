@@ -248,7 +248,7 @@ A dashboard is a collection of reports
 
 ---
 [Back to index](#splunk-core-certified-power-user)
-# 3 Visualizations
+# 1 Visualizations
 I will learn how to visualize and format data into tables and charts using Splunk Search Processing Language (SPL) and Splunk Web Interface (SWI).
 ## Video one: Using Formatting Commands (6:41).
 We use Splunk Search Processing Language (SSPL) and Splunk Web Interface (SWI).
