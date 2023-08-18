@@ -545,7 +545,7 @@ Filtering as early as possible in a search is a best practice.
 Fields default to inclusion, so if not operator is specified the supplied fields will be included in the search
 
 ### `rename`command.
-Can be used to rename fields in the search to give them mote meaningful or user-friendly names.
+Can be used to rename fields in the search to give them more meaningful or user-friendly names.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d641a352-cc70-4255-b046-19d240b19132)
 
 
@@ -554,7 +554,7 @@ Splunk returns
 ### Indexing versus search time field extraction
 Some fields are extracted at index time while others are extracted at search time.
 At data ingestion, a selected number of fields are automatically extracted (metadata: host, source, sourcetype, _time ( Event's timestamp), and _raw (original raw data of an event)
-At search time, field discovery extracts additional fields from the raw event data based on its assigned sourcetype, and key-value pairs found in the data. These fields are persistent and will be extracted every time a search is run containing the same search terms unless no inclusion is specified.
+At search time, **field discovery** extracts additional fields from the raw event data based on its assigned sourcetype, and key-value pairs found in the data. These fields are persistent and will be extracted every time a search is run containing the same search terms unless no inclusion is specified.
 ### temporary fields
 Are created on an ad-hoc basis with the command `eval`, which is used to calculate and manipulate field values.
 Results of eval can be written at search time  to a new temporary field or to replace an existing field value.
