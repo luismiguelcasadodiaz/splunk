@@ -656,7 +656,8 @@ the value pairs can be configured to automatically append to events in the searc
 # Quizzes
 ## Quiz Using Fields 100%
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
-  - 50% - 3% - **20%** - 10%
+
+   A 50% B 3%  **C 20%** D 10%
     
 2.- To **remove** fields from a seach, you would use the _______ command.
   - +fileds -  fields+  - **fields-**  - fields
@@ -665,16 +666,17 @@ the value pairs can be configured to automatically append to events in the searc
     - field name, sourcetype   - lookup, value    - **field name, value**  - lookup, sourcetype
    
 4.- Which of the following fields are default selected fields?
-  - **host** - **sourcetyep** - index  - **source**
+  **A host**  **B sourcetype** C index  **D source**
     
 5.- True or False: Once you rename a field, the new field name must be used in the rest of the search string.
+
     **True**  False
     
 6.- The fields command allows you to do which of the following:
 
-    A **exclude fields (fields -)**
-    B **include fields (fields  )**
-    C **include fields (fields +)**
+     **exclude fields (fields -)**
+     **include fields (fields  )**
+     **include fields (fields +)**
     
 7.- True or False: Field are Knowledge objects:
     **A True**  B False
