@@ -653,7 +653,7 @@ the value pairs can be configured to automatically append to events in the searc
 
 `Field extractions` are evaluated first in the pipeline. That means that `Calculated fields` can add additional context to `extracted fields`, but a `field alias` cannot reference a value from a `lookup`
 
-
+[Back to index](#splunk-core-certified-power-user)
 # 99 Quizzes
 ## Quiz Using Fields 100% with bold answers.
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
