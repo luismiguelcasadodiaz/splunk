@@ -670,14 +670,15 @@ the value pairs can be configured to automatically append to events in the searc
 5.- True or False: Once you rename a field, the new field name must be used in the rest of the search string.
     **True**  False
     
-6.- The fields command allows you to do which of the following
-    - **exclude fields (fields -)**
-    - **include fields (fields  )**
-    - **include fields (fields +)**
+6.- The fields command allows you to do which of the following:
+
+    A **exclude fields (fields -)**
+    B **include fields (fields  )**
+    C **include fields (fields +)**
     
 7.- True or False: Field are Knowledge objects:
-    **True**  False
+    **A True**  B False
     
 8.- At search time, _____ extract fields from raw event data.
-  - **field discovery**  - field extractor  - field commnad
+  ** A field discovery**  B field extractor  C field command
     
