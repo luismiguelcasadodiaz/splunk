@@ -655,6 +655,18 @@ the value pairs can be configured to automatically append to events in the searc
 
 [Back to index](#splunk-core-certified-power-user)
 # zz Quizzes
+## 
+1.- What is the most efficient way to limit search results returned.
+ - index
+ - source
+ - host
+ - **time**
+
+2.- By default, who is able to view a saved report?
+ - Any power or admin user
+ - **The user who created it.**
+ - Any user with view port capability
+
 ## Quiz Using Fields 100% with bold answers.
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
 
