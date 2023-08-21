@@ -1,5 +1,5 @@
 
-[Back to index](README.MD)
+[Back to index](README.md)
 # Intro to Splunk
 ## main functions:
 1. Index data. It is the heart (collects data from any source)
@@ -225,4 +225,4 @@ Charts are interactive allowing one to hover over the details or drill down to t
 Any chart can be saved as a dashboard.
 
 A dashboard is a collection of reports
-[Back to index](README.MD)
+[Back to index](README.md)
