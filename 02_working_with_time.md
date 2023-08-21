@@ -121,7 +121,7 @@ The bin command helps us bucket up our events. We can put numerical values into 
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab14cf24-d725-4cf9-8b09-ada375ca0da7)
 
-In this example I try to bin the event in intervals of 15 minutes
+In this example, I try to bin the event in intervals of 15 minutes and made some statistics over the event intra bin. Count number of files names as indexations. Distinct count of filees names as indexes, a ratio of times each index is indexed ans the sum of the files sizes.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0ab4babb-f7c0-4341-8881-33d6f6475b1d)
 
 ## Formating Time (06:12)
