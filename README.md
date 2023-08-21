@@ -443,7 +443,56 @@ In the statistics tab, the format that applies to the table. we can overlay a he
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ad89fbe3-9978-4737-8e11-5bbad0933bc7)
 
 [Back to index](#splunk-core-certified-power-user)
-# <a name= "working-with-time">2. Working with time</a>
+# [03 working-with-time]
+Time is one of the most important components to consider when working with data.
+we will learn:
+ - How to work with time in searches. `earliest=@d`,  `latest=@d`
+ - time base functions (`now()`, `time()`, `strftime()`, `strptime()`)
+ - time commands (`timechart`, `timewrap`)
+ - Understand how time zones are represented in the data
+
+## Searching with Time (25:36)
+What does time mean to Splunk?
+When an event is ingested, its timestamp is stored in the _time field that is used to implement the event timeLine in the Splunk Web interface. 
+The _time field is stored with the event in the index **prior** to the search time, along with default fields such as host, source, and source type (also de-index name in which it is stored in.
+Timestamps are expressed in Unix or epoch time (_time = 1619736430) and translated to human-readable time (Thu, 29 Apr 2021 22:47:10 GMT) **during the search** operation process.
+All events are sorted by time, thus time is the most efficient filter.
+
+The timestamp displayed in the Time Column of each event is adjusted to the user's local time zone, **As long as the time zone is set** within the account settings
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9c72ff16-da73-40d4-876c-0cb7e6133af2)
+
+### Timeline Mouse actions
+The timeline is an overall distribution of the events in relation to the specific time range set for the search
+- Zoom in, Zoom Out,
+- Hover to view the event count for a specific time,
+- Format the x and y-axis,
+- Rearrange the time range with the `click and drag' (acts as a filter without re-running the search).
+- and undo with the `deselect` or `zoom to selection` **RUNNING A BRAND NEW SEARCH**
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e0eae503-aeb9-48a9-9630-8200b70461c5)
+
+### Tiem Range picker
+We can control the overall time range for our search with a bit more detail using the time range picker:
+Splunk Enterprise version
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/99b41171-8bc8-4f7f-a71f-0d368e64b7e6)
+Splunk Cloud version
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f5bba99e-d155-4361-8c4a-4adb233fb681)
+ - real-time search: return results up to the second they are coming in. The benefit of that is that we see data as it's coming into Splucnk in real-time. Real .time searches **are resource intensive**. They consume an entire CPU-CORE. They continuously update search results as the events arrive. Multiple real-time searches could impact the overall performance. One alternative is to Schedule a report.
+ - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/158419c6-b536-4ddd-9cec-1873477a6036)
+
+ - Relative time option;
+   - earliest time range
+   - latest (now or a begining
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ba3152ab-7359-46dc-a4b6-dace23d90131)
+
+
+
+
+## Formating Time (06:12)
+## Using time commands (9:29)
+## Working with time zones (2:43)
+
+
 [Back to index](#splunk-core-certified-power-user)
 # <a name= "statistical-processing">3. Statistical Processing</a>
 [Back to index](#splunk-core-certified-power-user)
@@ -655,7 +704,8 @@ the value pairs can be configured to automatically append to events in the searc
 
 [Back to index](#splunk-core-certified-power-user)
 # zz Quizzes
-## 
+---
+## Intro to Splunk 93% with bold answers(one is wrong but I did not manage to discover which one.
 1.- What is the most efficient way to limit search results returned?
  - index
  - source
