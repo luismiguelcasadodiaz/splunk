@@ -125,6 +125,25 @@ In this example, I try to bin the event in intervals of 15 minutes and made some
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0ab4babb-f7c0-4341-8881-33d6f6475b1d)
 
 ## Formating Time (06:12)
+You can define how time is formatted in the search results using the time functions of the eval command.
+### eval command
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e7ba3b44-aaf9-407d-8d27-963606bc6165)
+
+Calculates an expression and puts the resulting value into a new o existing field that can be reused in the search pipeline.
+Supports a vast assortment of functions
+can exist as an expression
+`now()` function returns the time that a search was started.
+`time()` function returns the time an event was processed by eval command.
+`relative_time(X, Y)` function returns an **epoch timestamp** relative (Y) to a supplied time(X)
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/77750b9b-e273-4031-b859-979d4919d14c)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b1a8e47a-a4c0-438e-b684-e5a7e6d06905)
+
+ ### Date and time Fucntion Froma Variables
+ ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2470ffd3-c9d1-4aa4-ad4a-fb4960e333af)
+
+[Documentaition link] (https://docs.splunk.com/Documentation/SCS/current/Search/Timevariables)
+
 ## Using time commands (9:29)
 ## Working with time zones (2:43)
 [Back to index](README.md)
