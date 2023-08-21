@@ -1,5 +1,7 @@
 # Splunk Core Certified Power User
-Splunk lessons
+I wrote a summary for each Splunk lesson required to prepare certification.
+Each summary is in one individual file.
+Press on the links below.
 
 #### [00.- Intro to Splunk](00_intro_to_splunk.md) 
 #### [01.- Visualizations](01_visualizations.md)
