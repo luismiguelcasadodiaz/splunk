@@ -49,13 +49,12 @@ Splunk Cloud version
     ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c48a61e8-63cb-4e44-9b7e-acc612cf284b)
     ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/06bfc863-f795-44a7-a68c-60e68781dd02)
 
- - Advanced: we can express time unit abbreviations which allows us to be even more specific about our time.
+ - Advanced: we can express **time unit abbreviations** which allows us to be even more specific about our time.
   ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/15c3dcd7-dbc9-49a0-a068-05197a4b7f24)
-Please not the absolute times below field texts
+Please note the absolute times below the field texts
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6576e2e6-6c76-4fdb-9b0a-c83c06b2c5cd)
 
-
-### Time Unit Abbreviations
+## Time modifiers
 
    Time unit abbreviations can also be used within the `earliest` and `latest` time modifiers in our search to override the TimeRange Picker settings.
    Syntax starts with `plus +` or `minus -` to look forward or back in time. Continues with a number (1 is implicit) and a specific time unit, and we can round down to a specific time unit using  `@` symbol
@@ -91,7 +90,8 @@ Every single event will be assigned a value for `_time`, but not all source even
 as this event has a timestamp inside `_raw` field, Splunk extracts all `date_*` 
 In a lot of log files, the first value will be a timestamp, and Spluck's default event processing is that it wants to break the event at the timestamp. whenever it sees another timestamp it will want to break it into a new event.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ed082bc0-d6b4-468f-b755-c4c667b7d4b3)
-the difference between the `_raw`timestamp and the time under the `Time`columns is due to the time zone preference of the account settings.
+
+The difference between the `_raw`timestamp and the time under the `Time`columns is due to the time zone preference of the account settings.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b74b210b-22a7-47a5-ada1-790738f7f5ef)
 
 When I removed such a setting the `_raw`timestamp and the time under the `Time` columns becomes the same.
@@ -99,6 +99,21 @@ When I removed such a setting the `_raw`timestamp and the time under the `Time` 
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/458535f2-eb9b-421a-8935-d19929b9df0b)
 
+We can see in this other set of events without a timestamp that `date_*` fields are not generated and we can see also that time under `Time` column is the same for all events. That timestamp comes from  teh index time. When Splunk doe not manage to find a timestamp by default uses **index time**. it is the time the events were indexed.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b238a2c9-c587-4a9d-85b8-f69e33ee0d35)
+
+
+When the default time fields `date_*`are present we can use them to solve specific use cases in our searches
+### Time Modifiers and Tiem Fields
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/87e1fff2-8539-4afc-937e-36397d9cd33d)
+
+`Earliest` is looking back two days ago `-2d` to the beginning if day `@d` and latest is rounding down to the beginning of the current day
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab420b7a-43ef-41b4-8108-dbafb4d9ff48)
+
+And we are interested in displaying early-morning events from 2 AM until 5 AM in UNIX TIME
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/588d26e3-2ef2-4236-8c59-f9c63963f226)
 
 
 ## Formating Time (06:12)
