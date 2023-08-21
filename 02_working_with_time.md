@@ -115,6 +115,11 @@ And we are interested in displaying early-morning events from 2 AM until 5 AM in
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/588d26e3-2ef2-4236-8c59-f9c63963f226)
 
+### bin command and _time field
+The bin command helps us bucket up our events. We can put numerical values into discrete sets or bins. The bin command has a Span option  that is set to an integer or time-scale that allows us to set te size for each bin
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/04c7a226-297a-4010-a7c8-7fdcc05206df)
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab14cf24-d725-4cf9-8b09-ada375ca0da7)
 
 ## Formating Time (06:12)
 ## Using time commands (9:29)
