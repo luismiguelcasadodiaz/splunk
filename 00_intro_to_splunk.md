@@ -224,5 +224,6 @@ Any search that returns statistical values can be seen as a chart. Charta can be
 Charts are interactive allowing one to hover over the details or drill down to the events behind.
 Any chart can be saved as a dashboard.
 
-A dashboard is a collection of reports
+A dashboard is a collection of reports.
+
 [Back to index](README.md)
