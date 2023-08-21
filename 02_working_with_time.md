@@ -66,7 +66,8 @@ Splunk Cloud version
 
  |current time |modifier| meaning|
  |-------------|--------|--------|
- |9:45 AM on April 1st, 2021.|-30m@h| `-30m` 30 minutes before...`9:15 AM   `@h` rounded to hours 9:00am|
+ |9:45 AM on April 1st, 2021.|-30m@h| `-30m` 30 minutes before ==>  9:15 AM   `@h` rounded down to hours ==> 9:00am|
+ |9:45 AM on April 1st, 2021.|-h@h| `-h` one hour before ==>  8:45 AM   `@h` rounded down to hours ==> 8:00am|
 
  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/822ec956-4e3e-4a04-b90b-ff3b23ea0670)
 
