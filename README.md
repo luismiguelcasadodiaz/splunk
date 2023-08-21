@@ -665,7 +665,31 @@ the value pairs can be configured to automatically append to events in the searc
 2.- By default, who is able to view a saved report?
  - Any power or admin user
  - **The user who created it.**
- - Any user with view port capability
+ - Any user with a viewport capability
+
+3.- Which of the following booleans can be used in a search?
+ - **OR**
+ - ALSO
+ - **AND**
+ - **NOT**
+
+4.-Which character is used in a search before a command:
+ - **Pipe** (|)
+ - Backtick (`)
+ - Quotation mark(")
+ - Tilde (~)
+
+5.- Which search mode behaves differently depending on the type of search being run?
+ - Verbose
+ - **Smart**
+ - Variable
+ - Fast
+
+6.- Which of the following searches will return the words dail, failure, or failed?
+ - fail
+ - dail+
+ - *fail
+ - **fail***
 
 ## Quiz Using Fields 100% with bold answers.
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
