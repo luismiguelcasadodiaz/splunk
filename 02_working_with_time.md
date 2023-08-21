@@ -133,11 +133,21 @@ Calculates an expression and puts the resulting value into a new o existing fiel
 Supports a vast assortment of functions
 can exist as an expression
 `now()` function returns the time that a search was started.
+
 `time()` function returns the time an event was processed by eval command.
+
 `relative_time(X, Y)` function returns an **epoch timestamp** relative (Y) to a supplied time(X)
+
+`strftime(X, Y)` function converts a epoch timestamp (X) into a string representing a time accordingly to the format (Y)  expressed by a string. From Epoch to formatted. 
+
+`strptime(X, Y)` function converts a  string (X) representing a time, into a Unix Timestaps based on a format (Y)  expresseed by a string. From Formatted to Epoch.
+
+
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/77750b9b-e273-4031-b859-979d4919d14c)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b1a8e47a-a4c0-438e-b684-e5a7e6d06905)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/93e1752e-9323-45ad-a69c-212ceb26a070)
+
 
  ### Date and time Fucntion Froma Variables
  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2470ffd3-c9d1-4aa4-ad4a-fb4960e333af)
