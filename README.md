@@ -656,7 +656,7 @@ the value pairs can be configured to automatically append to events in the searc
 [Back to index](#splunk-core-certified-power-user)
 # zz Quizzes
 ## 
-1.- What is the most efficient way to limit search results returned.
+1.- What is the most efficient way to limit search results returned?
  - index
  - source
  - host
@@ -673,7 +673,7 @@ the value pairs can be configured to automatically append to events in the searc
  - **AND**
  - **NOT**
 
-4.-Which character is used in a search before a command:
+4.-Which character is used in a search before a command?
  - **Pipe** (|)
  - Backtick (`)
  - Quotation mark(")
@@ -691,6 +691,60 @@ the value pairs can be configured to automatically append to events in the searc
  - *fail
  - **fail***
 
+7.- Which of the following searches will return results containing the terms failed, password, or failed password?
+ - **failed or password**
+ - fail*
+ - failed password or "failed password"
+ - **failed or password or "failed password"**
+
+8.- Which of the following searches returns results containing the phrase "failed password"?
+ - failed password
+ - (failed password)
+ - **"failed password**
+ - `failed password
+
+9.- When a search is run, in what order are events returned?
+ - Alphanumerical order
+ - **Reverse chronological order**
+ - Chronological order
+ - Reverse alphanumerical order
+
+10.- Which command can be used to further filter results in a search?
+ - filter
+ - **search**
+ - subset
+ - subsearch
+
+11.- Which of the following roles are required to share knowledge objects?
+ - Manager
+ - **Power**
+ - **Admin**
+ - User
+
+12.- Which Splunk infraestrucutr component stors ingested data?
+ - Dashboards
+ - Datasets
+ - **index**
+ - data models
+
+13.- By default, how long does a search job remain active?
+ - 30"
+ - **10"**
+ - 10 days
+ - 7 days
+
+14 What are the default roles in Splunk Enterprise?
+ - **Admin**
+ - Manager
+ - **Power**
+ - **User**
+
+15.- What determines the timestamp shown on the returned event in a search?
+ - Timestamps are displayed in epoch time
+ - **The time zone defined in user settings
+ - the time zone where the event originated
+ - timestamps are displayed in GMT.
+---
 ## Quiz Using Fields 100% with bold answers.
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
 
@@ -734,3 +788,4 @@ the value pairs can be configured to automatically append to events in the searc
   - **field discovery.**
   - field extractor.
   - field command.
+---
