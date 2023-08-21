@@ -13,7 +13,7 @@ Splunk lessons
 #### [09.- Data Models](#9-data-models) KO
 #### [10.- Using Choropleth](#10-using-choropleth) KO
 #### [11.- Using Fields](#11-using-fields)
-#### [99.- Quizzes](#zz-quizzes)
+#### [99.- Quizzes](99-quizzes.md)
 
 
 
