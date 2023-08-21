@@ -26,7 +26,7 @@ The timeline is an overall distribution of the events in relation to the specifi
 - and undo with the `deselect` or `zoom to selection` **RUNNING A BRAND NEW SEARCH**
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e0eae503-aeb9-48a9-9630-8200b70461c5)
 
-### Tiem Range picker
+### Time Range picker
 We can control the overall time range for our search with a bit more detail using the time range picker:
 We can customize preset options in the menu Settings/user interface/time ranges.
 
@@ -51,6 +51,9 @@ Splunk Cloud version
 
  - Advanced: we can express time unit abbreviations which allows us to be even more specific about our time.
   ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/15c3dcd7-dbc9-49a0-a068-05197a4b7f24)
+Please not the absolute times below field texts
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6576e2e6-6c76-4fdb-9b0a-c83c06b2c5cd)
+
 
 ### Time Unit Abbreviations
 
@@ -60,22 +63,36 @@ Splunk Cloud version
 #### Time units table
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6a5573b3-4acf-4cb4-9acd-eb9dd1c7d075)
 
+Fort week days we can use w1(Monday)... w6(Saturday, w6 or w0 (Sunday).
+
+
   ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e4fcfc44-cdfb-4925-a5e3-79d288484ff1)
  ### Examples
  For understanding this example let's assume is exactly 9:45 AM on April 1st, 2021.
 
  |current time |modifier| meaning|
  |-------------|--------|--------|
- |9:45 AM on April 1st, 2021.|-30m@h| `-30m` 30 minutes before ==>  9:15 AM   `@h` rounded down to hours ==> 9:00am|
- |9:45 AM on April 1st, 2021.|-h@h| `-h` one hour before ==>  8:45 AM   `@h` rounded down to hours ==> 8:00am|
- |9:45 AM on April 1st, 2021.|earliest=-mon@mon latest=@mom| `-mon` one mon before ==> 9:45 AM on march 1 st   `@m` rounded down to mon ==>  9:45 AM on march 1 st .. 00:00 April 1st, 2021|
+ |9:45 AM on April 1st, 2021.|-30m@h| `-30m` 30 minutes before ==>  9:15 AM   `@h` rounded down to hours ==> 9:00 AM|
+ |9:45 AM on April 1st, 2021.|-h@h| `-h` one hour before ==>  8:45 AM   `@h` rounded down to hours ==> 8:00 AM|
+ |9:45 AM on April 1st, 2021.|earliest=-mon@mon latest=@mom| `-mon` one mon before ==> 9:45 AM on march 1 st   `@m` rounded down to mon ==>  9:45 AM on march 1 st .. 00:00 AM April 1st, 2021|
  |9:45 AM on April 1st, 2021.|earliest=-7d@d| `-7d` seven days before ==> 9:45 AM on march 25th   `@d` rounded down to day ==>  00:00 AM on march 25th .. 9:45 AM on April 1st, 2021|
  |9:45 AM on April 1st, 2021.|earliest=@d+3h| `@d` rounded down to day ==>  00:00 AM on march Apro 1st `+3h` plus 3 hours ==> 03:00 .. 9:45 AM on April 1st,201|
  
- ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/822ec956-4e3e-4a04-b90b-ff3b23ea0670)
-
+In this example, the time range picker was settled `-5h@h`, but in the search textbox there is a restriction to view only the last five minutes `earliest=-5m@m latest=now`
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4cc1e8e6-1a25-44be-93e8-5a9c8e678739)
+In this dual specification, the case has a prevalence is the restriction specified in the search textbox. èarliest`and `latest` modifiers have prevalence over time Range picker.
 
 [Time Unit Documentation](https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Search/Specifytimemodifiersinyoursearch)
+## default Time fields
+There are a set of fields that are available in most cases for controlling the time of our searches. All begin with `date_` prefix followed by a specific unit time (hour, mday (month_day) minute, month, second, wday (weekday) year, zone. These `date_` fields are **only generated for events where inside the raw event, Splunk is able to extract the timestamp.** 
+¿Do not all events that Splunk logs have timestamps assigned to them?
+
+Every single event will be assigned a value for `_time`, but not all source events have an actual timestamp value in them. In this case, the `_time` field is filed with the even's indexation time.
+as this event has a timestamp inside `_raw` field, Splunk extracts all `date_*` 
+In a lot of log files, the first value will be a timestamp, and Spluck's default event processing is that it wants to break the event at the timestamp. whenever it sees another timestamp it will want to break it into a new event.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ed082bc0-d6b4-468f-b755-c4c667b7d4b3)
+the difference between the `_raw`timestamp and the time under the `Time`columns is duue to 
+
 
 ## Formating Time (06:12)
 ## Using time commands (9:29)
