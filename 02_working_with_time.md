@@ -68,7 +68,10 @@ Splunk Cloud version
  |-------------|--------|--------|
  |9:45 AM on April 1st, 2021.|-30m@h| `-30m` 30 minutes before ==>  9:15 AM   `@h` rounded down to hours ==> 9:00am|
  |9:45 AM on April 1st, 2021.|-h@h| `-h` one hour before ==>  8:45 AM   `@h` rounded down to hours ==> 8:00am|
-
+ |9:45 AM on April 1st, 2021.|earliest=-mon@mon latest=@mom| `-mon` one mon before ==> 9:45 AM on march 1 st   `@m` rounded down to mon ==>  9:45 AM on march 1 st .. 00:00 April 1st, 2021|
+ |9:45 AM on April 1st, 2021.|earliest=-7d@d| `-7d` seven days before ==> 9:45 AM on march 25th   `@d` rounded down to day ==>  00:00 AM on march 25th .. 9:45 AM on April 1st, 2021|
+ |9:45 AM on April 1st, 2021.|earliest=@d+3h| `@d` rounded down to day ==>  00:00 AM on march Apro 1st `+3h` plus 3 hours ==> 03:00 .. 9:45 AM on April 1st,201|
+ 
  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/822ec956-4e3e-4a04-b90b-ff3b23ea0670)
 
 
