@@ -472,21 +472,31 @@ The timeline is an overall distribution of the events in relation to the specifi
 
 ### Tiem Range picker
 We can control the overall time range for our search with a bit more detail using the time range picker:
+We can customize preset options in the menu Settings/user interface/time ranges.
+
 Splunk Enterprise version
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/99b41171-8bc8-4f7f-a71f-0d368e64b7e6)
+
 Splunk Cloud version
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f5bba99e-d155-4361-8c4a-4adb233fb681)
+
  - real-time search: return results up to the second they are coming in. The benefit of that is that we see data as it's coming into Splucnk in real-time. Real .time searches **are resource intensive**. They consume an entire CPU-CORE. They continuously update search results as the events arrive. Multiple real-time searches could impact the overall performance. One alternative is to Schedule a report.
  - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/158419c6-b536-4ddd-9cec-1873477a6036)
 
  - Relative time option;
-   - earliest time range
-   - latest (now or a begining
+   - earliest time range.
+   - latest (now or at a beginning of the current hour)
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ba3152ab-7359-46dc-a4b6-dace23d90131)
 
+  - Data Range & date & Tiem range (between, before, since
+    ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c48a61e8-63cb-4e44-9b7e-acc612cf284b)
+    ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/06bfc863-f795-44a7-a68c-60e68781dd02)
 
+ - Advanced : we can express time unit abbreviattions
+ - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/15c3dcd7-dbc9-49a0-a068-05197a4b7f24)
 
+https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Search/Specifytimemodifiersinyoursearch
 
 ## Formating Time (06:12)
 ## Using time commands (9:29)
