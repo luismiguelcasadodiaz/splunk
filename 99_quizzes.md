@@ -170,10 +170,14 @@
 
 7.- Choose the search that will sort events into one minute groups. Select all that apply.
  - | bin span=1minute
- - | bin_time span=1m
- - | bin_time span=1mins
+ - **| bin_time span=1m**
+ - **| bin_time span=1mins**
  - | bin span=1minutes
- - 
+
+ 8.- What will the strftime function return when using the %H argument with the _time field? Select all that apply.
+  - hour of the event generated at index time.
+  - **convert the hour into your local time based on your time zone setting of your Splunk web sessions.**
+  - time of raw event in UTC
  
 
 [Back to index](README.md)
