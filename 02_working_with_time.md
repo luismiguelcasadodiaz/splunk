@@ -1,27 +1,27 @@
 [Back to index](README.md)
 # [03 working-with-time]
 Time is one of the most important components to consider when working with data.
-we will learn:
+We will learn:
  - How to work with time in searches. `earliest=@d`,  `latest=@d`
- - time base functions (`now()`, `time()`, `strftime()`, `strptime()`)
- - time commands (`timechart`, `timewrap`)
+ - Time base functions (`now()`, `time()`, `strftime()`, `strptime()`)
+ - Time commands (`timechart`, `timewrap`)
  - Understand how time zones are represented in the data
 
 ## Searching with Time (25:36)
 What does time mean to Splunk?
-When an event is ingested, its timestamp is stored in the _time field that is used to implement the event timeLine in the Splunk Web interface. 
-The _time field is stored with the event in the index **prior** to the search time, along with default fields such as host, source, and source type (also de-index name in which it is stored in.
+When an event is ingested, its timestamp is stored in the `_time` field that is used to implement the event timeLine in the Splunk Web interface. 
+The `_time` field is stored with the event in the index **prior** to the search time, along with default fields such as host, source, and source type (also the index name in which it is stored.
 Timestamps are expressed in Unix or epoch time (_time = 1619736430) and translated to human-readable time (Thu, 29 Apr 2021 22:47:10 GMT) **during the search** operation process.
 All events are sorted by time, thus time is the most efficient filter.
 
-The timestamp displayed in the Time Column of each event is adjusted to the user's local time zone, **As long as the time zone is set** within the account settings
+The timestamp displayed in the Time Column of each event is adjusted to the user's local time zone, **As long as the time zone is set** within the account settings.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9c72ff16-da73-40d4-876c-0cb7e6133af2)
 
 ### Timeline Mouse actions
-The timeline is an overall distribution of the events in relation to the specific time range set for the search
-- Zoom in, Zoom Out,
-- Hover to view the event count for a specific time,
-- Format the x and y-axis,
+The timeline is an overall distribution of the events in relation to the specific time range set for the search.
+- Zoom in, Zoom Out.
+- Hover to view the event count for a specific time.
+- Format the x and y-axis.
 - Rearrange the time range with the `click and drag' (acts as a filter without re-running the search).
 - and undo with the `deselect` or `zoom to selection` **RUNNING A BRAND NEW SEARCH**
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e0eae503-aeb9-48a9-9630-8200b70461c5)
@@ -34,6 +34,7 @@ Splunk Enterprise version
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/99b41171-8bc8-4f7f-a71f-0d368e64b7e6)
 
 Splunk Cloud version
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f5bba99e-d155-4361-8c4a-4adb233fb681)
 
  - real-time search: return results up to the second they are coming in. The benefit of that is that we see data as it's coming into Splucnk in real-time. Real .time searches **are resource intensive**. They consume an entire CPU-CORE. They continuously update search results as the events arrive. Multiple real-time searches could impact the overall performance. One alternative is to Schedule a report.
@@ -185,14 +186,14 @@ The `by` clause creates a **multi-series time series**
 |last 15 minutes|1o secodns|
 
 ### span definition
-Uses an integer and a time unit to define de bucke size we want the aggregation to be made.
+Uses an integer and a time unit to define de bucket size we want the aggregation to be made.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/005ad5a0-be2c-4f9a-ad32-b759d6f37bb2)
 ### limit definition
-by default, the  `by` clause shows top 10 series in a multi-series time series. It there are more are grouped int `OTHER` single series.
+By default, the  `by` clause shows the top 10 series in a multi-series time series. If there are more, are grouped into an `OTHER` single series.
 `Limit = 1` shows the most important single series
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6734e2a3-6c98-4f43-b927-15be837f0984)
 
- If set to limit=0, all distinct values are used. All other values are grouped into 'OTHER', as long as `useother´ is not set to false
+ If set to limit=0, all distinct values are used. All other values are grouped into an  'OTHER', as long as `useother´ is not set to false
  
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/abf4dba7-2d02-4bf7-a428-6337105caf47)
 
