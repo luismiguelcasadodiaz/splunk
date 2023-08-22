@@ -159,7 +159,7 @@ Can exist as an expression.
 [Documentaition link] (https://docs.splunk.com/Documentation/SCS/current/Search/Timevariables)
 
 ## Using time commands (9:29)
-### timechart
+### `Timechart`
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b7ae054e-3c93-4943-9087-1c3fabc87ddb)
 
@@ -201,7 +201,7 @@ By default, the  `by` clause shows the top 10 series in a multi-series time seri
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/abf4dba7-2d02-4bf7-a428-6337105caf47)
 
 
-### timewrap
+### `Timewrap`
 Helps to display  the result of  `timechart` command in such a way that each time period is a separate series. We can compare data over specific tiem period
 `tiemwrap`tipically will follow a `timechart`command
 
