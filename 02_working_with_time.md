@@ -164,21 +164,22 @@ Can exist as an expression.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b7ae054e-3c93-4943-9087-1c3fabc87ddb)
 
 `Timechart` performs statistical aggregations against time.
-It is a **transforming command** that allows plotting data over time where _times is always the x-axis and the leftmost column of our table.
-Support the same family of functions that the 'stats' and `chart` commands.
+It is a **transforming command** that allows plotting data over time where `_time` is always the x-axis and the leftmost column of our table.
+Support the same family of functions that the `stats` and `chart` commands.
 Has a built option `span` that allows us to control the time gap of our bins.
 The result can be split by another field with the `by` clause.
-Timechart are best visualized as a line or area chart
+Timechart are best visualized as a line or area chart.
 
-This simple command produces a **Single series** time series
+This simple command produces a **Single series** time series.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c6f59281-5403-41cd-9ddc-425ca4c2cd9d)
 
-Using the `by` clause we can get `NULL` column that counts the event with value on the field used in the `by` clause
+Using the `by` clause we can get `NULL` column that counts the events with no value on the field used in the `by` clause.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4b88e1d1-db12-40b6-8c21-fe163614ecfe)
 
-The `by` clause creates a **multi-series time series**
+The `by` clause creates a **multi-series time series**.
+
 ### default bin span un function fo picker time range
 |Time range|Default time bucket|
 |----------|-------------------|
