@@ -232,9 +232,16 @@ I did it from Spain, timezone GMT+1 at local time is 20:34 and i got the results
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d6782ab-f5c6-4f87-9db2-b466e3088175)
 
-![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/090f9241-f9a9-416f-bcc7-87b6c6551617)
-![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c336fd39-28b2-4fe6-b1f9-ccc1a5ae2ff0)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/64fd0596-895f-4d65-8ed6-b4358da85cff)
 
+
+After changing again the time zone
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/73fb8d78-9d25-42c3-b17c-1744534e4c95)
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1988ad18-0c48-4c40-9163-4b0ec08816b9)
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2214993-3932-4705-be9f-66f93ec80a3d)
 
 
 Do not take into account the time zone of the Splunk Web. We have to ensure that we set our time zone to the default system time, or as an alternative we use the `strftime` function to organize our data and normalize it.
