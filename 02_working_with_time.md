@@ -180,7 +180,8 @@ Using the `by` clause we can get `NULL` column that counts the events with no va
 
 The `by` clause creates a **multi-series time series**.
 
-### default bin span un function fo picker time range
+### Default bin span according to the picker time range.
+
 |Time range|Default time bucket|
 |----------|-------------------|
 |last 30 days|1 day|
@@ -189,10 +190,10 @@ The `by` clause creates a **multi-series time series**.
 |last hour|1 minute|
 |last 15 minutes|1o secodns|
 
-### span definition
+### Span definition
 Uses an integer and a time unit to define de bucket size we want the aggregation to be made.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/005ad5a0-be2c-4f9a-ad32-b759d6f37bb2)
-### limit definition
+### Limit definition
 By default, the  `by` clause shows the top 10 series in a multi-series time series. If there are more, are grouped into an `OTHER` single series.
 `Limit = 1` shows the most important single series
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6734e2a3-6c98-4f43-b927-15be837f0984)
@@ -203,13 +204,13 @@ By default, the  `by` clause shows the top 10 series in a multi-series time seri
 
 
 ### `Timewrap`
-Helps to display  the result of  `timechart` command in such a way that each time period is a separate series. We can compare data over specific tiem period
-`tiemwrap`tipically will follow a `timechart`command
+Helps to display  the result of  `timechart` command in such a way that each time period is a separate series. We can compare data over a specific time period
+`tiemwrap` tipically will follow a `timechart`command
 
-transforms a regular timechart like this one
+Transforms a regular timechart like this one.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1e546a45-c52a-437f-9930-56bc5243ea7f)
 
-into a chart to compare 6 hours periods where you can see that recent peaks has been under control in last six hours.
+Into a chart to compare 6 hours periods where you can see that recent peaks have been under control in the last six hours.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d4e8575-1582-474f-a197-b1568a3102ce)
 
 
