@@ -136,7 +136,7 @@
   - field command.
 ---
 
-## Working with time
+## Working with time 88% . i have hot the right answer for question 8
 
 1.- @timeUnit will always round up and go forward through time.
  - **False**
@@ -170,8 +170,8 @@
 
 7.- Choose the search that will sort events into one minute groups. Select all that apply.
  - | bin span=1minute
- - **| bin_time span=1m**
- - **| bin_time span=1mins**
+ - | bin_time span=1m
+ - | bin_time span=1mins
  - | bin span=1minutes
 
  8.- What will the strftime function return when using the %H argument with the _time field? Select all that apply.
