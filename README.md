@@ -5,7 +5,7 @@ Press on the links below.
 
 #### [00.- Intro to Splunk](00_intro_to_splunk.md) 
 #### [01.- Visualizations](01_visualizations.md)
-#### [02.- Working with time](02_working_with_time.md) KO
+#### [02.- Working with time](02_working_with_time.md)
 #### [03.- Statistical Processing](#3-statistical-processing) KO
 #### [04.- Comparing Values](#4-comparing-values)  KO
 #### [05.- Result Modification](#5-result-modification) KO
