@@ -135,4 +135,45 @@
   - field extractor.
   - field command.
 ---
+
+## Working with time
+
+1.- @timeUnit will always round up and go forward through time.
+ - **False**
+ - True
+
+2.- The _______ and ______ time modifiers will override the time range picker in a historical report.
+ - **latest**
+ - first
+ - **earliest**
+ - last
+
+3.- Which of the following are default time fields? Select all that apply.
+ - **date_mday**
+ - **date_year**
+ - data_day
+ - **date_hour**
+
+4.- When using the following search arguments, what will be returned?
+`timechart count span=1h`
+ - Events in the last 24 hours.
+ - Events with a duration of 1 hour.
+ - **Chart of events in 1-hour chunks.**
+
+5.- Date_time always reflects your local time zone and not the time/date from raw events.
+ - True
+ - **False**
+
+6.- Using `earliest=-30d@d latest=@d` is how to return results from 30 days ago up until the time the search was executed.
+ - **False**
+ - True
+
+7.- Choose the search that will sort events into one minute groups. Select all that apply.
+ - | bin span=1minute
+ - | bin_time span=1m
+ - | bin_time span=1mins
+ - | bin span=1minutes
+ - 
+ 
+
 [Back to index](README.md)
