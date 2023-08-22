@@ -106,25 +106,25 @@ We can see in this other set of events without a timestamp that `date_*` fields 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b238a2c9-c587-4a9d-85b8-f69e33ee0d35)
 
 
-When the default time fields `date_*`are present we can use them to solve specific use cases in our searches
+When the default time fields `date_*`are present we can use them to solve specific use cases in our searches.
 ### Time Modifiers and Time Fields
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/87e1fff2-8539-4afc-937e-36397d9cd33d)
 
-`Earliest` is looking back two days ago `-2d` to the beginning if day `@d` and latest is rounding down to the beginning of the current day
+`Earliest` is looking back two days ago `-2d` to the beginning of day `@d` and `latest` is rounding down to the beginning of the current day.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab420b7a-43ef-41b4-8108-dbafb4d9ff48)
 
-And we are interested in displaying early-morning events from 2 AM until 5 AM in UNIX TIME
+And we are interested in displaying early-morning events from 2 AM until 5 AM in UNIX TIME.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/588d26e3-2ef2-4236-8c59-f9c63963f226)
 
 ### bin command and _time field
-The bin command helps us bucket up our events. We can put numerical values into discrete sets or bins. The bin command has a Span option  that is set to an integer or time-scale that allows us to set the size for each bin
+The bin command helps us bucket up our events. We can put numerical values into discrete sets or bins. The bin command has a `span` option  that is set to an integer or time-scale that allows us to set the size for each bin.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/04c7a226-297a-4010-a7c8-7fdcc05206df)
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ab14cf24-d725-4cf9-8b09-ada375ca0da7)
 
-In this example, I try to bin the event in intervals of 15 minutes and made some statistics over the event intra bin. Count number of files names as indexations. Distinct count of filees names as indexes, a ratio of times each index is indexed ans the sum of the files sizes.
+In this example, I try to bin the events in intervals of 15 minutes and made some statistics over the events intra-bin. Count a number of file names as indexations. Distinct count of file names as indexes, a ratio of times each index is indexed, and the sum of the file sizes.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0ab4babb-f7c0-4341-8881-33d6f6475b1d)
 
 ## Formating Time (06:12)
@@ -133,17 +133,18 @@ You can define how time is formatted in the search results using the time functi
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e7ba3b44-aaf9-407d-8d27-963606bc6165)
 
 Calculates an expression and puts the resulting value into a new o existing field that can be reused in the search pipeline.
-Supports a vast assortment of functions
-can exist as an expression
-`now()` function returns the time that a search was started.
+Supports a vast assortment of functions.
+Can exist as an expression.
 
-`time()` function returns the time an event was processed by eval command.
+- `now()` function returns the time that a search was started.
 
-`relative_time(X, Y)` function returns an **epoch timestamp** relative (Y) to a supplied time(X)
+- `time()` function returns the time an event was processed by eval command.
 
-`strftime(X, Y)` function converts a epoch timestamp (X) into a string representing a time accordingly to the format (Y)  expressed by a string. From Epoch to formatted. 
+- `relative_time(X, Y)` function returns an **epoch timestamp** relative (Y) to a supplied time(X)
 
-`strptime(X, Y)` function converts a  string (X) representing a time, into a Unix Timestaps based on a format (Y)  expresseed by a string. From Formatted to Epoch.
+- `strftime(X, Y)` function converts a epoch timestamp (X) into a string representing a time accordingly to the format (Y)  expressed by a string. From Epoch to formatted. 
+
+- `strptime(X, Y)` function converts a  string (X) representing a time, into a Unix Timestaps based on a format (Y)  expresseed by a string. From Formatted to Epoch.
 
 
 
