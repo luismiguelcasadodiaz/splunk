@@ -149,11 +149,43 @@ can exist as an expression
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/93e1752e-9323-45ad-a69c-212ceb26a070)
 
 
- ### Date and time Fucntion Froma Variables
+ ### Date and time Function Format Variables
  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2470ffd3-c9d1-4aa4-ad4a-fb4960e333af)
 
 [Documentaition link] (https://docs.splunk.com/Documentation/SCS/current/Search/Timevariables)
 
 ## Using time commands (9:29)
+### timechart
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b7ae054e-3c93-4943-9087-1c3fabc87ddb)
+
+`Timechart` performs statistical aggregations against time.
+It is a **transforming command** that allows plotting data over time where _times is always the x-axis and the leftmost column of our table.
+Support the same family of functions that the 'stats' and `chart` commands.
+Has a built option `span` that allows us to control the time gap of our bins.
+The result can be split by another field with the `by` clause.
+Timechart are best visualized as a line or area chart
+
+This simple command produces a **Single serie** time series
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c6f59281-5403-41cd-9ddc-425ca4c2cd9d)
+
+Using the `by` clause we can get `NULL` column that counts the event with value on the field used in the `by` clause
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4b88e1d1-db12-40b6-8c21-fe163614ecfe)
+
+The `by`clause creates a **multiseries time serie**
+### default bin span un function fo picker time range
+|Time range|Default time bucket|
+|----------|-------------------|
+|last 30 days|1 day|
+|last 7 days|1 day|
+|last 24 hours| 30 minutes|
+|last hour|1 minute|
+|last 15 minutes|1o secodns|
+
+### span definition
+
+### timewrap
 ## Working with time zones (2:43)
 [Back to index](README.md)
