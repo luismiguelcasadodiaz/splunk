@@ -210,9 +210,16 @@ Helps to display  the result of  `timechart` command in such a way that each tim
 Transforms a regular timechart like this one.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1e546a45-c52a-437f-9930-56bc5243ea7f)
 
-Into a chart to compare 6 hours periods where you can see that recent peaks have been under control in the last six hours.
+Into a chart to compare 6 hours periods where you can see that recent peaks have been under control in the last six hours. Be aware of how legend changes and adapts its titles  to discriminate each single series.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d4e8575-1582-474f-a197-b1568a3102ce)
 
 
 ## Working with time zones (2:43)
+Working with time base data for multiple geographic locations can be tricky.
+We see here how time zones are represented in the data and how to use strftime function to correct time zones in search results.
+**FIRST: Verify that results return what we are expecting.
+If you wait for results between 2 and 5 AM, but the results display times between 9 to 11 PM
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f5bd05bb-8daf-4726-b251-7f1fdc64a65d)
+
+
 [Back to index](README.md)
