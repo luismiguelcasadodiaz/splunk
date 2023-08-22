@@ -166,7 +166,7 @@ Has a built option `span` that allows us to control the time gap of our bins.
 The result can be split by another field with the `by` clause.
 Timechart are best visualized as a line or area chart
 
-This simple command produces a **Single serie** time series
+This simple command produces a **Single series** time series
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c6f59281-5403-41cd-9ddc-425ca4c2cd9d)
 
@@ -174,7 +174,7 @@ Using the `by` clause we can get `NULL` column that counts the event with value 
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4b88e1d1-db12-40b6-8c21-fe163614ecfe)
 
-The `by`clause creates a **multiseries time serie**
+The `by` clause creates a **multi-series time series**
 ### default bin span un function fo picker time range
 |Time range|Default time bucket|
 |----------|-------------------|
@@ -185,7 +185,28 @@ The `by`clause creates a **multiseries time serie**
 |last 15 minutes|1o secodns|
 
 ### span definition
+Uses an integer and a time unit to define de bucke size we want the aggregation to be made.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/005ad5a0-be2c-4f9a-ad32-b759d6f37bb2)
+### limit definition
+by default, the  `by` clause shows top 10 series in a multi-series time series. It there are more are grouped int `OTHER` single series.
+`Limit = 1` shows the most important single series
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6734e2a3-6c98-4f43-b927-15be837f0984)
+
+ If set to limit=0, all distinct values are used. All other values are grouped into 'OTHER', as long as `useother´ is not set to false
+ 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/abf4dba7-2d02-4bf7-a428-6337105caf47)
+
 
 ### timewrap
+Helps to display  the result of  `timechart` command in such a way that each time period is a separate series. We can compare data over specific tiem period
+`tiemwrap`tipically will follow a `timechart`command
+
+transforms a regular timechart like this one
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1e546a45-c52a-437f-9930-56bc5243ea7f)
+
+into a chart to compare 6 hours periods where you can see that recent peaks has been under control in last six hours.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d4e8575-1582-474f-a197-b1568a3102ce)
+
+
 ## Working with time zones (2:43)
 [Back to index](README.md)
