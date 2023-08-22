@@ -224,9 +224,13 @@ If you wait for results between 2 and 5 AM, but the results display times betwee
 the `date_*` fields do not reflect my local time. They are the values directly from the raw events.
 To determine your time zones:
 1.- in preferences, set the time zone to **Default system timeZone**.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9f5cc7dc-3c6f-4486-b602-40031fcc6a91)
+
 2.- run a search over the last 15 minutes.
+
 3.- read the event time stamps and compare with your local time.
+
 
 I did it from Spain, timezone GMT+1 at local time is 20:34 and i got the results od 18:24, two hours before
 
