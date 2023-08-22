@@ -228,8 +228,13 @@ To determine your time zones:
 2.- run a search over the last 15 minutes.
 3.- read the event time stamps and compare with your local time.
 
-I did it from Spain, timezone GMT+1 at local time is 20:17 and i got the results od 18:17, two hours before
+I did it from Spain, timezone GMT+1 at local time is 20:34 and i got the results od 18:24, two hours before
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d6782ab-f5c6-4f87-9db2-b466e3088175)
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/090f9241-f9a9-416f-bcc7-87b6c6551617)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c336fd39-28b2-4fe6-b1f9-ccc1a5ae2ff0)
+
 
 
 Do not take into account the time zone of the Splunk Web. We have to ensure that we set our time zone to the default system time, or as an alternative we use the `strftime` function to organize our data and normalize it.
