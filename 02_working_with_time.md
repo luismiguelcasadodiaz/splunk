@@ -223,23 +223,23 @@ If you wait for results between 2 and 5 AM, but the results display times betwee
 
 the `date_*` fields do not reflect my local time. They are the values directly from the raw events.
 To determine your time zones:
-1.- in preferences, set the time zone to **Default system timeZone**.
+
+1.- In preferences, set the time zone to **Default system timeZone**.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9f5cc7dc-3c6f-4486-b602-40031fcc6a91)
 
-2.- run a search over the last 15 minutes.
+2.- Run a search over the last 15 minutes.
 
-3.- read the event time stamps and compare with your local time.
+3.- Read the event time stamps and compare them with your local time.
 
-
-I did it from Spain, timezone GMT+1 at local time is 20:34 and i got the results od 18:24, two hours before
+I did it from Spain, timezone GMT+1 at local time is 20:34 and I got the results od 18:24, two hours before
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d6782ab-f5c6-4f87-9db2-b466e3088175)
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/64fd0596-895f-4d65-8ed6-b4358da85cff)
 
 
-After changing again the time zone
+After changing again the time zone....
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/73fb8d78-9d25-42c3-b17c-1744534e4c95)
 
@@ -250,6 +250,13 @@ After changing again the time zone
 
 Do not take into account the time zone of the Splunk Web. We have to ensure that we set our time zone to the default system time, or as an alternative we use the `strftime` function to organize our data and normalize it.
 
-`%H`modifier makes strftime display data with the user's time zone preference
+`%H`modifier makes `strftime` display data with the user's time zone preference
+
+In previous examples, `my_hour` takes into account the timezone that is set. Date_hour field does not adjust the hour based on Splunk web time zone.
+
+According to what we have learned we rearrange the previous search to consider my_hour calculated with `strftime` instead of date_hour.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/580fc5ac-9cf6-4564-958f-0561849438de)
+
 
 [Back to index](README.md)
