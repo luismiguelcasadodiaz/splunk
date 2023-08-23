@@ -104,7 +104,7 @@ Alerts can;
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3795be0e-f7f7-477d-8f4d-ecd241076120)
 
-2.- From the save as button choose alert
+2.- From the `save as` button choose alert
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/bd8d9b9b-8805-4619-934b-1ec6368fa4f1)
 
 3.- Enter a title according to your organization's Naming policy and explain what this alert is for.
@@ -130,7 +130,7 @@ if our alert is set to trigger every time more than 2 errors happen in 60 minute
 - one email with `once` the action will be fired once within the scheduled time we have selected.
 - Five emails with  `For each result` as it will be fired  every time conditions are met.
 
-We can make this setting more granular usin the Throllle checkbox
+We can make this setting more granular using the Throttle checkbox. it [behaves differently](https://docs.splunk.com/Documentation/Splunk/9.1.0/Alert/ThrottleAlerts) depending on the `Alert Tipe`and the `Triggering option` 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/56587410-c5e0-409c-b01a-e0cef588ac18)
 
 
