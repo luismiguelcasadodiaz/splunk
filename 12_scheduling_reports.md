@@ -44,8 +44,8 @@ Options in points 8, 9, ad 10 help us manage our scheduled reports so that they 
   -  sending results to a telemetry endpoint
   -  Run a script
   -  Send an email
-  -  POST to an external url
-  -  Manage Actions Install os build custom alert actions depending on your user role. Admin user will have the option to manage and add prebuilt alert actions
+  -  POST to an external url.
+  -  Manage Actions Install or build custom alert actions depending on your user role. Admin user will have the option to manage and add prebuilt alert actions
  
   ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a3532994-f53e-4f0d-8e08-a141c5dd09f6)
 
@@ -59,6 +59,32 @@ Please note that [search, results, job,  server or dashboard tokens](https://doc
 
 
 ## Managing Reports (02:08)
+From `Settings` menu / `Searches, reports, and alerts` option. You get a quick overview of our report including when it is scheduled to run next. 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9b3a2e29-8c26-4d48-b67c-1386d2edf714)
+
+Clicking the name of the report, we get quick access to change the search string and time range.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1e01ae7d-5a07-4054-88ff-ed6754377763)
+
+
+
+From `reports` tap in the search and repost app. Clicking on the name  will display the results of our scheduled report. Use the edit button to change settings from this location. 
+
+Users with power role have the option to display this report for themselves  or other users of the app. Displaying a report for all apps requires an admin role.
+Selecting App allows us to grant read and write access to all users in our organization or users based on their role
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/721280a2-6461-4907-8163-fc59be28156b)
+
+To make a report available to folks who do not have access to the Splunk instance  we use the `embed` option from the edit menu.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2f1a4b6-9b36-49a0-88e2-4f40148fefa3)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9c0a64be-cf1e-40d9-bba9-cc78a3b257c8)
+
+**Be very cautious when doing this. AM embedded report will be viewable by anyone who has access to the webpage that it is inserted in.
+AN embedded report **will not ** show data until the scheduled search is run.
+Once the report is embedded we will no longer be able to edit attributes for the report
+
+Ther is also the option to dd a scheduled report o a dash board
+
+
+
 ## What are Alerts? (00:31)
 ## Creating Alerts (03:10)
 ## Using Alert Actions (02:24)
