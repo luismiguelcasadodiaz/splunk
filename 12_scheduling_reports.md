@@ -100,6 +100,38 @@ Alerts can;
 
 
 ## Creating Alerts (03:10).
+1.- Define a search
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3795be0e-f7f7-477d-8f4d-ecd241076120)
+
+2.- From the save as button choose alert
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/bd8d9b9b-8805-4619-934b-1ec6368fa4f1)
+
+3.- Enter a title according to your organization's Naming policy and explain what this alert is for.
+
+4.- Set Permission. `Private` (Only you can access, edit and view it). `Shared in App` (the result will be displayed for all app users. All have read access. **Only power user has write access** to it ).
+
+5.- Set Alert type. 
+  - `Scheduled Alert Type´ allows you to set a schedule and time range for the search to be run
+  - ´Real-Time Alert type` the search will be run continuously in the background. As soon as alert conditions are satisfied an action is triggered. Since Real-Time alerts run continuously can place more overhead on system performance. When we would like to know as soon as our trigger condition is met, a real-time alert type is a better fit.
+
+6.- Set trigger condition 
+  - Per result: Trigger whenever search returns a result.
+  - per Number of results: Trigger based on a number of search results during a rolling window of time.
+  - Per Number of Hosts: Triggers based on the number of hosts returned during a rolling window of time.
+  - Per number of sources: same as above but with Source default field.
+  - Custom conditions: Defined using Splunk search language.
+
+Since many issues may trigger an alert we would like to confirm a problem **before** sending an alert
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0c367172-0a57-4ba7-99bc-2847386662ed)
+
+It could be easy to inundate users with alerts. We can set the number of times to trigger the alert and throttle how often the alert is executed allowing them to be ignored or filtered out.
+if our alert is set to trigger every time more than 2 errors happen in 60 minutes, with 6 errors in 60 minutes then we will get:
+- one email with `once` the action will be fired once within the scheduled time we have selected.
+- Five emails with  `For each result` as it will be fired  every time conditions are met.
+
+We can make this setting more granular usin the Throllle checkbox
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/56587410-c5e0-409c-b01a-e0cef588ac18)
+
 
 ## Using Alert Actions (02:24)
 ## Manging Alerts (01:58)
