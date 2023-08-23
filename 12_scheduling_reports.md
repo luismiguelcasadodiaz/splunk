@@ -135,5 +135,22 @@ We can make this setting more granular using the Throttle checkbox. it [behaves 
 
 
 ## Using Alert Actions (02:24)
+There is a choice of actions to take when an alert is triggered depending on user's role.
+The triggered alerts allow us to set the severity of the alert, which allows us to sort and filter alerts in the [triggered alert list] (https://prd-p-6rxl6.splunkcloud.com/en-GB/app/search/triggered_alerts).
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2461b441-3a12-4efe-8147-67c7064f69af)
+
+If you have proper capabilities, you can use a `log event action` that is sent to your Splunk deployment for indexing. Fill in correctly the text boxes.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7e9091b3-aa75-435f-b192-ad78a38f3be1)
+
+`Output results to lookup` will create (repalce) or update (appned) a .csv lookup table.
+To see a list of the CSV lookup files currently uploaded to your Splunk implementation, select Settings > Lookups > Lookup table files.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/52c7b4c7-c91b-424c-94c1-1c1a9677eb24)
+
+
+`Output results to telemetry endpoint` allows us to set a name, input field, data type, categories, and opt-in.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7095920f-095b-4422-bde0-2c031c135113)
+
+
+`Run a Script`will trigger a shell script or bash file stored  on your instance.
 ## Manging Alerts (01:58)
 [Back to index](README.md)
