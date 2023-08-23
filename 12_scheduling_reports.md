@@ -101,6 +101,7 @@ Alerts can;
 
 ## Creating Alerts (03:10).
 1.- Define a search
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3795be0e-f7f7-477d-8f4d-ecd241076120)
 
 2.- From the save as button choose alert
