@@ -13,7 +13,7 @@ The report can be used to power dashboard panels to prevent Splunk from running 
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f9031323-9b2b-4b89-83d5-e439e6d5ed40)
 
-4.- As this is a Scheduled report do not a Time Range picker.
+4.- As this is a Scheduled report, do not select a Time Range picker.
 
 5.- Select Schedule Option.
 
@@ -47,7 +47,7 @@ Options in points 8, 9, ad 10 help us manage our scheduled reports so that they 
   -  POST to an external url
   -  Manage Actions Install os build custom alert actions depending on your user role. Admin user will have the option to manage and add prebuilt alert actions
  
-  [image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a3532994-f53e-4f0d-8e08-a141c5dd09f6)
+  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a3532994-f53e-4f0d-8e08-a141c5dd09f6)
 
 12.- Fill required parameters for the previously selected action.
 
