@@ -51,7 +51,8 @@ Options in points 8, 9, ad 10 help us manage our scheduled reports so that they 
 
 12.- Fill required parameters for the previously selected action.
 
-Please note that [search, results, job,  server or dashboard tokens] (https://docs.splunk.com/Documentation/Splunk/latest/Alert/EmailNotificationTokens) can customize fill-in parameters (to, cc, bcc, Subject, Message, footer)
+Please note that [search, results, job,  server or dashboard tokens](https://docs.splunk.com/Documentation/Splunk/latest/Alert/EmailNotificationTokens) can customize fill-in parameters (to, cc, bcc, Subject, Message, footer).
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/10878bc6-4dd7-4387-b578-4d5d3373b77e)
 
 13.- Indicate what to links include in the email and what documents to attach:
