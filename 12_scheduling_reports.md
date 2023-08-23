@@ -6,7 +6,9 @@ The report can be automatically sent by email or trigger additional actions.
 The report can be used to power dashboard panels to prevent Splunk from running multiple concurrent ad hoc searches.
 
 1.- Create the search we want the report to be based on.
+
 2.- From the Save As menu, select a report.
+
 3.- Give the report a name according to your company naming policy
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f9031323-9b2b-4b89-83d5-e439e6d5ed40)
