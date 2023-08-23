@@ -77,16 +77,30 @@ To make a report available to folks who do not have access to the Splunk instanc
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2f1a4b6-9b36-49a0-88e2-4f40148fefa3)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9c0a64be-cf1e-40d9-bba9-cc78a3b257c8)
 
-**Be very cautious when doing this. AM embedded report will be viewable by anyone who has access to the webpage that it is inserted in.
-AN embedded report **will not ** show data until the scheduled search is run.
+**Be very cautious** when doing this. AM embedded report will be viewable by anyone who has access to the webpage that it is inserted in.
+AN embedded report **will not** show data until the scheduled search is run.
 Once the report is embedded we will no longer be able to edit attributes for the report
 
-Ther is also the option to dd a scheduled report o a dash board
+There is also the option to add a scheduled report on a dashboard
 
 
 
 ## What are Alerts? (00:31)
-## Creating Alerts (03:10)
+Alerts are based on searches that run on a scheduled interval or in real-time. Splunk can alert you when the result of the search meet a defined condition
+Alerts are triggered once the search is completed
+Alerts can;
+  - List in the Splunk Interface.
+  - Log events.
+  - Be outputted to a lookup.
+  - Send to a telemetry endpoint.
+  - Trigger Script
+  - Send mails
+  - Use webhooks
+  - Run a custom alert.
+
+
+## Creating Alerts (03:10).
+
 ## Using Alert Actions (02:24)
 ## Manging Alerts (01:58)
 [Back to index](README.md)
