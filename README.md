@@ -15,6 +15,7 @@ Press on the links below.
 #### [09.- Data Models](#9-data-models) KO
 #### [10.- Using Choropleth](#10-using-choropleth) KO
 #### [11.- Using Fields](11_using_fields.md)
+#### [12.- Scheduling Reports](12_scheduling_reports.md)
 #### [99.- Quizzes](99_quizzes.md)
 
 
