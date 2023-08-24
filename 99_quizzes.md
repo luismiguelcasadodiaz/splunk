@@ -180,7 +180,7 @@
   - time of raw event in UTC
  
  
- ## Scheduling Reports & Alerts 11/14 79%
+ ## Scheduling Reports & Alerts 14/14 100%
 
  01.- Which **Scheduled report setting** allows you to define a time range for a report to run if it is delayed?
   - Report Window
@@ -189,7 +189,7 @@
   - Report Time Range
 
 02.- Which **alert setting** allows you to control how many actions are taken when trigger conditions are met?
- - **Throttle**
+ - **Throttle** OK
  - Schedule Priority
  - Schedule Window
  - Limit
@@ -214,7 +214,7 @@
 
 06.- When are actions triggered for a **real-time alert**?
  - Within a 60-second window of its cron Schedule.
- - **As soon as alert conditions are met.**
+ - **As soon as alert conditions are met.** OK
  - Within a five-minute window of its corn schedule.
  - As soon as the related report is run.
 
@@ -227,8 +227,8 @@
 08.- Select the two valid types of alerts.
  - Email.
  - Text message (SMS)
- - **Scheduled**
- - **Real-time**
+ - **Scheduled** OK
+ - **Real-time** OK
 
 09.- Which of the following prebuilt **alet actions** can be triggered when a report is run?
  - Run a secondary report
@@ -251,20 +251,20 @@
 12.- Which **Scheduled report** setting helps determine when concurrent report will run?
  - Scheduled Order.
  - Report Priority.
- - [**Scheduled Priority.**](https://docs.splunk.com/Documentation/SplunkCloud/latest/Report/PrioritizescheduledreportsinSplunkWeb)
+ - [**Scheduled Priority.**](https://docs.splunk.com/Documentation/SplunkCloud/latest/Report/PrioritizescheduledreportsinSplunkWeb) OK
  - Report Order.
 
 13.-Which alert action allows you to send a message to an external chat room?
- - **Webhook**
+ - **Webhook** OK
  - Output to chat.
  - Output to Text.
  - API Call.
 
-14.- Which of the following user roles are able to display a **report** in the app which it was created?
- - **Power**
- - **The user who created the report.**
+14.- Which of the following user roles are able to display a **report** in the app in which it was created?
+ - Power
+ - **The user who created the report.** OK
  - User
- - **Admin**
+ - **Admin** OK
 
 
 [Back to index](README.md)
