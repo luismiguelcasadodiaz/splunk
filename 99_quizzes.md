@@ -179,5 +179,92 @@
   - **convert the hour into your local time based on your time zone setting of your Splunk web sessions.**
   - time of raw event in UTC
  
+ 
+ ## Scheduling Reports & Alerts 11/14 79%
+
+ 01.- Which **Scheduled report setting** allows you to define a time range for a report to run if it is delayed?
+  - Report Window
+  - **Schedule Window** OK
+  - Schedule Time Range
+  - Report Time Range
+
+02.- Which **alert setting** allows you to control how many actions are taken when trigger conditions are met?
+ - **Throttle**
+ - Schedule Priority
+ - Schedule Window
+ - Limit
+
+03.- Which of the following user roles are able to display a **report** in all apps?
+ - Power.
+ - **Admin**.
+ - The user who created the report.
+ - User.
+
+04.- If a **dashboard panel** is powered by a **Scheduled report**, How frecuently will its cintents update?
+ - **The dashboard panel updates based on the underlying report's scheduling settings.**
+ - The dashboard panel updates any time the dashboard is opened or manually refreshed.
+ - Dashboard panels cannot be lined to scheduled reports.
+ - Dashboard panels will update based on the dashboard's time range picker.
+
+05.- Which is a primary benefit of scheduling reports?
+ - Dashboard panels require scheduled reports in order to display up-to-date content.
+ - **Scheduling a report reduces the demand that concurrently running reports can put on your system hardware.**
+ - Scheduled reports take precedence over all activity in your environment.
+ - When a scheduled report is run, all existing search jobs are terminated.
+
+06.- When are actions triggered for a **real-time alert**?
+ - Within a 60-second window of its cron Schedule.
+ - **As soon as alert conditions are met.**
+ - Within a five-minute window of its corn schedule.
+ - As soon as the related report is run.
+
+07.- Which edit setting allows a report to be displayed to users outside of your organization?
+ - HTML.
+ - Enable.
+ - Permissions.
+ - **Embed**. OK
+
+08.- Select the two valid types of alerts.
+ - Email.
+ - Text message (SMS)
+ - **Scheduled**
+ - **Real-time**
+
+09.- Which of the following prebuilt **alet actions** can be triggered when a report is run?
+ - Run a secondary report
+ - **Output results to a lookup**
+ - Send a text message (SMS)
+ - **Send an email**
+
+10.- Which **Scheduled report** type will continuously run in the background?
+ - **Real-Time**
+ - Constant
+ - Automatic
+ - Interval
+
+11.- Which **alert action** allows you to send an event to your Splunk deployment for indexing?
+ - **Log event**.
+ - Generate Event.
+ - Generate Log.
+ - Create Event.
+
+12.- Which **Scheduled report** setting helps determine when concurrent report will run?
+ - **Scheduled Order.**
+ - Report Priority.
+ - Scheduled Priority.
+ - Report Order.
+
+13.-Which alert action allows you to send a message to an external chat room?
+ - **Webhook**
+ - Output to chat.
+ - Output to Text.
+ - API Call.
+
+14.- Which of the following user roles are able to display a **report** in the app which it was created?
+ - **Power**
+ - **The user who created the report.**
+ - User
+ - **Admin**
+
 
 [Back to index](README.md)
