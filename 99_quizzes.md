@@ -200,9 +200,9 @@
  - The user who created the report.
  - User.
 
-04.- If a **dashboard panel** is powered by a **Scheduled report**, How frecuently will its cintents update?
- - **The dashboard panel updates based on the underlying report's scheduling settings.**
- - The dashboard panel updates any time the dashboard is opened or manually refreshed.
+04.- If a **dashboard panel** is powered by a **Scheduled report**, How frecuently will its contents update?
+ - The dashboard panel updates based on the underlying report's scheduling settings.
+ - **The dashboard panel updates any time the dashboard is opened or manually refreshed.** OK
  - Dashboard panels cannot be lined to scheduled reports.
  - Dashboard panels will update based on the dashboard's time range picker.
 
@@ -232,26 +232,26 @@
 
 09.- Which of the following prebuilt **alet actions** can be triggered when a report is run?
  - Run a secondary report
- - **Output results to a lookup**
+ - **Output results to a lookup** OK
  - Send a text message (SMS)
- - **Send an email**
+ - **Send an email** OK
 
 10.- Which **Scheduled report** type will continuously run in the background?
- - **Real-Time**
+ - **Real-Time** OK
  - Constant
  - Automatic
  - Interval
 
 11.- Which **alert action** allows you to send an event to your Splunk deployment for indexing?
- - **Log event**.
+ - **Log event**. OK
  - Generate Event.
  - Generate Log.
  - Create Event.
 
 12.- Which **Scheduled report** setting helps determine when concurrent report will run?
- - **Scheduled Order.**
+ - Scheduled Order.
  - Report Priority.
- - Scheduled Priority.
+ - [**Scheduled Priority.**](https://docs.splunk.com/Documentation/SplunkCloud/latest/Report/PrioritizescheduledreportsinSplunkWeb)
  - Report Order.
 
 13.-Which alert action allows you to send a message to an external chat room?
