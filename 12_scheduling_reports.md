@@ -167,4 +167,23 @@ To see a list of the CSV lookup files currently uploaded to your Splunk implemen
 
 
 ## Manging Alerts (01:58)
+
+From the `Activity` menu, `Triggered Alerts` option we can see all triggered alerts. then view the results and edit the search
+
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/89ed07ed-da20-4318-ad6d-f189ec443cb0)
+
+From `Settings'  menu,   with link `Searches, reports, and alerts` we can manage alerts the same way we did with scheduled reports
+
+From `Alerts' menu in the `Search and reporting app` we can see the Alert name, available actions, alert's owner, alert's app, privacy,  and if it is enabled or disabled.
+
+Expanding the alert we have direct links to edit permissions, settings for the alert type and trigger conditions, providing **we have edit permissions** for the selected alert.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/bfb3037e-ee35-4673-9115-d716d888a817)
+
+Alerts are private by default but can be displayed for all users of the app. Only those who have an admin role can display an alert in all apps.
+
+Selecting `App` allows us to grant read and writ access to all users.
+
+
 [Back to index](README.md)
