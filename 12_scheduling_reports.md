@@ -142,7 +142,7 @@ The triggered alerts allow us to set the severity of the alert, which allows us 
 If you have proper capabilities, you can use a `log event action` that is sent to your Splunk deployment for indexing. Fill in correctly the text boxes.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7e9091b3-aa75-435f-b192-ad78a38f3be1)
 
-`Output results to lookup` will create (repalce) or update (appned) a .csv lookup table.
+`Output results to lookup` will create (replace) or update (append) a .csv lookup table.
 To see a list of the CSV lookup files currently uploaded to your Splunk implementation, select Settings > Lookups > Lookup table files.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/52c7b4c7-c91b-424c-94c1-1c1a9677eb24)
 
@@ -151,6 +151,16 @@ To see a list of the CSV lookup files currently uploaded to your Splunk implemen
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7095920f-095b-4422-bde0-2c031c135113)
 
 
-`Run a Script`will trigger a shell script or bash file stored  on your instance.
+`Run a Script` will trigger a shell script or bash file stored  on your instance. This option is officially deprecated. Use a custom alert action instead.
+
+'Send email action` to set where to send an email, priority, subject, message, what elements to include, and choose between HTML or plain text. Splunk Tokens  add dynamic data to the email.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/73e34a63-e95a-4609-89c6-0a7b96a58884)
+
+´Webhooks allow you to define custom callbacks on a particular web resource`(make an alert message pop up in a chat room, create a ticket in a support app).
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e4941e09-181f-48bc-ad13-5b27bd23694c)
+
+`Custom alert actions`. Admin users can find prebuilt alert actions by clicking the manage Alert actions link. If there is not an action that fits your needs, you can build your own. [Splunkbase Alert Actions](https://splunkbase.splunk.com/apps#/app_content/alert_actions) 
+
+
 ## Manging Alerts (01:58)
 [Back to index](README.md)
