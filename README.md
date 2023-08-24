@@ -6,7 +6,7 @@ Press on the links below.
 #### [00.- Intro to Splunk](00_intro_to_splunk.md) 
 #### [01.- Visualizations](01_visualizations.md)
 #### [02.- Working with time](02_working_with_time.md)
-#### [03.- Statistical Processing](#3-statistical-processing) KO
+#### [03.- Statistical Processing](03_statistical_processing.md) KO
 #### [04.- Comparing Values](#4-comparing-values)  KO
 #### [05.- Result Modification](#5-result-modification) KO
 #### [06.- Correlation Analysis](#6-correlation-analysis) KO
@@ -21,8 +21,6 @@ Press on the links below.
 
 
 
-[Back to index](#splunk-core-certified-power-user)
-# <a name= "statistical-processing">3. Statistical Processing</a>
 [Back to index](#splunk-core-certified-power-user)
 # <a name= "comparing-values">4. Comparing Values</a>
 [Back to index](#splunk-core-certified-power-user)
