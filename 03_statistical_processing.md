@@ -125,6 +125,11 @@ To
 Renaming Coutn Column
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/378a9575-17c1-4f85-b512-ebae9344fd55)
 
+### run top command from the UI:
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7da88e5c-2d04-4d3a-b30a-4953767b85ea)
+Not that whe you use this method the limit argument is set by default to 20
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/045565c8-24d3-41fe-b3fd-6f4e285bcc51)
 
 
 ## Rare Command (00:27)
