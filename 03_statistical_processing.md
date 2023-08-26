@@ -72,6 +72,26 @@ When the period Spluck uses is not appropriate, you can override it using the `s
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/61cc63db-7cdf-4c1b-bbe7-b01c2b0f4036)
 
+`limit`argument controls the number of values returned for our multi-series split. Without it, we get the top 10 values in 11 lines in our chart, which has an additional other series.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ee5890c5-8bd1-46c3-8551-92eb7eb26361)
+
+compared with
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6522c148-0e0b-4b72-a18b-ded02e7df48a)
+### chart versus tiemchart
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0b77c9d6-7919-473c-9182-95e8d0675ff6)
+There is no time aggregation
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/49e68674-7739-4849-80d1-cb26144b0782)
+Automatically aggregates count in one-day buckets because the time range is 7 days.
+
+When running a multi-series time chart, we have an option for how we want our data to be displayed. AS our timechart can sometimes appear more cluttered, we have the option to toggle a feature called multi-series mode. This option shows in `format` `General' `Multi-series mode` . This will separate out the different series into their own trendlin sharing the same X-axis, but with individual  Y-axis tha share the floor and ceiling values.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/daf364b9-7490-4ead-bd44-4334260f9e01)
+
+
 
 
 ## Top Command (04:00)
