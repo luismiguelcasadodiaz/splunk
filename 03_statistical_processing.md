@@ -118,21 +118,25 @@ With two fields. All combinations of group and name are unique
 two top names by group
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e5d68d98-6646-450b-bd65-eeb38fbe780e)
 
-To
+Two top groups by name
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c92a58c1-fc7a-4be1-99df-4ae485e38a30)
 
 
-Renaming Coutn Column
+Renaming Count Column
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/378a9575-17c1-4f85-b512-ebae9344fd55)
 
 ### run top command from the UI:
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7da88e5c-2d04-4d3a-b30a-4953767b85ea)
-Not that whe you use this method the limit argument is set by default to 20
+Note that when you use this method the limit argument is set by default to 20
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/045565c8-24d3-41fe-b3fd-6f4e285bcc51)
 
 
 ## Rare Command (00:27)
+Essentially, is the opposite of the top command, which returns the least common values of a result set.. Has the same options., By default, results are sorted in ascending order based on count.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3326fbcd-019c-4357-86fe-c72a4b9b13ff)
+
+
 ## Stats Command (02:52)
 ## Functions of the Stast Command (06:56)
 ## Transforming Commands Summary (01:18)
