@@ -45,6 +45,35 @@ Some examples:
 
 
 ## Timechart Command (07:21)
+Performs stats aggregations against time and returns a time series chart or table where _time  field is always the X-axis.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fffb004d-f695-4a3b-ab16-4f8f37c85c3e)
+
+`stats-func(field)` populates the Y-axis. `count` is the only function that does not require field specification.
+Function and argument used in `Stat` and `chart` can also be used with `timechart`.
+
+ `by <split-by-field>` spit our result table. A key difference between `chart` and `timechart` is that `timechart` **only supports a single additional split**. This is because the X-axis is automatically segmented or bucketed based on time. Each distinct value of the `split-by-field` will become a series.
+
+ The functional equivalent of the search, using `chart` would be chart count by time and usage, but `timechart` automatically applies a bucket command to set the time span to a preset sampling interval that depends on the time range of  the search. We can see this reflected in the stats table output. Each row represents a chunk or bucket of aggregated data
+ ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/753088c7-83e0-47e3-b1b1-0d1a4db283ab)
+
+
+### Default bin span according to the picker time range.
+
+|Time range|Default time bucket|
+|----------|-------------------|
+|last 30 days|1 day|
+|last 7 days|1 day|
+|last 24 hours| 30 minutes|
+|last hour|1 minute|
+|last 15 minutes|10 secodns|
+
+When the period Spluck uses is not appropriate, you can override it using the `span` argument, which forces SPlunk to group bucket on the best-fit time range.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/61cc63db-7cdf-4c1b-bbe7-b01c2b0f4036)
+
+
+
 ## Top Command (04:00)
 ## Rare Command (00:27)
 ## Stats Command (02:52)
