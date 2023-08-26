@@ -96,7 +96,30 @@ When running a multi-series time chart, we have an option for how we want our da
 
 
 
-## Top Command (04:00)
+## Top Command (04:00).
+Finds the most common values from a given **list of fields** in a result set. We can group result together based on a shared field with the `by` clause.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/586a04b2-8fe0-46fc-a553-8f080f3c284a)
+
+By default output top 10 results in table format. This can be overridden with the limit argument
+`countfield': Renames the count field specifying a string.
+'showperc', Defaults to True. `showperf=f` or  `showperc=0` prevents the percentage column.
+
+### examples 
+Which IP addresses generated the most attacks in the last 60 minutes. Without any argument, we get the `count` or number of events and the percentage.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/23fa4cda-8071-4d23-87e1-f66b9e6f27b5)
+
+With only one field
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/51ec03a9-ad6a-48b7-83cc-ec0b2a39329a)
+
+With two fields
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/001e3bc4-2566-4b81-aa6a-5914479a1a9f)
+
+Renaming Coutn Column
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/378a9575-17c1-4f85-b512-ebae9344fd55)
+
+
+
 ## Rare Command (00:27)
 ## Stats Command (02:52)
 ## Functions of the Stast Command (06:56)
