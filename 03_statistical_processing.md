@@ -109,11 +109,18 @@ By default output top 10 results in table format. This can be overridden with th
 Which IP addresses generated the most attacks in the last 60 minutes. Without any argument, we get the `count` or number of events and the percentage.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/23fa4cda-8071-4d23-87e1-f66b9e6f27b5)
 
-With only one field
+With only one field: 10 most common values in the Grout field. Column values are unique.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/51ec03a9-ad6a-48b7-83cc-ec0b2a39329a)
 
-With two fields
+With two fields. All combinations of group and name are unique
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/001e3bc4-2566-4b81-aa6a-5914479a1a9f)
+
+two top names by group
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e5d68d98-6646-450b-bd65-eeb38fbe780e)
+
+To
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c92a58c1-fc7a-4be1-99df-4ae485e38a30)
+
 
 Renaming Coutn Column
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/378a9575-17c1-4f85-b512-ebae9344fd55)
