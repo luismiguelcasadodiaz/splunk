@@ -81,7 +81,7 @@ compared with
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6522c148-0e0b-4b72-a18b-ded02e7df48a)
 
-### chart versus tiemchart
+### chart versus timechart
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0b77c9d6-7919-473c-9182-95e8d0675ff6)
 There is no time aggregation
