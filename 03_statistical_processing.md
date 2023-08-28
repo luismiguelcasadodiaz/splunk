@@ -139,9 +139,21 @@ Essentially, is the opposite of the top command, which returns the least common 
 
 ## Stats Command (02:52)
 
-We produce statistics from out search result wiht the stats command. The **output is a table**. `by <field list>` clause groups the result for each different value of each field in the field list.  differentely from `chart` and  `timechart`, `stats` allows continupus splitting  of your data.
+We produce statistics from out search result wiht the stats command. The **output is a table**. `by <field list>` clause groups the result for each different value of each field in the field list.  Differently from `chart` and  `timechart`, `stats` allows continuous splitting  of your data. (`timechart`splits only by one field. `chart`command splits by two fields).
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d0c17253-ea63-4931-8e66-63cf9c768d67)
 
+Use `as` clause to rename resulting column to override default column names according to search syntax. It is very convenient option to avoid confusion when statistics for severals fields are calculated.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/be2c29ed-57e4-4003-b357-744dbe0d27ab)
+
+
+in `stats`statistical functions can support multiple fields
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8a9fee8-aec3-4c67-aac0-557ea21a70f1)
+
+`count` differs from `count(field)` in that the former counts all events and the latter count only events with a value in the field.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3475ff97-4b4a-43a9-b15b-80d989d2e41b)
+
+Order of fields inm `by <field list>` has a big  impact on the search results as the data will first be grouped by the first field given, then grouped by the second field given and so on.
 
 ## Functions of the Stast Command (06:56)
 ## Transforming Commands Summary (01:18)
