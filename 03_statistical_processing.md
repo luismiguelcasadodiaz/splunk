@@ -171,15 +171,20 @@ There are four categories of statistical functions:
   - Multivalue: Returns list of value for a field as a multivalue enr
     - list(x): Returns a list of up to 100 values in a field as a multivalue entry. The order of the values reflects the order of input events. 
     - values(x): Returns the list of all distinct values in a field as a multivalue entry. The order of the values is lexicographical.
-    - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1400be56-6a07-4ee3-9416-ab0781ef8173)
     - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/00019d36-d96f-46dc-ae05-d527397ce288)
 
 
-  - Time: Retunrs values based on time.
+  - Time: Returns values based on time.
+    -   Returns the chronologically `earliest(x)` (oldest) or  `latest(x)` (most recent) seen occurrence of a value in a field.
+    -   Returns the UNIX time of the `earliest_time(x)` (oldest) or  `latest_time(x)` (most recent) to calculate the rate of increase for an accumulating counter.
+    -   
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1181bd20-7da5-4ad8-a630-5ea7e9aeb6a1)
 
-  - 
 ## Transforming Commands Summary (01:18)
+`stats`, `chart`, and `timechart` share similar features. Use **proper** command to get wanted results: `stats` for table, the others for visualizations.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/56146202-fdeb-4f2e-8a05-d35f227356a7)
+
 ## Eval Command (06:43)
 ## Functions of the Eval Command(04:24)
 ## Eval as a Function (01:06)
