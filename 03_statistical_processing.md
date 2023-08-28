@@ -157,6 +157,28 @@ in `stats`statistical functions can support multiple fields
 Order of fields in `by <field list>` has a big  impact on the search results as the data will first be grouped by the first field given, then grouped by the second field given and so on.
 
 ## Functions of the Stast Command (06:56)
+There are four categories of statistical functions:
+  - Aggregate: Summarizes event values to create a single value
+    - `count`, `count(x)`, `dc(x) or distinct_count(x)`, `estdc(x)`, and `estdc_error(x)`  estimated count of the distinct values in the field specified.
+    - `min(x)`, `max(x)`,  `range(x)`.
+    - `sum(x)`, `sumsq(x)`. Sum and sum squares
+    - `avg(x)`, `median(x)`, `mode(x)`. Average ignores events without an especific value or whithout numeric values in the field
+    - `stdev(x)`, `stdevp(x)`,`var(x)´, `varp(x)´.
+    - `percentile<percentile>(x) or p<percentile>(x)`, `upperperc<percentile>(x)`, `exactperc<percentile>(x)`
+  - Event Order:Returns values from fields based on processing order.
+    - The `first(x)` seen value in the field x.
+    - The `lastst(x)` seen value in the field x.
+  - Multivalue: Returns list of value for a field as a multivalue enr
+    - list(x): Returns a list of up to 100 values in a field as a multivalue entry. The order of the values reflects the order of input events. 
+    - values(x): Returns the list of all distinct values in a field as a multivalue entry. The order of the values is lexicographical.
+    - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1400be56-6a07-4ee3-9416-ab0781ef8173)
+    - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/00019d36-d96f-46dc-ae05-d527397ce288)
+
+
+  - Time: Retunrs values based on time.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1181bd20-7da5-4ad8-a630-5ea7e9aeb6a1)
+
+  - 
 ## Transforming Commands Summary (01:18)
 ## Eval Command (06:43)
 ## Functions of the Eval Command(04:24)
