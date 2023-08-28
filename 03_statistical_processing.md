@@ -30,7 +30,7 @@ Take results and return them formatted into a table that can be displayed as a v
     - useother=True/False: **Visually** Removes the `OTHER`column. There is no recalculation or research
     - usenull: Removes the `NULL`Column if one exists. it is for events that do not contain the field used to create the multi-series series
       
-Each time you invoke the stats command, you can use one or more functions. However, you can only use one ´BY` clause.
+Each time you invoke the stats command, you can use one or more functions. However, you can only use one `BY` clause.
 unlike the `stats` command, the `chart` command **can only be split over two** fields or dimensions. A chart command with two arguments after the `by` clause   is equivalent to using an over and by clause. The values for a second split are represented by individually colored columns.
 
 Some examples:
@@ -138,6 +138,11 @@ Essentially, is the opposite of the top command, which returns the least common 
 
 
 ## Stats Command (02:52)
+
+We produce statistics from out search result wiht the stats command. The **output is a table**. `by <field list>` clause groups the result for each different value of each field in the field list.  differentely from `chart` and  `timechart`, `stats` allows continupus splitting  of your data.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d0c17253-ea63-4931-8e66-63cf9c768d67)
+
+
 ## Functions of the Stast Command (06:56)
 ## Transforming Commands Summary (01:18)
 ## Eval Command (06:43)
