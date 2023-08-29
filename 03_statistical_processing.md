@@ -186,6 +186,23 @@ There are four categories of statistical functions:
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/56146202-fdeb-4f2e-8a05-d35f227356a7)
 
 ## Eval Command (06:43)
+Performs calculations with values in our data.
+An eval expression is a combination of literals. fields, operators and functions that represent the valus of the destination field.
+Calculates the expression and puts the resulting values into a new fields or overwrites an existing one.
+Creates a new field on the fly, populated with the expresion's result, that can be used as any regular field in the remainder of the search expresion.
+Nothing written with the eval command is kept after the lifetime of the search it was used in. The new field **is not saved** in the index neithe it will be available again after the search is completed.
+Either that the eval commnad temporally can overwrites the values present in a previous existing field, no change of our data is permanent, the **new values are not written to disk** any way.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4fc5d8d9-e56f-41f5-ba49-47e00d51bba5)
+
+Eval involves 
+  - Mathematical operation.
+  - String concatenation.
+  - Comparison expression.
+  - Boolean expresion.
+  - a call to an `eval` function.
+
+
 ## Functions of the Eval Command(04:24)
 ## Eval as a Function (01:06)
 ## Rename Command (02:38)
