@@ -277,5 +277,20 @@ Wildcare usage in renaming fields
 
 
 ## Sort Command (03:11)
+Sorts in ascending ording by default. `-`changes it to descending order. `+` is implicit so not required.
+Double quote field name when containing special character or white spaces.
+limit the number of results with the `limit` argument or just putting an integer.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/09ecfaa9-5c5e-4fc8-9391-96233d803228)
+Splunk determines data type of values present in the field and sort appropriately:
+  - Alphabetic Strings : Lexicographically. **uppercase letters before than lowercase**
+  - numbers : Numerically
+  - Combination : Depending on the first character lexicographically or numerically.
+
+### Examples
+Please notice the white spaces after `-`. It applyes to both fields in the first example orderinf descending both of them. But in the second example, whihout white space,  `-` only applies to first field bieng the seconf field ordered in ascending mode
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/42c979a9-6256-40d3-bb4e-ed88d472ba76)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3cd1d008-130a-49e9-a4fa-108e4dbc8d23)
+
+
 
 [Back to index](README.md)
