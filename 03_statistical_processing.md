@@ -241,22 +241,39 @@ Genearlly, Evaluation functions will evaluate an expression based on the events 
 
 ### Examples
 Create a five random grups of users.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2a122143-4a9e-494c-95c4-4a3fbe78c172)
 
-Eval usage wihtout functions
+Eval usage wihtout functions.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8672b97-3b0a-4ad3-8384-93b8c68321c7)
-
-
 
   
 ## Eval as a Function (01:06)
 Eval command can be used as a function wihtin the `stats`command. 
 Nest eval inside an `stats count`to count events wiht a calculated value.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fc6663b6-337e-4e6e-8c08-12d452801767)
 
 **Requires** an `as` clause to rename the field.
 
 ## Rename Command (02:38)
+Helps to display a more useful or meaningfull field name.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5aabcc13-199c-468d-b53f-998c84f34551)
+
+Double quote new fieldname if has to contain any special character.
+Multiple field renaming is possible in a single command. **notice commas**
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f822f2e1-26f2-433b-b387-144db0e3232d)
+
+Once a field is renamed Splunk will only respond to or be able to use teh new name of that field in the rest of the search.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f418ba66-3eb9-4afb-9d33-b985ba03419b)
+
+Wildcare usage in renaming fields
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2e05d9a7-46ff-460a-8a93-9eaca8cc1e1e)
+
+
+
 ## Sort Command (03:11)
 
 [Back to index](README.md)
