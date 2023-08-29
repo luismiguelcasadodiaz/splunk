@@ -211,7 +211,12 @@ Field names mustbe single quoted when contain special charactares
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f7e0fdcc-7309-468b-8e09-9cd146993e01)
 
 ### Usage examples
-![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/dd5628ed-800c-46d4-a171-3b08f3202484)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a76ae2dd-dc6c-4685-a18a-72e062675bf8)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/63092157-753a-4455-b787-df5618dd772e)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/22cf7943-b588-4787-9ef6-37d57953be57)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/dd5628ed-800c-46d4-a171-3b08f3202484)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a76ae2dd-dc6c-4685-a18a-72e062675bf8)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/63092157-753a-4455-b787-df5618dd772e)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/22cf7943-b588-4787-9ef6-37d57953be57)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/53c3fa7d-d755-4d83-9e49-8a583c7b2fdf)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4113d108-4f30-4388-94c2-ddfa40f96a3e)
+
+
 
 
 
@@ -219,7 +224,38 @@ Field names mustbe single quoted when contain special charactares
 
 
 ## Functions of the Eval Command(04:24)
+There are 11 categories of [evaluation functions](https://docs.splunk.com/Documentation/Splunk/9.1.0/SearchReference/CommonEvalFunctions)
+- Comparison & Conditional
+- Conversion
+- Cryptographic (md5, sha1, sha256, sha512)
+- Data & time
+- Informational
+- JSON
+- Mathematical (round(X,Y), pow). A `round` without `Y` returns `X`as integer. 
+- Multivalue
+- Statistical (avg, max, min, random). `random`returns a Psudo-random integer ranging from zero to 2³¹-1
+- Text
+- Trigonometry and hyperbolic
+
+Genearlly, Evaluation functions will evaluate an expression based on the events ans returns a result, but some not evaluata any expression ans insteead return a result based on its own funcionality
+
+### Examples
+Create a five random grups of users.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2a122143-4a9e-494c-95c4-4a3fbe78c172)
+
+Eval usage wihtout functions
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8672b97-3b0a-4ad3-8384-93b8c68321c7)
+
+
+
+  
 ## Eval as a Function (01:06)
+Eval command can be used as a function wihtin the `stats`command. 
+Nest eval inside an `stats count`to count events wiht a calculated value.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fc6663b6-337e-4e6e-8c08-12d452801767)
+
+**Requires** an `as` clause to rename the field.
+
 ## Rename Command (02:38)
 ## Sort Command (03:11)
 
