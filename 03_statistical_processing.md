@@ -195,12 +195,27 @@ Either that the eval commnad temporally can overwrites the values present in a p
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4fc5d8d9-e56f-41f5-ba49-47e00d51bba5)
 
-Eval involves 
+Eval involves:
   - Mathematical operation.
-  - String concatenation.
+  - String concatenation. Use `+` for String or character and  `.` for any data type.
   - Comparison expression.
   - Boolean expresion.
-  - a call to an `eval` function.
+  - A call to an `eval` function.
+    these are the operators
+    ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/acb52173-a065-4fc6-94d3-5592062ff57d)
+
+### Eval Syntax
+Field values are case sensitive
+Stringss must be duble quoted
+Field names mustbe single quoted when contain special charactares
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f7e0fdcc-7309-468b-8e09-9cd146993e01)
+
+### Usage examples
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/dd5628ed-800c-46d4-a171-3b08f3202484)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/a76ae2dd-dc6c-4685-a18a-72e062675bf8)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/63092157-753a-4455-b787-df5618dd772e)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/22cf7943-b588-4787-9ef6-37d57953be57)
+
+
+
+
 
 
 ## Functions of the Eval Command(04:24)
