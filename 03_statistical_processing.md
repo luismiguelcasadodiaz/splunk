@@ -266,10 +266,12 @@ Double quote new fieldname if has to contain any special character.
 Multiple field renaming is possible in a single command. **notice commas**
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f822f2e1-26f2-433b-b387-144db0e3232d)
 
-Once a field is renamed Splunk will only respond to or be able to use teh new name of that field in the rest of the search.
+Once a field is renamed Splunk will only respond to or be able to use the new name of that field in the rest of the search.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f418ba66-3eb9-4afb-9d33-b985ba03419b)
 
 Wildcare usage in renaming fields
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2e05d9a7-46ff-460a-8a93-9eaca8cc1e1e)
 
 
