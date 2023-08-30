@@ -17,7 +17,7 @@
 
 
 ---
-## Intro to Splunk 
+# Intro to Splunk 
 93% with bold answers(one is wrong but I did not manage to discover which one.
 
 1.- What is the most efficient way to limit search results returned?
