@@ -9,9 +9,9 @@
 ##### [Eval: in function]() (2:18)]
 ##### [Eval: match function]() (4:57)
 ##### [Eval: replace function]() (5:38)
-##### [Fieldformat command]()(2:05)
-##### [Fillnull command]()(2:16)
-##### [Where command](##_where_command)(8:17)
+##### [Fieldformat command]() (2:05)
+##### [Fillnull command]() (2:16)
+##### [Where command](##_Where_command) (8:17)
 
 
 
