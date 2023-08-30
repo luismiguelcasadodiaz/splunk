@@ -109,7 +109,86 @@
  - the time zone where the event originated
  - timestamps are displayed in GMT.
 ---
-## Using Fields
+# Statistical processing
+
+01.- True o False: The timechart command will always have _time as the X-axis.
+ - **True.**
+ - False.
+
+
+02.- If you use the stats command with two functions and a BY clause, which function is the BY clause applied to?
+ - The second function.
+ - **both functions.**
+ - Both functions if they are both aggregated functions.
+ - The first function.
+
+03.- True or False: Use useother=false wiht the chart command if you want to hide the OTHER column.
+ - **True**
+ - False
+
+04.- When renaming fields with spaces or spacial characters, use the rename command and include the new field name in __________.
+ - None of the above.
+ - **Double quotes.**
+ - Single quotes.
+ - Parenthesis.
+
+05.- Which of these functions list ALL values of the field X?
+ - **list(X).**
+ - Values(X).
+
+06.- Which of these evals functions takes no arguments?
+ - min.
+ - max.
+ - pow.
+ - **random.**
+
+07.- When you use the stats command wiht a by clause, what is returned?
+ - **A statistical output for each value of the named field.**
+ - An error message because you did not include a statistical function.
+ - One row.
+ - Numerical statistics on each field is and only if all of the values ot that field are numerical.
+
+08.- True or False: Using an OVER and a BY Clause with the chart commnad will creata a multiseries data series?
+ - **True.**
+ - False.
+
+09.- True or False: Only one field can be created when using the eval command
+ - True.
+ - **False.**
+
+10.- True or False: The pow(X, Y) eval functions returns Y to the power of X.
+ - True.
+ - **False.**
+
+11.- True or False: You can use wildcards(*) with the rename commnad to rename multiple fields that match a pattern.
+ - **True.**
+ - False.
+
+12.- To display the least commond values of a field, use the _____ command.
+ - stats.
+ - top.
+ - timechart with common=f option.
+ - **rare.**
+
+13.- By default, the sort command list results in __________ order.
+ - descending.
+ - **ascending.**
+
+14.- Which eval function would you use to round numerical values?
+ - commas.
+ - roundvalue.
+ - tonumber.
+ - **round.**
+
+15.- When using the top command, add the BY clause to _______.
+ - **Return results grouped by the field you specify in the BY clause.**
+ - Specify how many result to return.
+ - Return a percentaje of events.
+ - Specify which search mode to return results by
+   
+---
+
+# Using Fields
 100% with bold answers.
 
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
@@ -156,7 +235,7 @@
   - field command.
 ---
 
-## Working with time
+# Working with time
 88% . i have not the right answer for question 8
 
 1.- @timeUnit will always round up and go forward through time.
@@ -201,7 +280,7 @@
   - time of raw event in UTC
  
  
- ## Scheduling Reports and Alerts
+ # Scheduling Reports and Alerts
  14/14 100%
 
  01.- Which **Scheduled report setting** allows you to define a time range for a report to run if it is delayed?
