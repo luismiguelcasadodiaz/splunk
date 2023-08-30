@@ -1,7 +1,7 @@
 [Back to index](README.md)
 # Quizzes
 
-#### [00.- Intro to Splunk](##_intro_to_splunk) 
+#### [00.- Intro to Splunk](#_intro_to_splunk) 
 #### [01.- Visualizations](##_visualizations)
 #### [02.- Working with time](##_working_with_time)
 #### [03.- Statistical Processing](03_statistical_processing)
