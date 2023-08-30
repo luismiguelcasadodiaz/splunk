@@ -1,7 +1,25 @@
 [Back to index](README.md)
-# zz Quizzes
+# Quizzes
+
+#### [00.- Intro to Splunk](##_intro_to_splunk) 
+#### [01.- Visualizations](##_visualizations)
+#### [02.- Working with time](##_working_with_time)
+#### [03.- Statistical Processing](03_statistical_processing)
+#### [04.- Comparing Values](#4-comparing-values)
+#### [05.- Result Modification](#5-result-modification)
+#### [06.- Correlation Analysis](#6-correlation-analysis)
+#### [07.- Creating Knowledge Objects](#7-creating-knowledge-objects)
+#### [08.- Creating Field Extractions](#8-creating-field-extractions)
+#### [09.- Data Models](#9-data-models)
+#### [10.- Using Choropleth](#10-using-choropleth)
+#### [11.- Using Fields](##_using_fields)
+#### [12.- Scheduling Reports](##_scheduling_reports_and_alerts)
+
+
 ---
-## Intro to Splunk 93% with bold answers(one is wrong but I did not manage to discover which one.
+## Intro to Splunk 
+93% with bold answers(one is wrong but I did not manage to discover which one.
+
 1.- What is the most efficient way to limit search results returned?
  - index
  - source
@@ -91,7 +109,9 @@
  - the time zone where the event originated
  - timestamps are displayed in GMT.
 ---
-## Quiz Using Fields 100% with bold answers.
+## Using Fields
+100% with bold answers.
+
 1.- In the fields sidebars, **interesting fields** occur in at least ______ of resulting events.
 
   - 50%
@@ -136,7 +156,8 @@
   - field command.
 ---
 
-## Working with time 88% . i have hot the right answer for question 8
+## Working with time
+88% . i have not the right answer for question 8
 
 1.- @timeUnit will always round up and go forward through time.
  - **False**
@@ -180,7 +201,8 @@
   - time of raw event in UTC
  
  
- ## Scheduling Reports & Alerts 14/14 100%
+ ## Scheduling Reports and Alerts
+ 14/14 100%
 
  01.- Which **Scheduled report setting** allows you to define a time range for a report to run if it is delayed?
   - Report Window
@@ -266,5 +288,6 @@
  - User
  - **Admin** OK
 
+[Back to top](#_quizzes)
 
 [Back to index](README.md)
