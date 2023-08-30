@@ -2,9 +2,9 @@
 # Quizzes
 
 #### [00.- Intro to Splunk](#_intro_to_splunk) 
-#### [01.- Visualizations](##_visualizations)
-#### [02.- Working with time](##_working_with_time)
-#### [03.- Statistical Processing](03_statistical_processing)
+#### [01.- Visualizations](#_visualizations)
+#### [02.- Working with time](#_working_with_time)
+#### [03.- Statistical Processing](#_statistical_processing)
 #### [04.- Comparing Values](#4-comparing-values)
 #### [05.- Result Modification](#5-result-modification)
 #### [06.- Correlation Analysis](#6-correlation-analysis)
@@ -12,8 +12,8 @@
 #### [08.- Creating Field Extractions](#8-creating-field-extractions)
 #### [09.- Data Models](#9-data-models)
 #### [10.- Using Choropleth](#10-using-choropleth)
-#### [11.- Using Fields](##_using_fields)
-#### [12.- Scheduling Reports](##_scheduling_reports_and_alerts)
+#### [11.- Using Fields](#_using_fields)
+#### [12.- Scheduling Reports](#_scheduling_reports_and_alerts)
 
 
 ---
