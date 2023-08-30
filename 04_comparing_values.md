@@ -19,7 +19,7 @@
 
 ## Using eval to compare(7:22)
 ## Evaluation functions(3:28)
-## Eval: if function (2:40)
+## if function (2:40)
 ## Eval: case function (4:13)
 ## Eval: validate function (1:15)
 ## Eval: in function (2:18)
