@@ -7,7 +7,7 @@ Press on the links below.
 #### [01.- Visualizations](01_visualizations.md)
 #### [02.- Working with time](02_working_with_time.md)
 #### [03.- Statistical Processing](03_statistical_processing.md)
-#### [04.- Comparing Values](#4-comparing-values)  KO
+#### [04.- Comparing Values](04_comparing_values.md)  KO
 #### [05.- Result Modification](#5-result-modification) KO
 #### [06.- Correlation Analysis](#6-correlation-analysis) KO
 #### [07.- Creating Knowledge Objects](#7-creating-knowledge-objects) KO
