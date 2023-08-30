@@ -1,7 +1,7 @@
 [Back to index](README.md)
 # comparing values
 ## index
-##### [Using eval to compare](#_using_eval_to_compare)
+##### [Using eval to compare](#using-eval-to-compare)
 ##### [Evaluation functions](##_evaluation_functions)
 ##### [Eval: if function]()
 ##### [Eval: case function]() (4:13)
@@ -11,7 +11,7 @@
 ##### [Eval: replace function]() (5:38)
 ##### [Fieldformat command]() (2:05)
 ##### [Fillnull command]() (2:16)
-##### [Where command](#_where_command) (8:17)
+##### [Where command](#where-command) (8:17)
 
 
 
