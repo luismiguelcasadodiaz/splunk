@@ -113,7 +113,7 @@ The `validate` function works exactly as the `case` except instead evaluating wh
 
 [Back to top](#index)
 ## in function
-Allows evaluate a value from a field against  a list of possible values and **returns a value of true** it if finds a match. to nest in a `if` or `case` when used ina an `eval` command. when used in the `where`command does not requires to be nested inside `if` or `case` functions,
+Allows evaluate a value from a field against  a list of possible values and **returns a value of true** it if finds a match. To be  nested in a `if` or `case` function when used in an `eval` command. When used in the `where`command does not requires to be nested inside `if` or `case` functions,
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/de452b46-a714-4a6e-8f67-7322160086b3)
 
 ### example
