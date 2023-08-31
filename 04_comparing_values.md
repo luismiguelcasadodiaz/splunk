@@ -69,6 +69,9 @@ We can use these functions with other commands such as `where`, `fieldformat`
 
 
 ## if function (2:40)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/728cf1c7-fd01-4a67-be19-09b79f07e0de)
+The new field created wiht the eval command shows int the field sidebar. We can make it a selected field to display it along the bottom row of each event.
+
 ## Eval: case function (4:13)
 Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements
 ## Eval: validate function (1:15)
