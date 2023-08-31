@@ -1,17 +1,17 @@
 [Back to index](README.md)
 # comparing values
 ## index
-##### [Using eval to compare](#using-eval-to-compare)
-##### [Evaluation functions](#evaluation-functions)
-##### [Eval: if function](#if-function)
-##### [Eval: case function]() (4:13)
-##### [Eval: validate function]() (1:15)
-##### [Eval: in function]() (2:18)]
-##### [Eval: match function]() (4:57)
-##### [Eval: replace function]() (5:38)
-##### [Fieldformat command](#fieldformat-command) (2:05)
-##### [Fillnull command](#fillnull-command) (2:16)
-##### [Where command](#where-command) (8:17)
+##### [01.-Using eval to compare](#using-eval-to-compare)
+##### [02.-Evaluation functions](#evaluation-functions)
+##### [03.-Eval: if function](#if-function)
+##### [04.-Eval: case function]() (4:13)
+##### [05.-Eval: validate function]() (1:15)
+##### [06.-Eval: in function]() (2:18)]
+##### [07.-Eval: match function]() (4:57)
+##### [08.-Eval: replace function]() (5:38)
+##### [09-Fieldformat command](#fieldformat-command) (2:05)
+##### [10.-Fillnull command](#fillnull-command) (2:16)
+##### [11.-Where command](#where-command) (8:17)
 
 
 
