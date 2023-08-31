@@ -40,16 +40,37 @@ Categorization of states in fucntion fo sales.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8e3d09c9-f2cc-4643-9c3b-2efe82438438)
 
 ### three ways of writting 
-Separates, nextes or liked with commas
+Separated, nested or linked with commas.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/74ee7004-5b22-4179-955c-8185e98ae08e)
 
 
-
-
-
 ## Evaluation functions(3:28)
+There are 11 categories of [evaluation functions](https://docs.splunk.com/Documentation/Splunk/9.1.0/SearchReference/CommonEvalFunctions)
+- Comparison & Conditional (THis is not a full list, just a few of them)
+  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d2e868b-a938-4ce9-9798-f4fcd11a48cc)
+  ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/375ca22c-3ae7-4eaa-8113-3be213c0f469)
+
+  
+- Conversion
+- Cryptographic (md5, sha1, sha256, sha512)
+- Data & time
+- Informational
+- JSON
+- Mathematical (round(X,Y), pow). A `round` without `Y` returns `X`as integer. 
+- Multivalue
+- Statistical (avg, max, min, random). `random`returns a Psudo-random integer ranging from zero to 2³¹-1
+- Text
+- Trigonometry and hyperbolic
+
+Genearlly, Evaluation functions will evaluate an expression based on the events ans returns a result, but some not evaluata any expression ans insteead return a result based on its own funcionality
+
+We can use these functions with other commands such as `where`, `fieldformat` 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2947a62-2551-401c-ba1a-d62fe300f06c)
+
+
 ## if function (2:40)
 ## Eval: case function (4:13)
+Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements
 ## Eval: validate function (1:15)
 ## Eval: in function (2:18)
 ## Eval: match function (4:57)
