@@ -2,8 +2,8 @@
 # comparing values
 ## index
 ##### [Using eval to compare](#using-eval-to-compare)
-##### [02.-Evaluation functions](#evaluation-functions)
-##### [03.-Eval: if function](#if-function)
+##### [-Evaluation functions](#evaluation-functions)
+##### [-Eval: if function](#if-function)
 ##### [04.-Eval: case function]() (4:13)
 ##### [05.-Eval: validate function]() (1:15)
 ##### [06.-Eval: in function]() (2:18)]
