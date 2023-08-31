@@ -1,7 +1,7 @@
 [Back to index](README.md)
 # comparing values
 ## index
-##### [01.-Using eval to compare](#using-eval-to-compare)
+##### [Using eval to compare](#using-eval-to-compare)
 ##### [02.-Evaluation functions](#evaluation-functions)
 ##### [03.-Eval: if function](#if-function)
 ##### [04.-Eval: case function]() (4:13)
