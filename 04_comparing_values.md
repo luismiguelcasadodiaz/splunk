@@ -3,7 +3,7 @@
 ## index
 ##### [Using eval to compare](#using-eval-to-compare)
 ##### [-Evaluation functions](#evaluation-functions)
-##### [-Eval: if function](#if-function)
+##### [adsdsaassad](#if-function)
 ##### [04.-Eval: case function]() (4:13)
 ##### [05.-Eval: validate function]() (1:15)
 ##### [06.-Eval: in function]() (2:18)]
@@ -17,7 +17,7 @@
 
 
 
-## Using eval to compare(7:22)
+## Using eval to compare (7:22)
 We will compare values in our data using conditional statemenst and commands.
 The `eval` command calculates an expression then puts the resulting value into a new or existing field, which can be reused in the search pipeline. When used with  an existing field the eval command overwrites the values of the field with the result of the eval expression at search time **not changing or overwritting any of the indexed data.**.  When we create a new field it will take the values of the expressions but no new data is written into the index. No alteration of the original index happens.
 
@@ -45,7 +45,7 @@ Separated, nested or linked with commas.
 
 [Back to top](#index)
 
-## Evaluation functions(3:28)
+## Evaluation functions (3:28)
 There are 11 categories of [evaluation functions](https://docs.splunk.com/Documentation/Splunk/9.1.0/SearchReference/CommonEvalFunctions)
 - Comparison & Conditional (THis is not a full list, just a few of them)
   ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d2e868b-a938-4ce9-9798-f4fcd11a48cc)
