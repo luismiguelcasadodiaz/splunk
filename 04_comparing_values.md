@@ -2,9 +2,12 @@
 # comparing values
 ## index
 [01.-Using eval to compare (7:22)](#using-eval-to-compare)
+
 [02.-Evaluation functions (3:28)](#evaluation-functions)
+
 [03.-Eval: if function (2:40)](#if-function)
-[04.-Eval: case function](#case-function) (4:13)
+
+[04.-Eval: case function (4:13)](#case-function)
 
 [05.-Eval: validate function](#validate_function) (1:15)
 
@@ -24,7 +27,8 @@
 
 
 
-## Using eval to compare (7:22)
+## Using eval to compare
+
 We will compare values in our data using conditional statemenst and commands.
 The `eval` command calculates an expression then puts the resulting value into a new or existing field, which can be reused in the search pipeline. When used with  an existing field the eval command overwrites the values of the field with the result of the eval expression at search time **not changing or overwritting any of the indexed data.**.  When we create a new field it will take the values of the expressions but no new data is written into the index. No alteration of the original index happens.
 
