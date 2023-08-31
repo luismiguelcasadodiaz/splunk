@@ -92,12 +92,13 @@ The new field created wiht the eval command shows int the field sidebar. We can 
 ## case function
 
 Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements.
-THe case function allows as to enter multiple boolean expresion separated by the argument of what to return if previous expresion evaluates to true. **Only** the argument of the **first expression that evaluates as true will be returned**. if none of the expressions return true, an null value is returned.
+The `case function allows as to enter multiple boolean expresions separated by the argument of what to return if previous expresion evaluates to true. **Only** the argument of the **first expression that evaluates as true will be returned**. if none of the expressions return true, an null value is returned.
 
 ### data normalization example
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/58457845-5bb0-4f29-b706-868142910a32)
 
-Case with last condition to `true()` or `1=1.
+Case with last condition to `true()` or `1=1`.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c986cf16-eadb-4ff1-bfd8-bcf4b5dc4a97)
 
 [Back to top](#index)
