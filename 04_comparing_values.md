@@ -104,6 +104,13 @@ Case with last condition to `true()` or `1=1`.
 [Back to top](#index)
 ## validate function
 
+The `validate` function works exactly as the `case` except instead evaluating whether or not a statement is true, it returns an argument when an expresion evaluates to false.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8cac3e5e-830f-4f2c-99ac-e5e9b298ee29)
+
+### example
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/53f7b67a-1403-4c43-bb32-0e802c9d0520)
+
 [Back to top](#index)
 ## in function
 
