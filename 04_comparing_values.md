@@ -122,6 +122,27 @@ Allows evaluate a value from a field against  a list of possible values and **re
 
 [Back to top](#index)
 ## match function
+Matching functions that return true or false if a suplied condition is matched by returned values.
+### searchmatch
+The `searchmatch` function is a function of the `eval` command the must be embedded wihtin the `if` funciton of the `eval command. it will retunr true or false  depending on whether an **event matches** the search string  passed in as an argument.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/896809f7-b904-4414-bdc8-4eabeab336a1)
+
+#### Example
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0f1932e0-95e9-491e-b4c8-83d002d1c2e0)
+
+
+### cidrmatch
+The `cidrmatch(x, Y) ` eval function will return true or false if the IP address passed in `Y` matched the subnet specified by `X`.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0b77a1b3-b25f-4cc9-84bc-3248839cf0cf)
+
+
+### match
+the `match(SUBJECT, "<regex>")` uses a regular expression to match on the `SUBJECT`argument returning true if Matche happens.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f32f8898-a501-4590-96c8-cb1873ff6e63)
+
+`match` can be made to behave like the `searchmatch function passing `_raw`  subject field. `searchmatch` **by default works off of the _raw data**. 
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b4fec75d-865e-4568-b9ae-91b46c7a9b63)
+
 
 [Back to top](#index)
 ## replace function
