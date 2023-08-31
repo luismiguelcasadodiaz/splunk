@@ -9,19 +9,19 @@
 
 [04.-Eval: case function (4:13)](#case-function)
 
-[05.-Eval: validate function](#validate_function) (1:15)
+[05.-Eval: validate function (1:15)](#validate-function)
 
-[06.-Eval: in function](#in-function) (2:18)]
+[06.-Eval: in function (2:18)](#in-function)
 
-[07.-Eval: match function](#match-function) (4:57)
+[07.-Eval: match function (4:57)](#match-function)
 
-[08.-Eval: replace function](#replace-function) (5:38)
+[08.-Eval: replace function (5:38)](#replace-function)
 
-[09-Fieldformat command](#fieldformat-command) (2:05)
+[09-Fieldformat command (2:05)](#fieldformat-command)
 
-[10.-Fillnull command](#fillnull-command) (2:16)
+[10.-Fillnull command (2:16)](#fillnull-command)
 
-[11.-Where  command](#where-command) (8:17)
+[11.-Where  command (8:17)](#where-command)
 
 
 
@@ -95,17 +95,24 @@ Will evaluate multiple boolean expressions and return a value based on these mul
 ## Eval: validate function
 
 [Back to top](#index)
-## Eval: in function (2:18)
+## Eval: in function
+
 [Back to top](#index)
-## Eval: match function (4:57)
+## Eval: match function
+
 [Back to top](#index)
-## Eval: replace function (5:38)
+## Eval: replace function
+
 [Back to top](#index)
-## Fieldformat command(2:05)
+## Fieldformat command
+
 [Back to top](#index)
-## Fillnull command(2:16)
+## Fillnull command
+
 [Back to top](#index)
-## Where command(8:17)
+## Where command
+
+[Back to top](#index)
 
 
 [Back to index](README.md)
