@@ -43,6 +43,7 @@ Categorization of states in fucntion fo sales.
 Separated, nested or linked with commas.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/74ee7004-5b22-4179-955c-8185e98ae08e)
 
+[Back to top](#index)
 
 ## Evaluation functions(3:28)
 There are 11 categories of [evaluation functions](https://docs.splunk.com/Documentation/Splunk/9.1.0/SearchReference/CommonEvalFunctions)
@@ -67,19 +68,28 @@ Genearlly, Evaluation functions will evaluate an expression based on the events 
 We can use these functions with other commands such as `where`, `fieldformat` 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2947a62-2551-401c-ba1a-d62fe300f06c)
 
+[Back to top](#index)
 
 ## if function (2:40)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/728cf1c7-fd01-4a67-be19-09b79f07e0de)
 The new field created wiht the eval command shows int the field sidebar. We can make it a selected field to display it along the bottom row of each event.
+[Back to top](#index)
 
 ## Eval: case function (4:13)
 Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements
+[Back to top](#index)
 ## Eval: validate function (1:15)
+[Back to top](#index)
 ## Eval: in function (2:18)
+[Back to top](#index)
 ## Eval: match function (4:57)
+[Back to top](#index)
 ## Eval: replace function (5:38)
+[Back to top](#index)
 ## Fieldformat command(2:05)
+[Back to top](#index)
 ## Fillnull command(2:16)
+[Back to top](#index)
 ## Where command(8:17)
 
 
