@@ -86,22 +86,31 @@ We can use these functions with other commands such as `where`, `fieldformat`
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/728cf1c7-fd01-4a67-be19-09b79f07e0de)
 The new field created wiht the eval command shows int the field sidebar. We can make it a selected field to display it along the bottom row of each event.
-[Back to top](#index)
-
-## Eval: case function
-
-Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements
-[Back to top](#index)
-## Eval: validate function
 
 [Back to top](#index)
-## Eval: in function
+
+## case function
+
+Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements.
+THe case function allows as to enter multiple boolean expresion separated by the argument of what to return if previous expresion evaluates to true. **Only** the argument of the **first expression that evaluates as true will be returned**. if none of the expressions return true, an null value is returned.
+
+### data normalization example
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/58457845-5bb0-4f29-b706-868142910a32)
+
+Case with last condition to `true()` or `1=1.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c986cf16-eadb-4ff1-bfd8-bcf4b5dc4a97)
 
 [Back to top](#index)
-## Eval: match function
+## validate function
 
 [Back to top](#index)
-## Eval: replace function
+## in function
+
+[Back to top](#index)
+## match function
+
+[Back to top](#index)
+## replace function
 
 [Back to top](#index)
 ## Fieldformat command
