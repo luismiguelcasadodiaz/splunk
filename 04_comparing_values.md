@@ -1,12 +1,9 @@
 [Back to index](README.md)
 # comparing values
 ## index
-[Using eval to compare (7:22)](#using-eval-to-compare) 
-
-[-Evaluation functions](#evaluation-functions) (3:28)
-
-[adsdsaassad](#if-function) (2:40)
-
+[01.-Using eval to compare (7:22)](#using-eval-to-compare)
+[02.-Evaluation functions (3:28)](#evaluation-functions)
+[03.-Eval: if function (2:40)](#if-function)
 [04.-Eval: case function](#case-function) (4:13)
 
 [05.-Eval: validate function](#validate_function) (1:15)
