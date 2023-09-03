@@ -161,9 +161,8 @@ Masking 4 last digits of an account code.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/620d7399-13cc-49da-97bb-31769b0cb41f)
 
 Masking central octects of an ip address.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d9f0e99d-ce82-45d3-be42-f26c96e41a0e)
-
-
 
 [Back to top](#index)
 ## Fieldformat command
