@@ -137,7 +137,7 @@ The `cidrmatch(x, Y) ` eval function will return true or false if the IP address
 
 
 ### match
-the `match(SUBJECT, "<regex>")` uses a regular expression to match on the `SUBJECT`argument returning true if Matche happens.
+The `match(SUBJECT, "<regex>")` uses a regular expression to match on the `SUBJECT`argument returning true if Matche happens.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f32f8898-a501-4590-96c8-cb1873ff6e63)
 
 `match` can be made to behave like the `searchmatch` function passing `_raw`  subject field. `searchmatch` **by default works off of the _raw data**.
@@ -147,6 +147,22 @@ the `match(SUBJECT, "<regex>")` uses a regular expression to match on the `SUBJE
 
 [Back to top](#index)
 ## replace function
+To replace characters in field's values. `replace` is helpful for **masking**, **at search time**,  any sensitive information within the data, such as exposed accoutn codes, DNI, credit card numbers, **which should ideally be masked prior to onboarding the data into Splunk**. 
+`X` is a string of fieldname.
+`Y` is a regular expression to be matched on the values in `X`.
+`Z` the value to replace the `X` vaues that match `Y` regular expression.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f27e058d-fb6d-4e14-83f5-0181bdc9a1db)
+
+### Examples
+Masking 4 last digits of an account code.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0f3fcf6a-943f-4f27-8c85-36ee352219c3)
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/620d7399-13cc-49da-97bb-31769b0cb41f)
+
+Masking central octects of an ip address.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d9f0e99d-ce82-45d3-be42-f26c96e41a0e)
+
+
 
 [Back to top](#index)
 ## Fieldformat command
