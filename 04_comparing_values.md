@@ -160,12 +160,23 @@ Masking 4 last digits of an account code.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0f3fcf6a-943f-4f27-8c85-36ee352219c3)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/620d7399-13cc-49da-97bb-31769b0cb41f)
 
-Masking central octects of an ip address.
+Masking central octets of an ip address.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d9f0e99d-ce82-45d3-be42-f26c96e41a0e)
 
 [Back to top](#index)
 ## Fieldformat command
+To format values without changing the underlaying value characteristics. `fieldformat` command uses the same functions as the `eval` command.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8de7860-2738-4bc1-b045-b72cd2075b6e)
+
+Once these results are formatted they cannot be modified  by any subsequent commands
+
+### Example
+Format a numeric result into an string wiht commas.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/39142fc9-d5e7-4ff0-a372-7f858ef5cc93)
+
 
 [Back to top](#index)
 ## Fillnull command
