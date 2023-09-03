@@ -151,6 +151,7 @@ To replace characters in field's values. `replace` is helpful for **masking**, *
 `X` is a string of fieldname.
 `Y` is a regular expression to be matched on the values in `X`.
 `Z` the value to replace the `X` vaues that match `Y` regular expression.
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f27e058d-fb6d-4e14-83f5-0181bdc9a1db)
 
 ### Examples
