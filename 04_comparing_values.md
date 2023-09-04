@@ -195,7 +195,7 @@ When the results of a search contains **null values** and the results display wi
 `where` Uses same syntax as the `eval` command and support same functions but filters the events to only keep the results the evaluate the expression as as true. 
 Interprets **unquoted or single quoted strings as fields** and **double quoted strings as field values** and treats filed values in case-sensitive manner.
 
-Comparing `search` and  `where` commands, `where` allows  for field-on-field comparison, use mathematical and boolean operators to evaluate values with in the eval expression returning true or false
+Comparing `search` and  `where` commands, `where` **allows**  for field-on-field comparison, use mathematical and boolean operators (with case-sensitiviness)  to evaluate values with in the eval expression returning true or false. The `search` command **does not support** field-on-field comparison.
 
 
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8b2e2265-1239-44fa-be3c-7d4763e12513)
@@ -204,6 +204,27 @@ Comparing `search` and  `where` commands, `where` allows  for field-on-field com
 
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/73a8ed38-b41d-4d19-88e6-0149acc18822)
 
+### Boolean operator precedence rules
+
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/279759d4-5451-4478-b8f7-3a54af9720c2)
+
+### wildcard % and _
+
+`where` command interprest `*` , the `search` command wildcard, as a literal character  or a mathematical operator. Use instead `%` for multiple characters and `_` for a single character. Use them either with the `like` operator or the `like(string, pattern)` function.
+
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6dc58ef2-7631-4cf6-b6c8-1023cff35f29)
+
+#### example.
+filter usersname starting with adm
+
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/789774d2-4d31-4456-aef9-fb79a40ff556)
+
+filtering null values.
+
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7a5bffa6-4a4c-4b18-b759-d907ebbe3549)
+
+identify period of times wiht no sales.
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e8cadeb3-7348-43ab-8baa-baa0503c68da)
 
 
 
