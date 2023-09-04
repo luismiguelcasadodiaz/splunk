@@ -192,8 +192,8 @@ When the results of a search contains **null values** and the results display wi
 [Back to top](#index)
 ## Where command
 
-`where` Uses same syntax as the `eval` command and support same functions but filters the events to only keep the results the evaluate the expression as as true. 
-Interprets **unquoted or single quoted strings as fields** and **double quoted strings as field values** and treats filed values in case-sensitive manner.
+`where` uses same syntax as the `eval` command and support same functions but filters the events to only keep the results that evaluate the expression as true. 
+Interprets **unquoted or single quoted strings as fields** and **double quoted strings as field values** and treats field values in case-sensitive manner.
 
 Comparing `search` and  `where` commands, `where` **allows**  for field-on-field comparison, use mathematical and boolean operators (with case-sensitiviness)  to evaluate values with in the eval expression returning true or false. The `search` command **does not support** field-on-field comparison.
 
@@ -214,19 +214,18 @@ Comparing `search` and  `where` commands, `where` **allows**  for field-on-field
 
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/6dc58ef2-7631-4cf6-b6c8-1023cff35f29)
 
-#### example.
-filter usersname starting with adm
+### Example.
+Filter usersname starting with adm.
 
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/789774d2-4d31-4456-aef9-fb79a40ff556)
 
-filtering null values.
+Filtering null values.
 
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7a5bffa6-4a4c-4b18-b759-d907ebbe3549)
 
-identify period of times wiht no sales.
+Identify period of times with no sales.
+
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e8cadeb3-7348-43ab-8baa-baa0503c68da)
-
-
 
 [Back to top](#index)
 
