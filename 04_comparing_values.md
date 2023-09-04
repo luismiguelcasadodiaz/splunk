@@ -41,16 +41,16 @@ the  `+` operator accepts two numbers for addition or two strings fro concatenat
 
 Field values created using the eval command are treated in a case sensitive manner.
 Field names must be unquoted or single quoted when they include an special character like space
-### case example
+### case example.
 Categorization of states in fucntion fo sales.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/21040f49-1858-42ce-9897-9eab8aa45b3a)
 
-### in example
+### in xample.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2c568d8c-10b8-4faa-b0a6-75e3455bcbb3)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8e3d09c9-f2cc-4643-9c3b-2efe82438438)
 
-### three ways of writting 
+### Three ways of writting 
 Separated, nested or linked with commas.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/74ee7004-5b22-4179-955c-8185e98ae08e)
 
@@ -108,7 +108,7 @@ The `validate` function works exactly as the `case` except instead evaluating wh
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8cac3e5e-830f-4f2c-99ac-e5e9b298ee29)
 
-### example
+### Example.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/53f7b67a-1403-4c43-bb32-0e802c9d0520)
 
 [Back to top](#index)
@@ -116,7 +116,7 @@ The `validate` function works exactly as the `case` except instead evaluating wh
 Allows evaluate a value from a field against  a list of possible values and **returns a value of true** it if finds a match. To be  nested in a `if` or `case` function when used in an `eval` command. When used in the `where`command does not requires to be nested inside `if` or `case` functions,
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/de452b46-a714-4a6e-8f67-7322160086b3)
 
-### example
+### Example.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f038223e-4da1-49dd-8014-063da6d83093)
 
 
@@ -127,7 +127,7 @@ Matching functions that return true or false if a supplied condition is matched 
 The `searchmatch` function is a function of the `eval` command the must be embedded wihtin the `if` function of the `eval` command. it will return true or false  depending on whether an **event matches** the search string  passed in as an argument.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/896809f7-b904-4414-bdc8-4eabeab336a1)
 
-#### Example
+#### Examples.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0f1932e0-95e9-491e-b4c8-83d002d1c2e0)
 
 
@@ -154,7 +154,7 @@ To replace characters in field's values. `replace` is helpful for **masking**, *
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f27e058d-fb6d-4e14-83f5-0181bdc9a1db)
 
-### Examples
+### Examples.
 Masking 4 last digits of an account code.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0f3fcf6a-943f-4f27-8c85-36ee352219c3)
@@ -172,7 +172,7 @@ To format values without changing the underlaying value characteristics. `fieldf
 
 Once these results are formatted they cannot be modified  by any subsequent commands
 
-### Example
+### Example.
 Format a numeric result into an string wiht commas.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/39142fc9-d5e7-4ff0-a372-7f858ef5cc93)
@@ -180,6 +180,14 @@ Format a numeric result into an string wiht commas.
 
 [Back to top](#index)
 ## Fillnull command
+When the results of a search contains **null values** and the results display with **empty fields**, they can be subtituted for a more readable output wiht the `fillnull` command. By default `fillnull` replaces null values inside all fielsd with zero. Instead of zero, a different value can be indicate with `value = "N/A"`. Use the `field-list'  to restrict the fields where null values will be replaced.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/46545b92-d146-4c19-b4b6-e2fc6cf3deb7)
+
+### Example.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0e4da910-2ce5-466d-8dcc-57e04dd39abb)
+
 
 [Back to top](#index)
 ## Where command
