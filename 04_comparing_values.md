@@ -192,6 +192,21 @@ When the results of a search contains **null values** and the results display wi
 [Back to top](#index)
 ## Where command
 
+`where` Uses same syntax as the `eval` command and support same functions but filters the events to only keep the results the evaluate the expression as as true. 
+Interprets **unquoted or single quoted strings as fields** and **double quoted strings as field values** and treats filed values in case-sensitive manner.
+
+Comparing `search` and  `where` commands, `where` allows  for field-on-field comparison, use mathematical and boolean operators to evaluate values with in the eval expression returning true or false
+
+
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8b2e2265-1239-44fa-be3c-7d4763e12513)
+
+### Operators 
+
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/73a8ed38-b41d-4d19-88e6-0149acc18822)
+
+
+
+
 [Back to top](#index)
 
 
