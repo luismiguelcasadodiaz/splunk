@@ -29,24 +29,24 @@
 
 ## Using eval to compare
 
-We will compare values in our data using conditional statemenst and commands.
+We will compare values in our data using conditional statements and commands.
 The `eval` command calculates an expression then puts the resulting value into a new or existing field, which can be reused in the search pipeline. When used with  an existing field the eval command overwrites the values of the field with the result of the eval expression at search time **not changing or overwritting any of the indexed data.**.  When we create a new field it will take the values of the expressions but no new data is written into the index. No alteration of the original index happens.
 
 ### Supported operators.
-the  `+` operator accepts two numbers for addition or two strings fro concatenation. the `.`operator concatenates both strings and numbers. Numbers are concatenated in their string representative form.
+the  `+` operator accepts two numbers for addition or two strings for concatenation. The `.`operator concatenates both strings and numbers. Numbers are concatenated in their string representative form.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2fc0132b-704e-4afd-abef-9b6fb66dc08e)
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f9cea730-3af2-419f-a7f3-fa2bba7f2d3c)
 
 Field values created using the eval command are treated in a case sensitive manner.
-Field names must be unquoted or single quoted when they include an special character like space
+Field names must be unquoted or single quoted when they include an special character like space.
 ### case example.
-Categorization of states in fucntion fo sales.
+Categorization of states in function fo sales.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/21040f49-1858-42ce-9897-9eab8aa45b3a)
 
-### in xample.
+### in example.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2c568d8c-10b8-4faa-b0a6-75e3455bcbb3)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/8e3d09c9-f2cc-4643-9c3b-2efe82438438)
 
@@ -75,7 +75,7 @@ There are 11 categories of [evaluation functions](https://docs.splunk.com/Docume
 - Text
 - Trigonometry and hyperbolic
 
-Genearlly, Evaluation functions will evaluate an expression based on the events ans returns a result, but some not evaluata any expression ans insteead return a result based on its own funcionality
+Genearlly, Evaluation functions will evaluate an expression based on the events and returns a result, but some not evaluata any expression ans instead return a result based on its own funcionality.
 
 We can use these functions with other commands such as `where`, `fieldformat` 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c2947a62-2551-401c-ba1a-d62fe300f06c)
@@ -85,7 +85,7 @@ We can use these functions with other commands such as `where`, `fieldformat`
 ## if function
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/728cf1c7-fd01-4a67-be19-09b79f07e0de)
-The new field created wiht the eval command shows int the field sidebar. We can make it a selected field to display it along the bottom row of each event.
+The new field created with the eval command shows in the field sidebar. We can make it a selected field to display it along the bottom row of each event.
 
 [Back to top](#index)
 
