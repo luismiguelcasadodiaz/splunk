@@ -1,6 +1,6 @@
 [Back to index](README.md)
-# comparing values
-## index
+# Comparing values
+## Index
 [01.-Using eval to compare (7:22)](#using-eval-to-compare)
 
 [02.-Evaluation functions (3:28)](#evaluation-functions)
