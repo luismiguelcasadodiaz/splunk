@@ -23,6 +23,7 @@
 
 [11.-Where  command (8:17)](#where-command)
 
+[12.-My own trials ](#my-own-trials)
 
 
 
@@ -229,5 +230,10 @@ Identify period of times with no sales.
 
 [Back to top](#index)
 
+## My own trials 
+Visualize evolution on time of partition space usability.
+![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9469c7eb-889f-438a-a1cf-bd781c2a4533)
+
+[Back to top](#index)
 
 [Back to index](README.md)
