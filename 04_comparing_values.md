@@ -234,6 +234,10 @@ Identify period of times with no sales.
 Visualize evolution on time of partition space usability.
 ![imagen](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/9469c7eb-889f-438a-a1cf-bd781c2a4533)
 
+Count how many events fall in each quartil according the normalized value of data.Key_count
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/7ac54f37-e635-470d-8146-1abb6e9b7aca)
+
+
 [Back to top](#index)
 
 [Back to index](README.md)
