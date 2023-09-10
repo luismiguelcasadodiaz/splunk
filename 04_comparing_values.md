@@ -86,6 +86,7 @@ We can use these functions with other commands such as `where`, `fieldformat`
 ## if function
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/728cf1c7-fd01-4a67-be19-09b79f07e0de)
+
 The new field created with the eval command shows in the field sidebar. We can make it a selected field to display it along the bottom row of each event.
 
 [Back to top](#index)
@@ -93,7 +94,7 @@ The new field created with the eval command shows in the field sidebar. We can m
 ## case function
 
 Will evaluate multiple boolean expressions and return a value based on these multiple else/if statements.
-The `case function allows us to enter multiple boolean expressions separated by the argument of what to return if the previous expression evaluates to true. **Only** the argument of the **first expression that evaluates as true will be returned**. if none of the expressions return true, a null value is returned.
+The `case` function allows us to enter multiple boolean expressions separated by the argument of what to return if the previous expression evaluates to true. **Only** the argument of the **first expression that evaluates as true will be returned**. If none of the expressions return true, a null value is returned.
 
 ### data normalization example
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/58457845-5bb0-4f29-b706-868142910a32)
@@ -114,7 +115,8 @@ The `validate` function works exactly as the `case` except instead of evaluating
 
 [Back to top](#index)
 ## in function
-Allows to evaluate a value from a field against  a list of possible values and **returns a value of true** it if finds a match. To be  nested in a `if` or `case` function when used in an `eval` command. When used in the `where` command does not require to be nested inside `if` or `case` functions,
+Allows to evaluate a value from a field against  a list of possible values and **returns a value of true** it if finds a match. To be  nested in a `if` or `case` function when used in an `eval` command. When used in the `where` command does not require to be nested inside `if` or `case` functions
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/de452b46-a714-4a6e-8f67-7322160086b3)
 
 ### Example.
@@ -138,7 +140,7 @@ The `cidrmatch(x, Y) ` eval function will return true or false if the IP address
 
 
 ### match
-The `match(SUBJECT, "<regex>")` uses a regular expression to match on the `SUBJECT` argument returning true if Matche happens.
+The `match(SUBJECT, "<regex>")` uses a regular expression to match on the `SUBJECT` argument returning true if Match happens.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f32f8898-a501-4590-96c8-cb1873ff6e63)
 
 `match` can be made to behave like the `searchmatch` function passing `_raw`  subject field. `searchmatch` **by default works off of the _raw data**.
