@@ -1,5 +1,7 @@
 [Back to index](README.md)
 # Result Modification
+How to modify result sets and normalize data using Commands and functions.
+
 ## Index
 [01.-Appendpipe Command (09:50)](#appendpipe-command)
 
@@ -28,6 +30,36 @@
 
 
 ## Appendpipe Command
+The `appendpipe` command will allow us to take existing results and push them into the **sub pipeline**, meaning the results of the search specified in the `appendpipe` command are appended to **the end/bottom of the outer result set**. the sub pipeline is executed when Splunk reaches the `appendpipe` command:
+  - Contains one or more transforming commands.
+  - Does not overwrite original results; instead, appends output as new lines to the bottom of the original result set.
+  - Multiple `appenpipe` commands can exist in a search.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d8aaae3-5760-4b7b-bdb2-34241e2500b4)
+
+The `appendpipe` command is preceded by a `search (...|) ` command and then followed in square brackets by the sub pipeline. The results of the wrapped-in-brackets search are what are appended to the results of the outer/previous/preceding search.
+
+This command helps me to add a subtotal lines in a report.
+
+### Example
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/bf0f46a0-4878-4951-bd6f-5c4bf0f29b58)
+
+
+### my own trial
+From the free cloud trial....
+
+`index="_internal" component=Metrics name=parsing`. I will process only the events with the value "Metrics" in the `component` field and the value "parsing" in the field `name`.
+
+I want the average executions by processor and ingest pipe. I will add a sub-average  row per processor and a grand average per the last 15 minutes.
+
+the searh `index="_internal" component=Metrics name=parsing | stats avg(executes) as average by processor, ingest_pipe| sort processor`, produces thes table.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0d75c0c7-1545-477b-9b19-7f55a4467cf6)
+
+The `appendpipe` command appends at the end a table with the average per processor such as this one.
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/05f74164-9cc1-49cb-ad34-41d9ce2f9fe8)
+
 
 [Back to top](#index)
 
