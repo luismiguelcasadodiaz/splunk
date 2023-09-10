@@ -1,7 +1,37 @@
 [Back to index](README.md)
 
-# 03 Statistical Processing
-## What is a data series?(01:29)
+# Statistical Processing
+
+
+## Index
+[01.-What is a data series? (01:29)](#what-is-a-data-series)
+
+[02.-Chart Command (06:57)](#chart-command)
+
+[03.-Timechart Command (07:21)](#timechart-command)
+
+[04.-Top Command (04:00)](#top-command)
+
+[05.-Rare Command (00:27)](#rare-command)
+
+[06.-Stats Command (02:52)](#stats-command)
+
+[07.-Functions of the stats Command (06:56)](#functions-of-the-stats-command)
+
+[08.-Transforming commands Summary (01:18)](#transforming-commands-summary)
+
+[09.-Eval Command (06:43)](#eval-command)
+
+[10.-Functions of the Eval Command (04:24)](#functions-of-the-eval-command)
+
+[11.-Eval as a Function (01:06)](#eval-as-a-function)
+
+[12.-Rename Command (02:38)](#rename-command)
+
+[13.-Sort Command (03:11)](#sort-command)
+
+
+## What is a data series
 A data series is a sequence of related data points that are plotted in a visualization:
   - Single Series: Compares values of a simple data category.
   - Multi-Series: Compares values of two or more data categories.
@@ -10,7 +40,9 @@ A data series is a sequence of related data points that are plotted in a visuali
 Transforming commands can be used in searches to organize your results into a statistical table containing a data series that can be visualized. (Chart, timechart, top, rare, stats)
 We will learn how transforming commands can be used to structure searches to generate the results you need for the visualization you want.
 
-## Chart Command (06:57)
+[Back to top](#index)
+
+## Chart Command
 Take results and return them formatted into a table that can be displayed as a visualization.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fe3703b5-aa8f-46e4-976e-9fddf76f78c6)
@@ -40,11 +72,9 @@ Some examples:
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d34a75a4-4209-4724-aa48-e14fddbf37d5)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1e111437-fe42-4c57-adf4-7f274039e4b3)
 
+[Back to top](#index)
 
-
-
-
-## Timechart Command (07:21)
+## Timechart Command
 Performs stats aggregations against time and returns a time series chart or table where _time  field is always the X-axis.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fffb004d-f695-4a3b-ab16-4f8f37c85c3e)
@@ -94,9 +124,9 @@ When running a multi-series time chart, we have an option for how we want our da
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/daf364b9-7490-4ead-bd44-4334260f9e01)
 
 
+[Back to top](#index)
 
-
-## Top Command (04:00).
+## Top Command
 Finds the most common values from a given **list of fields** in a result set. We can group results together based on a shared field with the `by` clause.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/586a04b2-8fe0-46fc-a553-8f080f3c284a)
@@ -131,13 +161,15 @@ Renaming Count Column
 Note that when you use this method the limit argument is set by default to 20
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/045565c8-24d3-41fe-b3fd-6f4e285bcc51)
 
+[Back to top](#index)
 
-## Rare Command (00:27)
+## Rare Command
 Essentially, is the opposite of the top command, which returns the least common values of a result set.. Has the same options., By default, results are sorted in ascending order based on count.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3326fbcd-019c-4357-86fe-c72a4b9b13ff)
 
+[Back to top](#index)
 
-## Stats Command (02:52)
+## Stats Command
 
 We produce statistics from our search results with the stats command. The **output is a table**. `by <field list>` clause groups the result for each different value of each field in the field list.  Differently from `chart` and  `timechart`, `stats` allows continuous splitting  of your data. (`timechart` splits only by one field. `chart` command splits by two fields).
 
@@ -156,7 +188,9 @@ in `stats` statistical functions can support multiple fields
 
 The order of fields in `by <field list>` has a big  impact on the search results as the data will first be grouped by the first field given, then grouped by the second field given, and so on.
 
-## Functions of the Stats Command (06:56)
+[Back to top](#index)
+
+## Functions of the Stats Command
 There are four categories of statistical functions:
   - Aggregate: Summarizes event values to create a single value
     - `count`, `count(x)`, `dc(x) or distinct_count(x)`, `estdc(x)`, and `estdc_error(x)`  estimated count of the distinct values in the field specified.
@@ -180,12 +214,16 @@ There are four categories of statistical functions:
     -   
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1181bd20-7da5-4ad8-a630-5ea7e9aeb6a1)
 
-## Transforming Commands Summary (01:18)
+[Back to top](#index)
+
+## Transforming Commands Summary
 `stats`, `chart`, and `timechart` share similar features. Use **proper** command to get wanted results: `stats` for the table, and the others for visualizations.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/56146202-fdeb-4f2e-8a05-d35f227356a7)
 
-## Eval Command (06:43)
+[Back to top](#index)
+
+## Eval Command
 Performs calculations with values in our data.
 An eval expression is a combination of literals. fields, operators, and functions that represent the values of the destination field.
 Calculates the expression and puts the resulting values into a new field or overwrites an existing one.
@@ -216,14 +254,9 @@ Field names must be single-quoted when contain special characters
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/53c3fa7d-d755-4d83-9e49-8a583c7b2fdf)
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4113d108-4f30-4388-94c2-ddfa40f96a3e)
 
+[Back to top](#index)
 
-
-
-
-
-
-
-## Functions of the Eval Command(04:24)
+## Functions of the Eval Command
 There are 11 categories of [evaluation functions](https://docs.splunk.com/Documentation/Splunk/9.1.0/SearchReference/CommonEvalFunctions)
 - Comparison & Conditional
 - Conversion
@@ -248,8 +281,9 @@ Eval usage without functions.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8672b97-3b0a-4ad3-8384-93b8c68321c7)
 
-  
-## Eval as a Function (01:06)
+[Back to top](#index)
+
+## Eval as a Function
 The eval command can be used as a function within the `stats` command. 
 Nest eval inside a `stats count` to count events with a calculated value.
 
@@ -257,7 +291,9 @@ Nest eval inside a `stats count` to count events with a calculated value.
 
 **Requires** an `as` clause to rename the field.
 
-## Rename Command (02:38)
+[Back to top](#index)
+
+## Rename Command
 Helps to display a more useful or meaningful field name.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5aabcc13-199c-468d-b53f-998c84f34551)
@@ -274,9 +310,9 @@ Wildcare usage in renaming fields
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2e05d9a7-46ff-460a-8a93-9eaca8cc1e1e)
 
+[Back to top](#index)
 
-
-## Sort Command (03:11)
+## Sort Command
 Sorts in ascending order by default. `-` changes it to descending order. `+` is implicit so not required.
 Double quote field name when containing special characters or white spaces.
 limit the number of results with the `limit` argument or just put an integer.
@@ -292,6 +328,6 @@ Splunk determines the data type of values present in the field and sorts appropr
 Please notice the white spaces after `-`, it applies to both fields. In the first example, orders descend on both of them. But in the second example, without white space,  `-` only applies to the first field being the second field ordered in ascending mode.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/42c979a9-6256-40d3-bb4e-ed88d472ba76)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3cd1d008-130a-49e9-a4fa-108e4dbc8d23)
 
-
+[Back to top](#index)
 
 [Back to index](README.md)
