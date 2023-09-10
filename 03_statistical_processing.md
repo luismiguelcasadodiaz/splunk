@@ -21,12 +21,12 @@ Take results and return them formatted into a table that can be displayed as a v
 
   - `field` is a field with numeric values.
 
-  - `over row-spli` specify X-axis and defines the first column in our resulting table. Creates a single-series.
+  - `over row-spli` specifies the X-axis and defines the first column in our resulting table. Creates a single series.
   - `by column-split` Further split data, resulting in multi-series data-series.
   - Further control of our results.
     - span (with categorical fields). By default, Splunk will display individual columns for the top 10 values found in the field used to execute multi-series split (the field after `by`)
-    - span (with numerical fields). will group the event into buckets. Splunk Shift overlapped values to the higher grouping. 400 falls into 400-500, instead on 300-400.
-    - limit: overrides that top 10 to whatever whole value you find appropriate. Less frequent values than the indicated in `limit` argument get aggregated into the `other` column. ´limit` argument sets a limit across the entire dataset. `limit=0` means no limit at all. When there are too many values to display inside the legend, the list will include a down arrow to scroll through the values.
+    - span (with numerical fields). will group the event into buckets. Splunk Shift overlapped values to the higher grouping. 400 falls into 400-500, instead of 300-400.
+    - limit: overrides that top 10 to whatever whole value you find appropriate. Less frequent values than those indicated in `limit` argument get aggregated into the `other` column. ´limit` argument sets a limit across the entire dataset. `limit=0` means no limit at all. When there are too many values to display inside the legend, the list will include a down arrow to scroll through the values.
     - useother=True/False: **Visually** Removes the `OTHER`column. There is no recalculation or research
     - usenull: Removes the `NULL`Column if one exists. it is for events that do not contain the field used to create the multi-series series
       
@@ -73,7 +73,7 @@ When the period Spluck uses is not appropriate, you can override it using the `s
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/61cc63db-7cdf-4c1b-bbe7-b01c2b0f4036)
 
-`limit`argument controls the number of values returned for our multi-series split. Without it, we get the top 10 values in 11 lines in our chart, which has an additional `other` series.
+`limit` argument controls the number of values returned for our multi-series split. Without it, we get the top 10 values in 11 lines in our chart, which has an additional `other` series.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/ee5890c5-8bd1-46c3-8551-92eb7eb26361)
 
@@ -97,7 +97,7 @@ When running a multi-series time chart, we have an option for how we want our da
 
 
 ## Top Command (04:00).
-Finds the most common values from a given **list of fields** in a result set. We can group result together based on a shared field with the `by` clause.
+Finds the most common values from a given **list of fields** in a result set. We can group results together based on a shared field with the `by` clause.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/586a04b2-8fe0-46fc-a553-8f080f3c284a)
 
@@ -106,7 +106,7 @@ By default output top 10 results in table format. This can be overridden with th
 'showperc', Defaults to True. `showperf=f` or  `showperc=0` prevents the percentage column.
 
 ### examples 
-Which IP addresses generated the most attacks in the last 60 minutes. Without any argument, we get the `count` or number of events and the percentage.
+Which IP addresses generated the most attacks in the last 60 minutes? Without any argument, we get the `count` or number of events and the percentage.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/23fa4cda-8071-4d23-87e1-f66b9e6f27b5)
 
 With only one field: 10 most common values in the Grout field. Column values are unique.
@@ -139,36 +139,36 @@ Essentially, is the opposite of the top command, which returns the least common 
 
 ## Stats Command (02:52)
 
-We produce statistics from out search result with the stats command. The **output is a table**. `by <field list>` clause groups the result for each different value of each field in the field list.  Differently from `chart` and  `timechart`, `stats` allows continuous splitting  of your data. (`timechart`splits only by one field. `chart`command splits by two fields).
+We produce statistics from our search results with the stats command. The **output is a table**. `by <field list>` clause groups the result for each different value of each field in the field list.  Differently from `chart` and  `timechart`, `stats` allows continuous splitting  of your data. (`timechart` splits only by one field. `chart` command splits by two fields).
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/d0c17253-ea63-4931-8e66-63cf9c768d67)
 
-Use `as` clause to rename resulting column to override default column names according to search syntax. It is very convenient option to avoid confusion when statistics for severals fields are calculated.
+Use `as` clause to rename the resulting column to override default column names according to search syntax. It is a very convenient option to avoid confusion when statistics for several fields are calculated.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/be2c29ed-57e4-4003-b357-744dbe0d27ab)
 
 
-in `stats`statistical functions can support multiple fields
+in `stats` statistical functions can support multiple fields
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8a9fee8-aec3-4c67-aac0-557ea21a70f1)
 
-`count` differs from `count(field)` in that the former counts all events and the latter count only events with a value in the field.
+`count` differs from `count(field)` in that the former counts all events and the latter counts only events with a value in the field.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3475ff97-4b4a-43a9-b15b-80d989d2e41b)
 
-Order of fields in `by <field list>` has a big  impact on the search results as the data will first be grouped by the first field given, then grouped by the second field given and so on.
+The order of fields in `by <field list>` has a big  impact on the search results as the data will first be grouped by the first field given, then grouped by the second field given, and so on.
 
-## Functions of the Stast Command (06:56)
+## Functions of the Stats Command (06:56)
 There are four categories of statistical functions:
   - Aggregate: Summarizes event values to create a single value
     - `count`, `count(x)`, `dc(x) or distinct_count(x)`, `estdc(x)`, and `estdc_error(x)`  estimated count of the distinct values in the field specified.
     - `min(x)`, `max(x)`,  `range(x)`.
     - `sum(x)`, `sumsq(x)`. Sum and sum squares
-    - `avg(x)`, `median(x)`, `mode(x)`. Average ignores events without an especific value or whithout numeric values in the field
+    - `avg(x)`, `median(x)`, `mode(x)`. Average ignores events without an specific value or without numeric values in the field
     - `stdev(x)`, `stdevp(x)`,`var(x)´, `varp(x)´.
     - `percentile<percentile>(x) or p<percentile>(x)`, `upperperc<percentile>(x)`, `exactperc<percentile>(x)`
-  - Event Order:Returns values from fields based on processing order.
+  - Event Order: Returns values from fields based on processing order.
     - The `first(x)` seen value in the field x.
     - The `lastst(x)` seen value in the field x.
-  - Multivalue: Returns list of value for a field as a multivalue enr
+  - Multivalue: Returns a list of values for a field.
     - list(x): Returns a list of up to 100 values in a field as a multivalue entry. The order of the values reflects the order of input events. 
     - values(x): Returns the list of all distinct values in a field as a multivalue entry. The order of the values is lexicographical.
     - ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/00019d36-d96f-46dc-ae05-d527397ce288)
@@ -181,17 +181,17 @@ There are four categories of statistical functions:
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1181bd20-7da5-4ad8-a630-5ea7e9aeb6a1)
 
 ## Transforming Commands Summary (01:18)
-`stats`, `chart`, and `timechart` share similar features. Use **proper** command to get wanted results: `stats` for table, the others for visualizations.
+`stats`, `chart`, and `timechart` share similar features. Use **proper** command to get wanted results: `stats` for the table, and the others for visualizations.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/56146202-fdeb-4f2e-8a05-d35f227356a7)
 
 ## Eval Command (06:43)
 Performs calculations with values in our data.
-An eval expression is a combination of literals. fields, operators and functions that represent the valus of the destination field.
-Calculates the expression and puts the resulting values into a new fields or overwrites an existing one.
-Creates a new field on the fly, populated with the expresion's result, that can be used as any regular field in the remainder of the search expresion.
-Nothing written with the eval command is kept after the lifetime of the search it was used in. The new field **is not saved** in the index neithe it will be available again after the search is completed.
-Either that the eval commnad temporally can overwrites the values present in a previous existing field, no change of our data is permanent, the **new values are not written to disk** any way.
+An eval expression is a combination of literals. fields, operators, and functions that represent the values of the destination field.
+Calculates the expression and puts the resulting values into a new field or overwrites an existing one.
+Creates a new field on the fly, populated with the expression's result, that can be used as any regular field in the remainder of the search expression.
+Nothing written with the eval command is kept after the lifetime of the search it was used in. The new field **is not saved** in the index nor it will be available again after the search is completed.
+Either that the eval command temporally can overwrite the values present in a previously existing field, no change of our data is permanent. **New values are not written to disk** anyway.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/4fc5d8d9-e56f-41f5-ba49-47e00d51bba5)
 
@@ -199,15 +199,15 @@ Eval involves:
   - Mathematical operation.
   - String concatenation. Use `+` for String or character and  `.` for any data type.
   - Comparison expression.
-  - Boolean expresion.
+  - Boolean expressions.
   - A call to an `eval` function.
-    these are the operators
+    These are the operators
     ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/acb52173-a065-4fc6-94d3-5592062ff57d)
 
 ### Eval Syntax
-Field values are case sensitive
-Stringss must be duble quoted
-Field names mustbe single quoted when contain special charactares
+Field values are case-sensitive
+Strings must be double-quoted
+Field names must be single-quoted when contain special characters
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f7e0fdcc-7309-468b-8e09-9cd146993e01)
 
 ### Usage examples
@@ -231,38 +231,38 @@ There are 11 categories of [evaluation functions](https://docs.splunk.com/Docume
 - Data & time
 - Informational
 - JSON
-- Mathematical (round(X,Y), pow). A `round` without `Y` returns `X`as integer. 
+- Mathematical (round(X,Y), pow). A `round` without `Y` returns `X` as an integer. 
 - Multivalue
-- Statistical (avg, max, min, random). `random`returns a Psudo-random integer ranging from zero to 2³¹-1
+- Statistical (avg, max, min, random). `random` returns a Pseudo-random integer ranging from zero to 2³¹-1
 - Text
 - Trigonometry and hyperbolic
 
-Genearlly, Evaluation functions will evaluate an expression based on the events ans returns a result, but some not evaluata any expression ans insteead return a result based on its own funcionality
+Generally, Evaluation functions will evaluate an expression based on the events and return a result, but some do not evaluata any expression and instead return a result based on its own functionality
 
 ### Examples
-Create a five random grups of users.
+Create five random groups of users.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/2a122143-4a9e-494c-95c4-4a3fbe78c172)
 
-Eval usage wihtout functions.
+Eval usage without functions.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c8672b97-3b0a-4ad3-8384-93b8c68321c7)
 
   
 ## Eval as a Function (01:06)
-Eval command can be used as a function wihtin the `stats`command. 
-Nest eval inside an `stats count`to count events wiht a calculated value.
+The eval command can be used as a function within the `stats` command. 
+Nest eval inside a `stats count` to count events with a calculated value.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/fc6663b6-337e-4e6e-8c08-12d452801767)
 
 **Requires** an `as` clause to rename the field.
 
 ## Rename Command (02:38)
-Helps to display a more useful or meaningfull field name.
+Helps to display a more useful or meaningful field name.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5aabcc13-199c-468d-b53f-998c84f34551)
 
-Double quote new fieldname if has to contain any special character.
+Double quote the new field name if has to contain any special character.
 Multiple field renaming is possible in a single command. **notice commas**
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/f822f2e1-26f2-433b-b387-144db0e3232d)
 
@@ -277,19 +277,19 @@ Wildcare usage in renaming fields
 
 
 ## Sort Command (03:11)
-Sorts in ascending ording by default. `-`changes it to descending order. `+` is implicit so not required.
-Double quote field name when containing special character or white spaces.
-limit the number of results with the `limit` argument or just putting an integer.
+Sorts in ascending order by default. `-` changes it to descending order. `+` is implicit so not required.
+Double quote field name when containing special characters or white spaces.
+limit the number of results with the `limit` argument or just put an integer.
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/09ecfaa9-5c5e-4fc8-9391-96233d803228)
 
-Splunk determines data type of values present in the field and sort appropriately:
-  - Alphabetic Strings : Lexicographically. **uppercase letters before than lowercase**
-  - numbers : Numerically
-  - Combination : Depending on the first character lexicographically or numerically.
+Splunk determines the data type of values present in the field and sorts appropriately:
+  - Alphabetic Strings: Lexicographically. **uppercase letters before lowercase**
+  - numbers: Numerically
+  - Combination: Depending on the first character lexicographically or numerically.
 
 ### Examples
-Please notice the white spaces after `-`, it applies to both fields. In the first example, orders descending both of them. But in the second example, whihout white space,  `-` only applies to first field being the second field ordered in ascending mode.
+Please notice the white spaces after `-`, it applies to both fields. In the first example, orders descend on both of them. But in the second example, without white space,  `-` only applies to the first field being the second field ordered in ascending mode.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/42c979a9-6256-40d3-bb4e-ed88d472ba76)![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3cd1d008-130a-49e9-a4fa-108e4dbc8d23)
 
 
