@@ -46,7 +46,7 @@ This command helps me to add a subtotal lines in a report.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/bf0f46a0-4878-4951-bd6f-5c4bf0f29b58)
 
 
-### my own trial
+### My own trial
 From the free cloud trial....
 
 `index="_internal" component=Metrics name=parsing`. I will process only the events with the value "Metrics" in the `component` field and the value "parsing" in the field `name`.
