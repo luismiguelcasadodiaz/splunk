@@ -53,12 +53,31 @@ From the free cloud trial....
 
 I want the average executions by processor and ingest pipe. I will add a sub-average  row per processor and a grand average per the last 15 minutes.
 
-the searh `index="_internal" component=Metrics name=parsing | stats avg(executes) as average by processor, ingest_pipe| sort processor`, produces thes table.
+the searh `index="_internal" component=Metrics name=parsing | stats avg(executes) as my_avg by processor, ingest_pipe`, produces this table (a 3-column table).
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0d75c0c7-1545-477b-9b19-7f55a4467cf6)
 
-The `appendpipe` command appends at the end a table with the average per processor such as this one.
+The `appendpipe [stats avg(my_avg) as my_avg by processor ` command appends at the end a table with the average per processor such as this one. (a 2-column table). Please notice that `appendpipe` search uses the given name to the aggregation column of the outer/previous/precedent search `my_avg` .
+
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/05f74164-9cc1-49cb-ad34-41d9ce2f9fe8)
+
+The command `sort processor` sorts the rows in such a way that subtotal rows appear at the end of each `processor` value.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/5b230c9d-9391-4389-a521-05bc8470a63e)
+
+To fill in the third column of the latter 2-column table, I create with 'eval' command  a new column `eval ingest_pipe = "Average for ". processor`.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1216eca3-4058-4e37-899f-ef5445ac3240)
+
+Finally, to add a grand Average, I need to calculate the averages of the processor's average. I do that with a new `appendpipe' command that aggregates the table's rows  lines with "Average for". 
+`| appendpipe [ search ingest_pipe = "Average for*" | stats avg(my_avg) as my_avg | eval ingest_pipe = " ===== ALL PROCESSOR AVERAGE ======"]`
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/32f08e79-928d-4a5e-94c1-a6ca8f480038)
+
+Here is the full search command.
+
+![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/c3a59e71-c752-4ad4-8b7f-2406319afc99)
+
 
 
 [Back to top](#index)
