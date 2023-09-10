@@ -53,7 +53,7 @@ From the free cloud trial....
 
 I want the average executions by processor and ingest pipe. I will add a sub-average  row per processor and a grand average per the last 15 minutes.
 
-the searh `index="_internal" component=Metrics name=parsing | stats avg(executes) as my_avg by processor, ingest_pipe`, produces this table (a 3-column table).
+The search `index="_internal" component=Metrics name=parsing | stats avg(executes) as my_avg by the processor, ingest_pipe`, produces this table (a 3-column table).
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0d75c0c7-1545-477b-9b19-7f55a4467cf6)
 
@@ -69,7 +69,7 @@ To fill in the third column of the latter 2-column table, I create with 'eval' c
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/1216eca3-4058-4e37-899f-ef5445ac3240)
 
-Finally, to add a grand Average, I need to calculate the averages of the processor's average. I do that with a new `appendpipe' command that aggregates the table's rows  lines with "Average for". 
+Finally, to add a grand Average, I need to calculate the averages of the processor's average. I do that with a new `appendpipe` command that aggregates the table's rows  lines with "Average for". 
 `| appendpipe [ search ingest_pipe = "Average for*" | stats avg(my_avg) as my_avg | eval ingest_pipe = " ===== ALL PROCESSOR AVERAGE ======"]`
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/32f08e79-928d-4a5e-94c1-a6ca8f480038)
