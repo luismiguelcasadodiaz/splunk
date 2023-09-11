@@ -12,7 +12,7 @@
 #### [08.- Creating Field Extractions](#8-creating-field-extractions)
 #### [09.- Data Models](#9-data-models)
 #### [10.- Using Choropleth](#10-using-choropleth)
-#### [11.- Using Fields](#-using-fields)
+#### [11.- Using Fields](#using-fields)
 #### [12.- Scheduling Reports](#scheduling-reports-and-alerts)
 
 
