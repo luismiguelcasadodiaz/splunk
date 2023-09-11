@@ -1,23 +1,23 @@
 [Back to index](README.md)
 # Quizzes
 
-#### [00.- Intro to Splunk](#_intro_to_splunk) 
+#### [00.- Intro to Splunk](#intro-to-splunk) 
 #### [01.- Visualizations](#_visualizations)
-#### [02.- Working with time](#_working_with_time)
-#### [03.- Statistical Processing](#_statistical_processing)
-#### [04.- Comparing Values](#4-comparing-values)
+#### [02.- Working with time](#working-with-time)
+#### [03.- Statistical Processing](#statistical-processing)
+#### [04.- Comparing Values](#comparing-values)
 #### [05.- Result Modification](#5-result-modification)
 #### [06.- Correlation Analysis](#6-correlation-analysis)
 #### [07.- Creating Knowledge Objects](#7-creating-knowledge-objects)
 #### [08.- Creating Field Extractions](#8-creating-field-extractions)
 #### [09.- Data Models](#9-data-models)
 #### [10.- Using Choropleth](#10-using-choropleth)
-#### [11.- Using Fields](#_using_fields)
-#### [12.- Scheduling Reports](#_scheduling_reports_and_alerts)
+#### [11.- Using Fields](#-using-fields)
+#### [12.- Scheduling Reports](#scheduling-reports-and-alerts)
 
 
 ---
-# Intro to Splunk 
+# Intro to Splunk
 93% with bold answers(one is wrong but I did not manage to discover which one.
 
 1.- What is the most efficient way to limit search results returned?
@@ -37,7 +37,7 @@
  - **AND**
  - **NOT**
 
-4.-Which character is used in a search before a command?
+4.- Which character is used in a search before a command?
  - **Pipe** (|)
  - Backtick (`)
  - Quotation mark(")
@@ -109,6 +109,52 @@
  - the time zone where the event originated
  - timestamps are displayed in GMT.
 ---
+
+# Working with time
+88% . i have not the right answer for question 8
+
+1.- @timeUnit will always round up and go forward through time.
+ - **False**
+ - True
+
+2.- The _______ and ______ time modifiers will override the time range picker in a historical report.
+ - **latest**
+ - first
+ - **earliest**
+ - last
+
+3.- Which of the following are default time fields? Select all that apply.
+ - **date_mday**
+ - **date_year**
+ - data_day
+ - **date_hour**
+
+4.- When using the following search arguments, what will be returned?
+`timechart count span=1h`
+ - Events in the last 24 hours.
+ - Events with a duration of 1 hour.
+ - **Chart of events in 1-hour chunks.**
+
+5.- Date_time always reflects your local time zone and not the time/date from raw events.
+ - True
+ - **False**
+
+6.- Using `earliest=-30d@d latest=@d` is how to return results from 30 days ago up until the time the search was executed.
+ - **False**
+ - True
+
+7.- Choose the search that will sort events into one minute groups. Select all that apply.
+ - | bin span=1minute
+ - | bin_time span=1m
+ - | bin_time span=1mins
+ - | bin span=1minutes
+
+ 8.- What will the strftime function return when using the %H argument with the _time field? Select all that apply.
+  - hour of the event generated at index time.
+  - **convert the hour into your local time based on your time zone setting of your Splunk web sessions.**
+  - time of raw event in UTC
+-----
+
 # Statistical processing
 
 01.- True o False: The timechart command will always have _time as the X-axis.
@@ -185,9 +231,87 @@
  - Specify how many result to return.
  - Return a percentaje of events.
  - Specify which search mode to return results by
-   
----
 
+---
+# comparing values
+
+01.- Which eval function is the best option for masking data?
+ - **replace.**
+ - isnotnull.
+ - validate.
+ - case.
+
+02.- True or False: eval cannot exist as an expression.
+ - **False.**
+ - True.
+
+03.- True or False: When using the eval command, all field values are treated in a case-sensitive manner and must be double-quoted.
+ - False.
+ - **True.**
+
+04.- Which of the following functions can be used to filter NULL values?
+ - unsenull=f
+ - **isnull**
+ - usenull=t
+ - **isnotnull**
+
+05.- True or False: Specify a wildcard by using the * character with the where command.
+ - **False.**
+ - True.
+
+06.- Which of the following functions must be used with the in function?
+ - sum
+ - validate
+ - **case**
+ - **if**
+
+07.- True or False: The case function will return NULL if no expressions evaluate to TRUE.
+ - False.
+ - **True.**
+
+08.- The eval command calculates an expression and puts the resulting _______ into a new or existing field
+ - command
+ - **value**
+ - argument
+
+09.- True or False: Temporary fields created by using eval can be referenced in the search pipeline following creation.
+ - False.
+ - **True.**
+
+10.- Which are the Boolean operators that can be used by the eval command? Select all that apply.
+ - **OR**
+ - NAND
+ - **AND**
+ - **XOR**
+
+11.- What is the order of Boolean Expression of Evaluation for the where and eval commands?
+ - AND, OR, NOT, Expressions with parenthesis.
+ - AND, NOT, Expression with parenthesis, OR.
+ - NOT, AND, OR, Expressions with parenthesis.
+ - **Expressions with parenthesis, NOT, AND, OR.**
+
+12.- Which of these fillnull expressions will replace NULL data with the string "NOT FOUND"?
+ - | fillnull
+ - **| fillnull value="NOT FOUND"**
+ - | fillnull NOTFOUND
+ - | fillnull NOTFOUND=true
+
+13.- The **where** command interprets unquoted or single-quoted strings as _________ and double-quoted strings as _____.
+ - field values, fields.
+ - **fields, field values.**
+ - integers, field values.
+ - field values, integers.
+
+14.- True or False: The **where** command only returns results that evaluate to TRUE.
+ - False.
+ - **True.**
+
+15.- The _______ command replaces NULL values in fields.
+ - isnotnull.
+ - isnull.
+ - null
+ - **fillnull**
+---
 # Using Fields
 100% with bold answers.
 
@@ -233,53 +357,8 @@
   - **field discovery.**
   - field extractor.
   - field command.
----
-
-# Working with time
-88% . i have not the right answer for question 8
-
-1.- @timeUnit will always round up and go forward through time.
- - **False**
- - True
-
-2.- The _______ and ______ time modifiers will override the time range picker in a historical report.
- - **latest**
- - first
- - **earliest**
- - last
-
-3.- Which of the following are default time fields? Select all that apply.
- - **date_mday**
- - **date_year**
- - data_day
- - **date_hour**
-
-4.- When using the following search arguments, what will be returned?
-`timechart count span=1h`
- - Events in the last 24 hours.
- - Events with a duration of 1 hour.
- - **Chart of events in 1-hour chunks.**
-
-5.- Date_time always reflects your local time zone and not the time/date from raw events.
- - True
- - **False**
-
-6.- Using `earliest=-30d@d latest=@d` is how to return results from 30 days ago up until the time the search was executed.
- - **False**
- - True
-
-7.- Choose the search that will sort events into one minute groups. Select all that apply.
- - | bin span=1minute
- - | bin_time span=1m
- - | bin_time span=1mins
- - | bin span=1minutes
-
- 8.- What will the strftime function return when using the %H argument with the _time field? Select all that apply.
-  - hour of the event generated at index time.
-  - **convert the hour into your local time based on your time zone setting of your Splunk web sessions.**
-  - time of raw event in UTC
  
- 
+---- 
  # Scheduling Reports and Alerts
  14/14 100%
 
