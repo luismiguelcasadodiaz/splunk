@@ -2,7 +2,7 @@
 # Quizzes
 
 #### [00.- Intro to Splunk](#intro-to-splunk) 
-#### [01.- Visualizations](#_visualizations)
+#### [01.- Visualizations](#visualizations)
 #### [02.- Working with time](#working-with-time)
 #### [03.- Statistical Processing](#statistical-processing)
 #### [04.- Comparing Values](#comparing-values)
@@ -113,6 +113,101 @@
 
 ---
 
+# Visualizations
+01.- Which command can be used to exclude fields from search results?
+ - exclude.
+ - dedup.
+ - remove.
+ - **fields**
+
+02.- Which clause can be used with the top command to change the name of the count column?
+ - colname.
+ - **countfield.**
+ - countname.
+ - colheader.
+
+03.- Which argument can be used with the timechart command to specify the time range to use when grouping events?
+ - timerange
+ - range
+ - **span**
+ - timespan
+
+04.- How many columns are displayed in a visualization by default when using the chart command?
+ - 20
+ - **10**
+ - 5
+ - 3
+
+05.- How can the order of columns in a table be changed?
+ - By changing the order of fields specified in the fields command.
+ - By selecting the "Move column" option in a column header's dropdown.
+ - By dragging and dropping in the table interface.
+ - **By changing the order of fields specified in the table command.**
+
+06.- Which command changes the appearance of field values?
+ - format
+ - rename
+ - fields
+ - **fieldformat**
+
+07.- When using the timechart command, which axis represents time?
+ - Y-axis
+ - The axis is specified using the by clause.
+ - The axis is spacified the as clause.
+ - **X-axis.**
+
+08.- In a single series data table, which column provides the x-axis values for visualization?
+ - The third column.
+ - The fourth column.
+ - The second column.
+ - **The first column.**
+
+09.- Which clause can be used with the rare command to specify whether or not a percentage column is created?
+ - **showperc**
+ - percentage
+ - perccol
+ - displayperc
+
+10.- Which of the following commands can return a count of all events matching search criteria over a specified time period?
+ - where
+ - match
+ - **stats**
+ - count
+
+11.- Which argument can be used with the geostats command to control the column count?
+ - collimit
+ - longfield
+ - latfield
+ - **globallimit**
+
+12.- Which optional argument of the addtotals command changes the label for row totals in a table?
+ - fieldformat
+ - label
+ - **fieldname**
+ - rowlabel
+   
+13.- Which command removes duplicated field values in search results?
+ -  fields
+ -  exclude
+ -  remove
+ -  **dedup**
+
+14.- Which clause can be used with the top command to specify a number of values to return?
+ - resultcount
+ - values
+ - return
+ - **limit**
+
+15.- Which type of default map visualization uses shading to represent relative metrics?
+ -  Shading Map
+ -  **Choropleth Map**
+ -  Market Map
+ -  Cluster Map
+
+
+[Back to top](#quizzes)
+
+---
 # Working with time
 88% . i have not the right answer for question 8
 
