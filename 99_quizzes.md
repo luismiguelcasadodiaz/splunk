@@ -108,6 +108,9 @@
  - **The time zone defined in user settings
  - the time zone where the event originated
  - timestamps are displayed in GMT.
+
+[Back to top](#quizzes)
+
 ---
 
 # Working with time
@@ -153,6 +156,10 @@
   - hour of the event generated at index time.
   - **convert the hour into your local time based on your time zone setting of your Splunk web sessions.**
   - time of raw event in UTC
+
+
+[Back to top](#quizzes)
+
 -----
 
 # Statistical processing
@@ -231,6 +238,8 @@
  - Specify how many result to return.
  - Return a percentaje of events.
  - Specify which search mode to return results by
+
+[Back to top](#quizzes)
 
 ---
 # comparing values
@@ -311,6 +320,9 @@
  - isnull.
  - null
  - **fillnull**
+
+[Back to top](#quizzes)
+
 ---
 # Using Fields
 100% with bold answers.
@@ -357,6 +369,8 @@
   - **field discovery.**
   - field extractor.
   - field command.
+
+[Back to top](#quizzes)
  
 ---- 
  # Scheduling Reports and Alerts
@@ -446,6 +460,6 @@
  - User
  - **Admin** OK
 
-[Back to top](#_quizzes)
+[Back to top](#quizzes)
 
 [Back to index](README.md)
