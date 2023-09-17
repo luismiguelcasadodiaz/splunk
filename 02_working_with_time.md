@@ -1,5 +1,19 @@
 [Back to index](README.md)
+
+## Index
+[01.-What is a data series? (01:29)](#what-is-a-data-series)
+
+[01.-Searching with Time (25:36)](#Searching-with-time)
+
+[02.-Formating Time (06:12)](#formating-time)
+
+[03.-Using time commands (09:29)](#using-time-commands)
+
+[04.-Working with time zones (2:43)](#working-with-time-zones)
+
+
 # [03 working-with-time]
+
 Time is one of the most important components to consider when working with data.
 We will learn:
  - How to work with time in searches. `earliest=@d`,  `latest=@d`
@@ -7,7 +21,7 @@ We will learn:
  - Time commands (`timechart`, `timewrap`)
  - Understand how time zones are represented in the data
 
-## Searching with Time (25:36)
+## Searching with Time
 What does time mean to Splunk?
 When an event is ingested, its timestamp is stored in the `_time` field that is used to implement the event timeLine in the Splunk Web interface. 
 The `_time` field is stored with the event in the index **prior** to the search time, along with default fields such as host, source, and source type (also the index name in which it is stored.
@@ -127,7 +141,10 @@ The bin command helps us bucket up our events. We can put numerical values into 
 In this example, I try to bin the events in intervals of 15 minutes and made some statistics over the events intra-bin. Count a number of file names as indexations. Distinct count of file names as indexes, a ratio of times each index is indexed, and the sum of the file sizes.
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/0ab4babb-f7c0-4341-8881-33d6f6475b1d)
 
-## Formating Time (06:12)
+
+[Back to top](#index)
+
+## Formating Time
 You can define how time is formatted in the search results using the time functions of the eval command.
 ### eval command
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/e7ba3b44-aaf9-407d-8d27-963606bc6165)
@@ -158,7 +175,9 @@ Can exist as an expression.
 
 [Documentaition link] (https://docs.splunk.com/Documentation/SCS/current/Search/Timevariables)
 
-## Using time commands (9:29)
+[Back to top](#index)
+
+## Using time commands
 ### `Timechart`
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/b7ae054e-3c93-4943-9087-1c3fabc87ddb)
@@ -214,7 +233,10 @@ Into a chart to compare 6 hours periods where you can see that recent peaks have
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/3d4e8575-1582-474f-a197-b1568a3102ce)
 
 
-## Working with time zones (2:43)
+[Back to top](#index)
+
+
+## Working with time zones
 Working with time base data for multiple geographic locations can be tricky.
 We see here how time zones are represented in the data and how to use strftime function to correct time zones in search results.
 **FIRST: Verify that results return what we are expecting.
@@ -258,5 +280,7 @@ According to what we have learned we rearrange the previous search to consider m
 
 ![image](https://github.com/luismiguelcasadodiaz/splunk/assets/19540140/580fc5ac-9cf6-4564-958f-0561849438de)
 
+
+[Back to top](#index)
 
 [Back to index](README.md)
