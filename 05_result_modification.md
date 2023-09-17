@@ -83,6 +83,7 @@ Here is the full search command.
 [Back to top](#index)
 
 ## Eventstats Command
+The `eventstats` command will generate statistics for fields in search events,   saving them to a new field in the results, saving them inline with pertinent events.
 
 [Back to top](#index)
 
