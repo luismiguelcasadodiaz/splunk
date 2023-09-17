@@ -22,6 +22,9 @@ We will learn:
  - Time commands (`timechart`, `timewrap`)
  - Understand how time zones are represented in the data
 
+[Back to top](#index)
+
+
 ## Searching with Time
 What does time mean to Splunk?
 When an event is ingested, its timestamp is stored in the `_time` field that is used to implement the event timeLine in the Splunk Web interface. 
