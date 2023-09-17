@@ -1,5 +1,7 @@
 [Back to index](README.md)
 
+# Working-with-time
+
 ## Index
 [01.-What is a data series? (01:29)](#what-is-a-data-series)
 
@@ -11,8 +13,7 @@
 
 [04.-Working with time zones (2:43)](#working-with-time-zones)
 
-
-# [03 working-with-time]
+## What is a data series
 
 Time is one of the most important components to consider when working with data.
 We will learn:
